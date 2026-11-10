@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Ôn Thi Lịch Sử Đảng CSVN — Hệ Thống Học Nhanh & Nhớ Lâu (81 Câu)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f1f5f9;
+      --bg-elevated: #ffffff;
+      --bg-subtle: #f8fafc;
+      --text: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-soft: #eef2ff;
+      --primary-border: #c7d2fe;
+
+      --success: #10b981;
+      --success-dark: #047857;
+      --success-soft: #ecfdf5;
+      --success-border: #6ee7b7;
+
+      --danger: #ef4444;
+      --danger-dark: #b91c1c;
+      --danger-soft: #fef2f2;
+      --danger-border: #fca5a5;
+
+      --warning: #f59e0b;
+      --warning-dark: #b45309;
+      --warning-soft: #fffbeb;
+      --warning-border: #fde68a;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 18px 36px -8px rgba(15, 23, 42, 0.12);
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b1120;
+      --bg-elevated: #1e293b;
+      --bg-subtle: #0f172a;
+      --text: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --border-strong: #475569;
+
+      --primary: #6366f1;
+      --primary-hover: #818cf8;
+      --primary-soft: rgba(99, 102, 241, 0.16);
+      --primary-border: rgba(99, 102, 241, 0.4);
+
+      --success-soft: rgba(16, 185, 129, 0.15);
+      --success-border: rgba(16, 185, 129, 0.4);
+      --success-dark: #34d399;
+
+      --danger-soft: rgba(239, 68, 68, 0.15);
+      --danger-border: rgba(239, 68, 68, 0.4);
+      --danger-dark: #f87171;
+
+      --warning-soft: rgba(245, 158, 11, 0.15);
+      --warning-border: rgba(245, 158, 11, 0.4);
+      --warning-dark: #fbbf24;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      min-height: 100vh;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    /* Top App Header */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    [data-theme="dark"] .topbar {
+      background: rgba(15, 23, 42, 0.92);
+    }
+
+    .topbar-inner {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #e11d48, #f59e0b);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(225, 29, 72, 0.28);
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.02rem;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Main Pill Navigation */
+    .main-nav {
+      display: flex;
+      background: var(--bg-subtle);
+      padding: 4px;
+      border-radius: 13px;
+      border: 1px solid var(--border);
+      gap: 4px;
+    }
+
+    .nav-pill {
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      padding: 8px 14px;
+      border-radius: 9px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    .nav-pill:hover {
+      color: var(--text);
+    }
+
+    .nav-pill.active {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.28);
+    }
+
+    .nav-count {
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 99px;
+      background: rgba(0, 0, 0, 0.08);
+    }
+    [data-theme="dark"] .nav-count {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .nav-pill.active .nav-count {
+      background: rgba(255, 255, 255, 0.22);
+      color: #fff;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-family: inherit;
+      transition: all 0.15s;
+      min-height: 38px;
+    }
+
+    .icon-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Main Container */
+    .main-wrap {
+      max-width: 1260px;
+      margin: 20px auto 80px;
+      padding: 0 20px;
+    }
+
+    .tab-section {
+      display: none;
+    }
+    .tab-section.active {
+      display: block;
+      animation: fadeSlide 0.2s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Sub-toolbar */
+    .subbar {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .seg-group {
+      display: inline-flex;
+      background: var(--bg-subtle);
+      padding: 4px;
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .seg-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+      text-align: center;
+    }
+
+    .seg-btn.active {
+      background: var(--bg-elevated);
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+      font-weight: 700;
+    }
+
+    .subbar-controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* ==================== SECTION 1: MCQ LAYOUT ==================== */
+    .mcq-workspace {
+      display: grid;
+      grid-template-columns: 1fr 310px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Focus Card (1 Question at a time) */
+    .focus-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 26px;
+      box-shadow: var(--shadow-md);
+      min-width: 0;
+    }
+
+    .focus-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .q-num-pill {
+      background: var(--primary-soft);
+      color: var(--primary);
+      border: 1px solid var(--primary-border);
+      padding: 5px 12px;
+      border-radius: 99px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    .q-text-large {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .opt-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .opt-item {
+      width: 100%;
+      text-align: left;
+      background: var(--bg-subtle);
+      border: 2px solid var(--border);
+      border-radius: 13px;
+      padding: 13px 15px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: all 0.16s ease;
+      line-height: 1.48;
+    }
+
+    @media (hover: hover) {
+      .opt-item:hover {
+        border-color: var(--primary);
+        background: var(--primary-soft);
+        transform: translateY(-1px);
+      }
+    }
+
+    .opt-key {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-strong);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.84rem;
+      flex-shrink: 0;
+      color: var(--text-secondary);
+      margin-top: 1px;
+    }
+
+    .opt-item.correct {
+      background: var(--success-soft);
+      border-color: var(--success);
+      font-weight: 600;
+    }
+    .opt-item.correct .opt-key {
+      background: var(--success);
+      border-color: var(--success);
+      color: #fff;
+    }
+
+    .opt-item.wrong {
+      background: var(--danger-soft);
+      border-color: var(--danger);
+    }
+    .opt-item.wrong .opt-key {
+      background: var(--danger);
+      border-color: var(--danger);
+      color: #fff;
+    }
+
+    .instant-memory-box {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 13px;
+      background: var(--warning-soft);
+      border: 1px solid var(--warning-border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .memory-chip-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .kw-tag {
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 0.83rem;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .ans-tag {
+      background: var(--success);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 0.83rem;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .focus-footer {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Mobile Palette Drawer Toggle (hidden on desktop) */
+    .mobile-palette-toggle {
+      display: none;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    /* Right Question Palette */
+    .palette-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 82px;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 7px;
+      margin-top: 12px;
+    }
+
+    .p-cell {
+      height: 38px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.14s;
+      font-family: inherit;
+      position: relative;
+    }
+
+    .p-cell.current {
+      outline: 2.5px solid var(--primary);
+      outline-offset: 1px;
+    }
+
+    .p-cell.done-ok {
+      background: var(--success-soft);
+      border-color: var(--success);
+      color: var(--success-dark);
+    }
+
+    .p-cell.done-bad {
+      background: var(--danger-soft);
+      border-color: var(--danger);
+      color: var(--danger-dark);
+    }
+
+    .p-cell.starred::after {
+      content: "★";
+      position: absolute;
+      top: -5px;
+      right: -3px;
+      font-size: 0.68rem;
+      color: #f59e0b;
+    }
+
+    /* Ultra-Fast Keyword Reflex Table */
+    .reflex-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+      gap: 12px;
+    }
+
+    .reflex-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+      min-width: 0;
+    }
+
+    .reflex-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .reflex-pair {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* ==================== SECTION 2: SHORT ANSWERS (CLOZE & CONDENSED) ==================== */
+    .short-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
+      gap: 16px;
+    }
+
+    .scard {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .scard.mastered {
+      border-left: 5px solid var(--success);
+    }
+    .scard.hard {
+      border-left: 5px solid var(--danger);
+    }
+
+    .scard-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .scard-q {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--text);
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* Ultra-short Memory Pill Box */
+    .ultra-short-box {
+      background: var(--primary-soft);
+      border: 1px solid var(--primary-border);
+      border-radius: 11px;
+      padding: 10px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ultra-label {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary);
+      width: 100%;
+      margin-bottom: 2px;
+    }
+
+    .pill-kw {
+      background: var(--bg-elevated);
+      border: 1px solid var(--primary-border);
+      color: var(--text);
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    /* Interactive Cloze Token - Never overflows on short words */
+    .cloze-token {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--warning-soft);
+      border: 1.5px dashed var(--warning);
+      color: transparent;
+      border-radius: 6px;
+      padding: 2px 10px;
+      margin: 2px 2px;
+      min-width: 92px;
+      min-height: 26px;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      font-weight: 700;
+      vertical-align: middle;
+      transition: all 0.15s;
+      line-height: 1.4;
+    }
+
+    .cloze-token::after {
+      content: "👆 Chạm mở";
+      color: var(--warning-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+
+    .cloze-token.revealed {
+      display: inline;
+      min-width: 0;
+      min-height: 0;
+      padding: 1px 6px;
+      background: var(--success-soft);
+      border: 1.5px solid var(--success);
+      color: var(--success-dark);
+    }
+    .cloze-token.revealed::after {
+      content: none;
+    }
+
+    .full-ans-line {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      background: var(--bg-subtle);
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      line-height: 1.75;
+      word-break: break-word;
+    }
+
+    /* 3D Flashcard for Short Answers */
+    .fc-stage {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .fc-card-modern {
+      background: var(--bg-elevated);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-lg);
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ==================== SECTION 3: ESSAYS (SIÊU RÚT GỌN VS ĐẦY ĐỦ) ==================== */
+    .essay-selector {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .e-btn {
+      background: var(--bg-elevated);
+      border: 2px solid var(--border);
+      border-radius: 13px;
+      padding: 11px 12px;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.16s;
+      min-width: 0;
+    }
+
+    .e-btn:hover {
+      border-color: var(--primary);
+    }
+
+    .e-btn.active {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .e-btn-num {
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .e-btn-name {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+
+    /* Mobile Essay Column Switcher (hidden on desktop) */
+    .mobile-essay-switcher {
+      display: none;
+      margin-bottom: 14px;
+    }
+
+    /* Comparison Dual Grid for Essays */
+    .essay-dual-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .essay-pane {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      box-shadow: var(--shadow-md);
+      min-width: 0;
+    }
+
+    .pane-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .mindmap-branch {
+      border-left: 3px solid var(--primary);
+      padding-left: 12px;
+      margin-bottom: 16px;
+    }
+
+    .mindmap-title {
+      font-weight: 800;
+      font-size: 0.93rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .mini-step {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 11px;
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .mini-step-num {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .exam-ready-block {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .exam-ready-block.masked .exam-ready-body {
+      filter: blur(6px);
+      user-select: none;
+    }
+
+    .hl {
+      background: rgba(245, 158, 11, 0.22);
+      color: inherit;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .warning-banner {
+      background: var(--danger-soft);
+      border: 1px solid var(--danger-border);
+      color: var(--danger-dark);
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    /* =========================================================================
+       RESPONSIVE BREAKPOINTS (TABLET & MOBILE OPTIMIZATION)
+       ========================================================================= */
+    @media (max-width: 960px) {
+      .mcq-workspace {
+        grid-template-columns: 1fr;
+      }
+
+      .palette-card {
+        position: static;
+        display: none;
+      }
+      .palette-card.mobile-open {
+        display: block;
+        animation: fadeSlide 0.2s ease;
+      }
+
+      .mobile-palette-toggle {
+        display: flex;
+      }
+
+      .palette-grid {
+        grid-template-columns: repeat(9, 1fr);
+      }
+
+      .essay-selector {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .essay-dual-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .mobile-essay-switcher {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hide-on-mobile {
+        display: none !important;
+      }
+
+      .topbar-inner {
+        padding: 10px 12px;
+        gap: 8px;
+      }
+
+      .brand-logo {
+        width: 34px;
+        height: 34px;
+        font-size: 0.95rem;
+      }
+
+      .brand-title {
+        font-size: 0.94rem;
+      }
+
+      .brand-sub {
+        font-size: 0.72rem;
+      }
+
+      .topbar-actions .theme-label {
+        display: none;
+      }
+
+      /* Full-width 3-column navigation bar on mobile */
+      .main-nav {
+        order: 3;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 3px;
+        gap: 3px;
+      }
+
+      .nav-pill {
+        padding: 8px 4px;
+        font-size: 0.78rem;
+        flex-direction: column;
+        gap: 3px;
+        border-radius: 8px;
+      }
+
+      .nav-count {
+        font-size: 0.68rem;
+        padding: 1px 6px;
+      }
+
+      .main-wrap {
+        margin: 12px auto 70px;
+        padding: 0 12px;
+      }
+
+      .subbar {
+        padding: 10px;
+        gap: 8px;
+        border-radius: 14px;
+      }
+
+      .seg-group {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+      }
+
+      .seg-btn {
+        padding: 8px 4px;
+        font-size: 0.76rem;
+        line-height: 1.25;
+      }
+
+      .subbar-controls {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 6px;
+      }
+
+      .subbar-controls select.icon-btn {
+        width: 100%;
+        min-width: 0;
+        padding: 7px 8px;
+        font-size: 0.8rem;
+      }
+
+      .subbar-controls button.icon-btn {
+        padding: 7px 10px;
+        font-size: 0.8rem;
+      }
+
+      .focus-card {
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+
+      .q-text-large {
+        font-size: 1.02rem;
+        margin-bottom: 14px;
+      }
+
+      .opt-item {
+        padding: 11px 12px;
+        font-size: 0.9rem;
+        gap: 10px;
+        border-radius: 11px;
+      }
+
+      .opt-key {
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
+      }
+
+      .focus-footer {
+        margin-top: 16px;
+        padding-top: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .focus-footer .footer-status {
+        grid-column: 1 / -1;
+        order: -1;
+        text-align: center;
+        padding-bottom: 4px;
+      }
+
+      .palette-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .scard {
+        padding: 14px;
+      }
+
+      .scard-head {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .scard-actions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .fc-card-modern {
+        padding: 18px 14px;
+        min-height: 260px;
+      }
+
+      /* Essay selector horizontal scroll or compact 2-col on mobile */
+      .essay-selector {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .e-btn {
+        padding: 9px 10px;
+      }
+
+      .e-btn-name {
+        font-size: 0.79rem;
+      }
+
+      .essay-pane {
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY MODERN TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-logo">A+</div>
+        <div>
+          <div class="brand-title">Lịch Sử Đảng CSVN (81 Câu)</div>
+          <div class="brand-sub">Bản Rút Gọn Từ Khóa & Nhớ Nhanh</div>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <button class="nav-pill active" onclick="switchTab('mcq', this)">
+          <span>🎯 Trắc Nghiệm</span>
+          <span class="nav-count" id="nav-stat-mcq">0/45</span>
+        </button>
+        <button class="nav-pill" onclick="switchTab('short', this)">
+          <span>⚡ Câu Ngắn</span>
+          <span class="nav-count" id="nav-stat-short">0/30</span>
+        </button>
+        <button class="nav-pill" onclick="switchTab('essay', this)">
+          <span>🧠 Tự Luận</span>
+          <span class="nav-count" id="nav-stat-essay">0/6</span>
+        </button>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" onclick="toggleTheme()" id="theme-btn" title="Đổi giao diện Sáng/Tối">
+          <span id="theme-icon">🌙</span>
+          <span class="theme-label" id="theme-text">Giao diện tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+
+    <!-- ==================== TAB 1: TRẮC NGHIỆM (45 CÂU) ==================== -->
+    <section id="tab-mcq" class="tab-section active">
+      <div class="subbar">
+        <div class="seg-group">
+          <button class="seg-btn active" id="mcq-view-focus" onclick="setMcqView('focus')">
+            🎯 Từng câu <span class="hide-on-mobile">(Phím 1-4)</span>
+          </button>
+          <button class="seg-btn" id="mcq-view-reflex" onclick="setMcqView('reflex')">
+            ⚡ Mẹo 3 Giây
+          </button>
+          <button class="seg-btn" id="mcq-view-list" onclick="setMcqView('list')">
+            📜 Cả 45 câu
+          </button>
+        </div>
+
+        <div class="subbar-controls">
+          <select id="mcq-filter" class="icon-btn" onchange="applyMcqFilter()">
+            <option value="all">Tất cả (45 câu)</option>
+            <option value="wrong">🔴 Câu đang sai</option>
+            <option value="unanswered">⚪ Chưa làm</option>
+            <option value="starred">⭐ Đánh dấu sao</option>
+          </select>
+          <button class="icon-btn" onclick="shuffleMcqQuestions()" id="btn-shuffle">🔀 Đảo</button>
+          <button class="icon-btn" onclick="resetMcq()">🔄 Reset</button>
+        </div>
+      </div>
+
+      <!-- View 1: Focus Mode (1 Question + Right Palette) -->
+      <div id="mcq-focus-layout" class="mcq-workspace">
+        <div>
+          <div class="focus-card" id="mcq-focus-box"></div>
+          <button class="icon-btn mobile-palette-toggle" onclick="toggleMobilePalette()" id="btn-mobile-palette">
+            🗺️ Mở Bản đồ 45 câu hỏi (Chọn nhanh câu)
+          </button>
+        </div>
+
+        <aside class="palette-card" id="mcq-palette-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-weight:800; font-size:0.9rem;">Bản đồ 45 câu</span>
+            <span style="font-size:0.78rem; color:var(--text-muted);" id="palette-summary">0/45 đúng</span>
+          </div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">
+            💡 Vuốt trái/phải trên điện thoại hoặc bấm ô số để chuyển câu.
+          </div>
+          <div class="palette-grid" id="mcq-palette-grid"></div>
+        </aside>
+      </div>
+
+      <!-- View 2: Keyword Reflex Mode -->
+      <div id="mcq-reflex-layout" class="reflex-grid" style="display:none;"></div>
+
+      <!-- View 3: Full Scroll List -->
+      <div id="mcq-list-layout" style="display:none; flex-direction:column; gap:14px;"></div>
+    </section>
+
+    <!-- ==================== TAB 2: CÂU HỎI NGẮN RÚT GỌN (30 CÂU: 46–75) ==================== -->
+    <section id="tab-short" class="tab-section">
+      <div class="subbar">
+        <div class="seg-group">
+          <button class="seg-btn active" id="short-view-cloze" onclick="setShortView('cloze')">
+            🧩 Tự Dò Từ Khóa
+          </button>
+          <button class="seg-btn" id="short-view-flashcard" onclick="setShortView('flashcard')">
+            🗂️ Thẻ Flashcard
+          </button>
+          <button class="seg-btn" id="short-view-compare" onclick="setShortView('compare')">
+            ⚡ Siêu Rút Gọn
+          </button>
+        </div>
+
+        <div class="subbar-controls">
+          <select id="short-group-filter" class="icon-btn" onchange="renderShortTab()">
+            <option value="all">Tất cả 30 câu (46–75)</option>
+            <option value="g1">1930–1945 (Câu 46–55)</option>
+            <option value="g2">1945–1975 (Câu 56–65)</option>
+            <option value="g3">Đổi mới (Câu 66–75)</option>
+            <option value="unmastered">Chưa thuộc lòng</option>
+          </select>
+          <button class="icon-btn" id="btn-cloze-toggle" onclick="toggleAllCloze()" style="grid-column: span 2;">
+            👁️ Mở hết từ khóa
+          </button>
+        </div>
+      </div>
+
+      <div id="short-content-area"></div>
+    </section>
+
+    <!-- ==================== TAB 3: TỰ LUẬN SƠ ĐỒ Ý CHÍNH (6 CÂU: 76–81) ==================== -->
+    <section id="tab-essay" class="tab-section">
+      <div class="subbar">
+        <div style="font-size:0.86rem; font-weight:600; color:var(--text-secondary); flex:1;">
+          💡 <strong>Sơ đồ Từ Khóa (2 phút thuộc khung)</strong> + <strong>Câu văn cô đọng chuẩn Giáo trình</strong>.
+        </div>
+        <button class="icon-btn" id="btn-mask-essay" onclick="toggleMaskEssay()">
+          🙈 Che bài viết để tự nhẩm
+        </button>
+      </div>
+
+      <div class="essay-selector" id="essay-selector-bar"></div>
+
+      <!-- Mobile column switcher for Essays -->
+      <div class="seg-group mobile-essay-switcher" id="mobile-essay-tabs">
+        <button class="seg-btn active" onclick="setEssayMobileCol('both', this)">🔀 Xem cả 2</button>
+        <button class="seg-btn" onclick="setEssayMobileCol('mindmap', this)">⚡ Sơ đồ Rút gọn</button>
+        <button class="seg-btn" onclick="setEssayMobileCol('text', this)">📝 Bài viết thi</button>
+      </div>
+
+      <div id="essay-main-view"></div>
+    </section>
+
+  </main>
+
+<script>
+// ============================================================================
+// 1. DỮ LIỆU 45 CÂU TRẮC NGHIỆM (CÓ CẶP PHẢN XẠ TỪ KHÓA "NHÌN 3 GIÂY CHỌN NGAY")
+// ============================================================================
+const mcqList = [
+  { id: 1, q: "Nhiệm vụ của khoa học lịch sử Đảng Cộng sản Việt Nam.", opts: ["Trình bày có hệ thống Cương lĩnh, đường lối của Đảng", "Tái hiện tiến trình lịch sử lãnh đạo, đấu tranh của Đảng", "Tổng kết lịch sử của Đảng", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Nhiệm vụ khoa học LSĐ", kwA: "D. Tất cả đều đúng (Trình bày + Tái hiện + Tổng kết)" },
+  { id: 2, q: "Phương pháp nghiên cứu môn lịch sử Đảng Cộng sản Việt Nam gồm những phương pháp nào?", opts: ["Phương pháp lịch sử; phương pháp logic", "Phương pháp lịch sử; phương pháp logic; phương pháp tổng kết thực tiễn lịch sử", "Phương pháp lịch sử; phương pháp logic; phương pháp tổng kết thực tiễn lịch sử; phương pháp so sánh", "Phương pháp logic; phương pháp tổng kết thực tiễn lịch sử; phương pháp so sánh"], ans: 2, kwQ: "Phương pháp nghiên cứu LSĐ", kwA: "C. Đủ 4 phương pháp (Lịch sử + Logic + Tổng kết thực tiễn + So sánh)" },
+  { id: 3, q: "Chức năng của khoa học Lịch sử Đảng Cộng sản Việt Nam.", opts: ["Chức năng nhận thức; chức năng giáo dục; chức năng dự báo và phê phán", "Chức năng nhận thức; chức năng giáo dục", "Chức năng giáo dục; chức năng dự báo và phê phán", "Chức năng nhận thức; chức năng dự báo và phê phán"], ans: 0, kwQ: "Chức năng khoa học LSĐ", kwA: "A. Đủ 3 chức năng (Nhận thức + Giáo dục + Dự báo & phê phán)" },
+  { id: 4, q: "Năm 1929 ở Việt Nam đã xuất hiện các tổ chức cộng sản nào?", opts: ["Đông Dương Cộng sản Đảng", "An Nam Cộng sản Đảng", "Đông Dương Cộng sản Liên đoàn", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Năm 1929 xuất hiện tổ chức CS nào", kwA: "D. Tất cả đều đúng (Đông Dương CSĐ + An Nam CSĐ + ĐDCS Liên đoàn)" },
+  { id: 5, q: "Hội nghị thành lập Đảng năm 1930 do ai chủ trì?", opts: ["Nguyễn Đức Cảnh", "Trịnh Đình Cửu", "Nguyễn Ái Quốc", "Trần Phú"], ans: 2, kwQ: "Chủ trì Hội nghị thành lập Đảng 1930", kwA: "C. Nguyễn Ái Quốc" },
+  { id: 6, q: "Đảng Cộng sản Việt Nam thành lập ngày, tháng, năm nào?", opts: ["Ngày 03 tháng 2 năm 1930", "Ngày 06 tháng 2 năm 1930", "Ngày 24 tháng 2 năm 1930", "Ngày 07 tháng 3 năm 1930"], ans: 0, kwQ: "Ngày thành lập Đảng CSVN", kwA: "A. Ngày 03/02/1930" },
+  { id: 7, q: "Cương lĩnh chính trị đầu tiên của Đảng do Nguyễn Ái Quốc soạn thảo xác định phương hướng chiến lược của cách mạng Việt Nam là gì?", opts: ["Tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản", "Tư sản dân quyền cách mạng và thổ địa cách mạng", "Thổ địa cách mạng", "Tư sản dân quyền"], ans: 0, kwQ: "Phương hướng chiến lược Cương lĩnh đầu tiên", kwA: "A. Tư sản dân quyền CM và thổ địa CM để đi tới xã hội cộng sản" },
+  { id: 8, q: "Ai là Tổng Bí thư đầu tiên của Đảng Cộng sản Việt Nam?", opts: ["Trịnh Đình Cửu", "Trần Phú", "Lê Hồng Phong", "Hà Huy Tập"], ans: 1, kwQ: "Tổng Bí thư đầu tiên của Đảng", kwA: "B. Trần Phú" },
+  { id: 9, q: "Khi nào phong trào công nhân Việt Nam hoàn toàn trở thành một phong trào tự giác?", opts: ["Năm 1920 (tổ chức công hội ở Sài Gòn được thành lập)", "Năm 1925 (cuộc bãi công Ba Son)", "Năm 1929 (sự ra đời ba tổ chức cộng sản)", "Năm 1930 (Đảng Cộng sản Việt Nam ra đời)"], ans: 3, kwQ: "Phong trào công nhân HOÀN TOÀN tự giác", kwA: "D. Năm 1930 (Đảng Cộng sản Việt Nam ra đời)" },
+  { id: 10, q: "Luận cương chính trị tháng 10 năm 1930 do ai soạn thảo?", opts: ["Trần Phú", "Nguyễn Ái Quốc", "Trịnh Đình Cửu", "Nguyễn Đức Cảnh"], ans: 0, kwQ: "Soạn thảo Luận cương tháng 10/1930", kwA: "A. Trần Phú" },
+  { id: 11, q: "Vai trò lãnh đạo của Đảng Cộng sản Đông Dương trong Luận cương Chính trị tháng 10 năm 1930 được xác định như thế nào?", opts: ["Sự lãnh đạo của Đảng là điều kiện cốt yếu cho thắng lợi của cách mạng Việt Nam", "Làm cách mạng tư sản dân quyền và thổ địa cách mạng", "Đoàn kết rộng rãi các tầng lớp nhân dân chống thực dân, phong kiến", "Đánh đuổi thực dân Pháp xâm lược"], ans: 0, kwQ: "Vai trò lãnh đạo của Đảng (Luận cương 10/1930)", kwA: "A. Điều kiện cốt yếu cho thắng lợi của cách mạng" },
+  { id: 12, q: "Tháng 6 năm 1932, Chương trình hành động của Đảng Cộng sản Đông Dương được công bố, gồm những nội dung nào?", opts: ["Đòi các quyền tự do tổ chức, xuất bản, ngôn luận, đi lại. Bỏ những luật hình đặc biệt đối với người bản xứ, trả tự do cho tù chính trị, bỏ ngay chính sách đàn áp, giải tán hội đồng đề hình", "Bỏ thuế thân, thuế ngụ cư và các thứ thuế vô lý khác", "Bỏ các độc quyền về rượu, muối và thuốc phiện", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Chương trình hành động của Đảng (6/1932)", kwA: "D. Tất cả đều đúng (Đòi quyền tự do + Bỏ thuế thân + Bỏ độc quyền)" },
+  { id: 13, q: "Ngày 16 tháng 8 năm 1945, Quốc dân Đại hội họp tại Tân Trào quyết định những vấn đề gì?", opts: ["Tán thành chủ trương Tổng khởi nghĩa của Đảng và Mười chính sách của Việt Minh", "Quyết định đặt tên nước là Việt Nam Dân chủ Cộng hòa, xác định quốc kỳ, quốc ca", "Thành lập Ủy ban dân tộc giải phóng Việt Nam (Chính phủ lâm thời) do Hồ Chí Minh làm Chủ tịch", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Quốc dân Đại hội Tân Trào (16/8/1945) quyết định gì", kwA: "D. Tất cả đều đúng (Tổng khởi nghĩa + Tên nước, Quốc kỳ + Ủy ban DTGP)" },
+  { id: 14, q: "Ngày 16 tháng 8 năm 1945, Quốc dân Đại hội họp tại Tân Trào quyết định thành lập Uỷ ban dân tộc giải phóng do ai làm chủ tịch?", opts: ["Hồ Chí Minh", "Phạm Văn Đồng", "Võ Nguyên Giáp", "Trường Chinh"], ans: 0, kwQ: "Chủ tịch Ủy ban dân tộc giải phóng (16/8/1945)", kwA: "A. Hồ Chí Minh" },
+  { id: 15, q: "Việt Nam Tuyên truyền giải phóng quân được thành lập ngày, tháng, năm nào?", opts: ["Ngày 19 tháng 12 năm 1944", "Ngày 20 tháng 12 năm 1944", "Ngày 21 tháng 12 năm 1944", "Ngày 22 tháng 12 năm 1944"], ans: 3, kwQ: "Ngày thành lập VN Tuyên truyền giải phóng quân", kwA: "D. Ngày 22/12/1944" },
+  { id: 16, q: "Ngày 25 tháng 11 năm 1945, Ban Chấp hành trung ương Đảng ra chỉ thị “Kháng chiến, kiến quốc” xác định ai là kẻ thù chính của cách mạng Việt Nam?", opts: ["Phát xít Nhật", "Quân đội Tưởng Giới Thạch", "Thực dân Pháp xâm lược", "Thực dân Anh"], ans: 2, kwQ: "Kẻ thù chính trong Chỉ thị Kháng chiến kiến quốc", kwA: "C. Thực dân Pháp xâm lược" },
+  { id: 17, q: "Lời kêu gọi Toàn quốc kháng chiến của Chủ tịch Hồ Chí Minh viết vào ngày, tháng, năm nào?", opts: ["Ngày 18 tháng 12 năm 1946", "Ngày 19 tháng 12 năm 1946", "Ngày 20 tháng 12 năm 1946", "Ngày 21 tháng 12 năm 1946"], ans: 1, kwQ: "Ngày viết Lời kêu gọi Toàn quốc kháng chiến", kwA: "B. Ngày 19/12/1946" },
+  { id: 18, q: "Đường lối kháng chiến (1945-1954) được hoàn chỉnh và thể hiện tập trung trong những văn kiện nào?", opts: ["Toàn dân kháng chiến của Trung ương Đảng (12/12/1946)", "Lời kêu gọi toàn quốc kháng chiến (19/12/1946) của Hồ Chủ Tịch", "Kháng chiến nhất định thắng lợi (1947) của đồng chí Trường Chinh", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Văn kiện thể hiện Đường lối kháng chiến (1945-1954)", kwA: "D. Tất cả đều đúng (3 văn kiện)" },
+  { id: 19, q: "Ngày 3-9-1945, Chính phủ lâm thời họp phiên đầu tiên dưới sự chủ trì của Chủ tịch Hồ Chí Minh đã xác định ngay nhiệm vụ lớn trước mắt, gồm những nhiệm vụ nào?", opts: ["Diệt giặc đói", "Diệt giặc dốt", "Diệt giặc ngoại xâm", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Nhiệm vụ lớn phiên họp Chính phủ đầu tiên (3/9/1945)", kwA: "D. Tất cả đều đúng (Diệt giặc đói + giặc dốt + giặc ngoại xâm)" },
+  { id: 20, q: "Quốc hội khóa I đã họp phiên đầu tiên tại Nhà hát lớn Hà Nội vào ngày 2-3-1946 đã nhất trí bầu Ban Thường trực Quốc hội do ai làm Chủ tịch?", opts: ["Trường Chinh", "Phạm Văn Đồng", "Huỳnh Thúc Kháng", "Nguyễn Văn Tố"], ans: 3, kwQ: "Chủ tịch Ban Thường trực Quốc hội khóa I (2/3/1946)", kwA: "D. Nguyễn Văn Tố" },
+  { id: 21, q: "Trong cuộc kháng chiến chống Pháp và can thiệp Mỹ Đảng ta đã chủ trương xây dựng và phát triển lực lượng vũ trang nhằm đáp ứng kịp thời yêu cầu của nhiệm vụ chính trị-quân sự của cuộc kháng chiến, gồm những lực lượng nào?", opts: ["Bộ đội chủ lực", "Bộ đội địa phương", "Dân quân du kích", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Lực lượng vũ trang 3 thứ quân", kwA: "D. Tất cả đều đúng (Chủ lực + Địa phương + Dân quân du kích)" },
+  { id: 22, q: "Sau khi miền Bắc được giải phóng, tháng 9/1954 Bộ Chính trị đề ra nhiệm vụ chủ yếu trước mắt của miền Bắc là gì?", opts: ["Hàn gắn vết thương chiến tranh, phục hồi kinh tế quốc dân", "Giảm tô, giảm tức và cải cách ruộng đất", "Đưa miền Bắc tiến lên chủ nghĩa xã hội", "Xây dựng nền văn hóa mới, con người mới"], ans: 0, kwQ: "Nhiệm vụ trước mắt của miền Bắc (9/1954)", kwA: "A. Hàn gắn vết thương chiến tranh, phục hồi kinh tế quốc dân" },
+  { id: 23, q: "Nghị quyết Bộ Chính trị, tháng 9-1954, nêu rõ nhiệm vụ cụ thể trước mắt của cách mạng miền Nam là gì?", opts: ["Đấu tranh đòi thi hành Hiệp định", "Chuyển hướng công tác cho phù hợp điều kiện mới", "Tập hợp mọi lực lượng dân tộc, dân chủ, hòa bình, thống nhất, độc lập, đấu tranh", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Nhiệm vụ trước mắt của miền Nam (9/1954)", kwA: "D. Tất cả đều đúng (Đòi thi hành Hiệp định + Chuyển hướng + Tập hợp lực lượng)" },
+  { id: 24, q: "Từ thắng lợi của phong trào Đồng khởi, ngày 20/12/1960, tại xã Tân Lập (Tây Ninh), Mặt trận Dân tộc giải phóng miền Nam Việt Nam được thành lập, do ai làm chủ tịch?", opts: ["Nguyễn Thị Bình", "Nguyễn Thị Định", "Huỳnh Tấn Phát", "Nguyễn Hữu Thọ"], ans: 3, kwQ: "Chủ tịch Mặt trận Dân tộc giải phóng miền Nam (20/12/1960)", kwA: "D. Nguyễn Hữu Thọ" },
+  { id: 25, q: "Đại hội đại biểu toàn quốc lần thứ III của Đảng họp tại Thủ đô Hà Nội, vào tháng năm nào?", opts: ["Tháng 8 năm 1960", "Tháng 9 năm 1960", "Tháng 10 năm 1960", "Tháng 11 năm 1960"], ans: 1, kwQ: "Thời gian họp Đại hội III của Đảng", kwA: "B. Tháng 9 năm 1960" },
+  { id: 26, q: "Trận “Điện Biên Phủ trên không”, đánh bại hoàn toàn cuộc tập kích chiến lược bằng máy bay B52 của Mỹ vào Hà Nội và Hải Phòng, diễn ra thời gian nào?", opts: ["Từ 18 đến ngày 30 tháng 12 năm 1972", "Từ 18 đến ngày 24 tháng 12 năm 1972", "Từ 18 đến ngày 26 tháng 12 năm 1972", "Từ 18 đến ngày 28 tháng 12 năm 1972"], ans: 0, kwQ: "Thời gian trận Điện Biên Phủ trên không", kwA: "A. Từ 18 đến ngày 30/12/1972 (12 ngày đêm)" },
+  { id: 27, q: "Cuộc đấu tranh ngoại giao trên bàn Hội nghị Paris với việc ký kết “Hiệp định về chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam, kết thúc vào ngày, tháng, năm nào?", opts: ["Ngày 27 tháng 1 năm 1973", "Ngày 28 tháng 1 năm 1973", "Ngày 29 tháng 1 năm 1973", "Ngày 30 tháng 1 năm 1973"], ans: 0, kwQ: "Ngày ký kết Hiệp định Paris", kwA: "A. Ngày 27/01/1973" },
+  { id: 28, q: "Cuộc Tổng tiến công và nổi dậy mùa Xuân 1975 bắt đầu bằng chiến dịch nào?", opts: ["Chiến dịch giải phóng Phước Long", "Chiến dịch tiến công giải phóng thành phố Đà Nẵng", "Chiến dịch Tây Nguyên", "Chiến dịch tiến công giải phóng Huế"], ans: 2, kwQ: "Chiến dịch mở đầu Tổng tiến công Xuân 1975", kwA: "C. Chiến dịch Tây Nguyên" },
+  { id: 29, q: "Chiến dịch Hồ Chí Minh giải phóng Sài Gòn-Gia Định bắt đầu vào ngày, tháng, năm nào?", opts: ["Ngày 25 tháng 4 năm 1975", "Ngày 26 tháng 4 năm 1975", "Ngày 27 tháng 4 năm 1975", "Ngày 28 tháng 4 năm 1975"], ans: 1, kwQ: "Ngày BẮT ĐẦU Chiến dịch Hồ Chí Minh", kwA: "B. Ngày 26/4/1975" },
+  { id: 30, q: "Cuộc tổng tiến công và nổi dậy Xuân 1975 đã toàn thắng, kết thúc vào ngày, tháng, năm nào?", opts: ["Ngày 27 tháng 4 năm 1975", "Ngày 28 tháng 4 năm 1975", "Ngày 29 tháng 4 năm 1975", "Ngày 30 tháng 4 năm 1975"], ans: 3, kwQ: "Ngày KẾT THÚC toàn thắng Xuân 1975", kwA: "D. Ngày 30/4/1975" },
+  { id: 31, q: "Từ ngày 24 tháng 6 đến ngày 3 tháng 7 năm 1976, kỳ họp thứ nhất của Quốc hội nước Việt Nam thống nhất đã họp tại Thủ đô Hà Nội đã quyết định những vấn đề gì?", opts: ["Đặt tên nước ta là nước Cộng hoà Xã hội chủ nghĩa Việt Nam, Quốc kỳ nền đỏ sao vàng 5 cánh, Thủ đô là Hà Nội, Quốc ca là bài Tiến quân ca, Quốc huy mang dòng chữ Cộng hòa Xã hội chủ nghĩa Việt Nam", "Thành phố Sài Gòn đổi tên là Thành phố Hồ Chí Minh", "Quốc hội đã bầu Tôn Đức Thắng làm Chủ tịch nước; Nguyễn Lương Bằng, Nguyễn Hữu Thọ làm Phó Chủ tịch nước; Trường Chinh làm Chủ tịch Quốc hội và Phạm Văn Đồng làm Thủ tướng Chính phủ nước Cộng hòa Xã hội chủ nghĩa Việt Nam. Quốc hội đã thành lập Ủy ban dự thảo Hiến pháp mới", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Kỳ họp thứ nhất Quốc hội thống nhất (6-7/1976)", kwA: "D. Tất cả đều đúng" },
+  { id: 32, q: "Đại hội lần thứ mấy của Đảng là đại hội toàn thắng của sự nghiệp giải phóng dân tộc, thống nhất Tổ quốc, khẳng định và xác định đường lối đưa cả nước tiến lên chủ nghĩa xã hội?", opts: ["Đại hội lần thứ IV", "Đại hội lần thứ V", "Đại hội lần thứ VI", "Đại hội lần thứ VII"], ans: 0, kwQ: "Đại hội toàn thắng GPDT, đưa cả nước lên CNXH", kwA: "A. Đại hội lần thứ IV (1976)" },
+  { id: 33, q: "Đại hội lần thứ mấy của Đảng xác định cách mạng Việt Nam có hai nhiệm vụ chiến lược là: xây dựng thành công chủ nghĩa xã hội và bảo vệ vững chắc Tổ quốc Việt Nam xã hội chủ nghĩa. Hai nhiệm vụ chiến lược có quan hệ mật thiết với nhau?", opts: ["Đại hội lần thứ IV", "Đại hội lần thứ V", "Đại hội lần thứ VI", "Đại hội lần thứ VII"], ans: 1, kwQ: "Đại hội xác định 2 nhiệm vụ chiến lược (Xây dựng & Bảo vệ)", kwA: "B. Đại hội lần thứ V (1982)" },
+  { id: 34, q: "Đại hội nào xác định quan điểm mới nổi bật cho phép đảng viên làm kinh tế tư nhân, kể cả tư bản tư nhân nhưng yêu cầu phải tuân thủ Điều lệ Đảng, nghị quyết của Đảng và quy định của pháp luật Nhà nước đồng thời nêu cao tính tiền phong gương mẫu của người đảng viên?", opts: ["Đại hội lần thứ IX", "Đại hội lần thứ X", "Đại hội lần thứ XI", "Đại hội lần thứ XII"], ans: 1, kwQ: "Cho phép đảng viên làm kinh tế tư nhân", kwA: "B. Đại hội lần thứ X (2006)" },
+  { id: 35, q: "Vấn đề trọng tâm trong xây dựng văn hóa được Hội nghị Trung ương 9 (khóa XI) xác định là gì?", opts: ["Xây dựng lối sống \"Mỗi người vì mọi người, mọi người vì mỗi người\"; hình thành lối sống có ý thức tự trọng, tự chủ, sống và làm việc theo Hiến pháp và pháp luật", "Xây dựng nền văn hoá Việt Nam tiên tiến, đậm đà bản sắc dân tộc, thống nhất trong đa dạng của cộng đồng các dân tộc Việt Nam", "Chăm lo xây dựng con người có nhân cách, lối sống tốt đẹp, với các đặc tính cơ bản: yêu nước, nhân ái, nghĩa tình, trung thực, đoàn kết, cần cù, sáng tạo", "Giáo dục nghệ thuật, nâng cao năng lực cảm thụ thẩm mỹ cho nhân dân, đặc biệt là thanh, thiếu niên"], ans: 2, kwQ: "Trọng tâm xây dựng văn hóa (TW 9 khóa XI)", kwA: "C. Chăm lo xây dựng con người có nhân cách, lối sống tốt đẹp..." },
+  { id: 36, q: "Thế nào là văn hóa tiên tiến theo tinh thần Nghị quyết Hội nghị Trung ương IX (khóa XI)?", opts: ["Văn hóa Tiên tiến là yêu nước và tiến bộ với nội dung cốt lõi là lý tưởng độc lập dân tộc và chủ nghĩa xã hội theo chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh, nhằm mục tiêu tất cả vì con người", "Là những giá trị văn hoá truyền thống bền vững của cộng đồng các dân tộc Việt Nam được vun đắp qua lịch sử hàng ngàn năm đấu tranh dựng nước và giữ nước", "Đó là lòng nhân ái, khoan dung trọng tình nghĩa, đạo lý", "Là đức tính cần cù, sáng tạo trong lao động"], ans: 0, kwQ: "Khái niệm Văn hóa Tiên tiến (TW 9 khóa XI)", kwA: "A. Là yêu nước và tiến bộ với nội dung cốt lõi là lý tưởng ĐLDT và CNXH..." },
+  { id: 37, q: "Vai trò của đội ngũ trí thức trong xây dựng và phát triển văn hóa hiện nay, được Hội nghị Trung ương 9 (khóa XI) xác định là gì?", opts: ["Cùng với giai cấp công nhân, nông dân, trí thức có vai trò quan trọng là nền tảng của sự nghiệp xây dựng và phát triển văn hóa dưới sự lãnh đạo của Đảng, quản lý của Nhà nước", "Tham gia sự nghiệp xây dựng và phát triển nền văn hoá nước nhà", "Đi đầu trong xây dựng và phát triển văn hóa, con người Việt Nam", "Góp phần giáo dục, rèn luyện con người về nhân cách, lối sống"], ans: 0, kwQ: "Vai trò đội ngũ trí thức trong văn hóa (TW 9 khóa XI)", kwA: "A. Cùng với công nhân, nông dân, trí thức có vai trò quan trọng là nền tảng..." },
+  { id: 38, q: "Nguyên tắc cơ bản trong thực hiện chính sách đối ngoại của Đảng ta được Hội nghị Trung ương 8 (khóa XI) xác định là gì?", opts: ["Nắm vững hai mặt hợp tác và đấu tranh trong quan hệ quốc tế", "Tôn trọng độc lập chủ quyền không can thiệp vào công việc nội bộ của nhau", "Thúc đẩy hợp tác, cân bằng lợi ích", "Chủ động và tích cực hội nhập quốc tế; là bạn, là đối tác tin cậy và thành viên có trách nhiệm của cộng đồng quốc tế"], ans: 0, kwQ: "Nguyên tắc đối ngoại (TW 8 khóa XI)", kwA: "A. Nắm vững hai mặt hợp tác và đấu tranh trong quan hệ quốc tế" },
+  { id: 39, q: "Trong chiến lược phát triển kinh tế-xã hội 2011-2020, Đại hội XI nhấn mạnh ba đột phá chiến lược, gồm những chiến lược nào?", opts: ["Hoàn thiện thể chế kinh tế thị trường định hướng xã hội chủ nghĩa, trọng tâm là tạo lập môi trường cạnh tranh bình đẳng và cải cách hành chính", "Phát triển nhanh nguồn nhân lực, nhất là nguồn nhân lực chất lượng cao, tập trung vào việc đổi mới căn bản và toàn diện nền giáo dục quốc dân; gắn kết chặt chẽ phát triển nguồn nhân lực với phát triển và ứng dụng khoa học, công nghệ", "Xây dựng hệ thống kết cấu hạ tầng đồng bộ, với một số công trình hiện đại, tập trung vào hệ thống giao thông và hạ tầng đô thị lớn", "Tất cả các phương án đều đúng"], ans: 3, kwQ: "Ba đột phá chiến lược Đại hội XI", kwA: "D. Tất cả đều đúng (Thể chế + Nhân lực + Hạ tầng)" },
+  { id: 40, q: "Theo quan điểm Đại hội XII của Đảng, để tiếp tục đẩy mạnh thực hiện mô hình công nghiệp hóa, hiện đại hóa trong điều kiện phát triển kinh tế thị trường định hướng xã hội chủ nghĩa và hội nhập quốc tế gắn với phát triển kinh tế tri thức, Đảng ta xác định cần lấy những yếu tố nào làm động lực chủ yếu?", opts: ["Nguồn nhân lực chất lượng cao", "Khoa học và công nghệ", "Khoa học, công nghệ, tri thức và nguồn nhân lực chất lượng cao", "Nguồn lực về tài chính"], ans: 2, kwQ: "Động lực chủ yếu CNH-HĐH gắn KT tri thức (ĐH XII)", kwA: "C. Khoa học, công nghệ, tri thức và nguồn nhân lực chất lượng cao" },
+  { id: 41, q: "Mục đích nền kinh tế thị trường định hướng xã hội chủ nghĩa ở nước ta do Đại hội XII của Đảng xác định?", opts: ["Phát triển nền kinh tế với nhiều hình thức sở hữu, nhiều thành phần kinh tế nhằm giải phóng mọi tiềm năng trong mọi thành phần kinh tế", "Nhằm thực hiện \"dân giàu, nước mạnh, dân chủ, công bằng, văn minh\"; giải phóng mạnh mẽ lực lượng sản xuất, không ngừng nâng cao đời sống nhân dân", "Phát huy vai trò làm chủ xã hội của nhân dân, bảo đảm vai trò quản lý, điều tiết nền kinh tế của Nhà nước pháp quyền xã hội chủ nghĩa dưới sự lãnh đạo của Đảng.", "Phát huy vai trò làm chủ xã hội của nhân dân."], ans: 1, kwQ: "Mục đích KTTT định hướng XHCN (ĐH XII)", kwA: "B. Thực hiện 'dân giàu, nước mạnh, dân chủ, công bằng, văn minh'; giải phóng LLSX..." },
+  { id: 42, q: "Vai trò của thành phần kinh tế tư nhân trong nền kinh tế thị trường ở nước ta hiện nay do Hội nghị Trung ương 5 (khóa XII) xác định là gì?", opts: ["Là một động lực quan trọng của nền kinh tế", "Điều tiết nền kinh tế, tạo môi trường và điều kiện thúc đẩy các thành phần kinh tế cùng phát triển", "Giữ vai trò chủ đạo, là lực lượng vật chất quan trọng để Nhà nước định hướng và điều tiết nền kinh tế", "Là lực lượng vật chất quan trọng để Nhà nước định hướng và điều tiết nền kinh tế, tạo môi trường và điều kiện thúc đẩy các thành phần kinh tế cùng phát triển"], ans: 0, kwQ: "Vai trò kinh tế tư nhân (TW 5 khóa XII)", kwA: "A. Là một động lực quan trọng của nền kinh tế" },
+  { id: 43, q: "Chủ trương: \"Bảo đảm lợi ích tối cao của quốc gia - dân tộc, trên cơ sở các nguyên tắc cơ bản của luật pháp quốc tế, bình đẳng và cùng có lợi, thực hiện nhất quán đường lối đối ngoại độc lập, tự chủ, hoà bình, hợp tác và phát triển; đa dạng hoá, đa phương hoá trong quan hệ đối ngoại; chủ động và tích cực hội nhập quốc tế; là bạn, là đối tác tin cậy và thành viên có trách nhiệm của cộng đồng quốc tế\" được Đại hội nào xác định?", opts: ["Đại hội XII", "Đại hội XI", "Đại hội X", "Đại hội IX"], ans: 0, kwQ: "Chủ trương 'Bảo đảm lợi ích tối cao của quốc gia - dân tộc...'", kwA: "A. Đại hội XII" },
+  { id: 44, q: "Cấu trúc hệ thống chính trị ở Việt Nam hiện nay bao gồm những bộ phận nào?", opts: ["Đảng Cộng sản Việt Nam", "Nhà nước", "Mặt trận Tổ quốc Việt Nam và các đoàn thể chính trị xã hội", "Tất cả đều đúng"], ans: 3, kwQ: "Cấu trúc hệ thống chính trị ở Việt Nam", kwA: "D. Tất cả đều đúng (Đảng + Nhà nước + MTTQ và các đoàn thể)" },
+  { id: 45, q: "Đại hội XII của Đảng chủ trương triển khai mạnh mẽ định hướng chiến lược chủ động và tích cực hội nhập quốc tế hiện nay lấy hội nhập lĩnh vực nào là trọng tâm?", opts: ["Chính trị", "Kinh tế", "Văn hóa, xã hội", "Quốc phòng, an ninh"], ans: 1, kwQ: "Hội nhập quốc tế lấy lĩnh vực nào là trọng tâm (ĐH XII)", kwA: "B. Kinh tế" }
+];
+
+// ============================================================================
+// 2. DỮ LIỆU 30 CÂU HỎI NGẮN (CÓ BẢN SIÊU RÚT GỌN + CLOZE TEST TỰ DÒ)
+// ============================================================================
+const shortList = [
+  { id: 46, grp: "g1", q: "Câu 46. Đối tượng nghiên cứu của khoa học Lịch sử Đảng Cộng sản Việt Nam.",
+    pills: ["Sự ra đời", "Phát triển", "Hoạt động lãnh đạo qua các thời kỳ"],
+    cloze: "{{Sự ra đời}}, {{phát triển}} và {{hoạt động lãnh đạo}} của Đảng qua các thời kỳ." },
+  { id: 47, grp: "g1", q: "Câu 47. Thời gian, địa điểm, thành phần dự Hội nghị thành lập Đảng Cộng sản Việt Nam.",
+    pills: ["TG: 6/1 – 7/2/1930", "ĐĐ: Cửu Long (Hồng Kông)", "2 ĐDCSĐ: Trịnh Đình Cửu, Nguyễn Đức Cảnh", "2 ANCSĐ: Châu Văn Liêm, Nguyễn Thiệu", "Chủ trì: Nguyễn Ái Quốc"],
+    cloze: "• TG: Từ {{6/1 đến 7/2/1930}} | ĐĐ: {{Cửu Long (Hồng Kông)}}.\n• Thành phần: 2 đại biểu Đông Dương CSĐ ({{Trịnh Đình Cửu, Nguyễn Đức Cảnh}}), 2 đại biểu An Nam CSĐ ({{Châu Văn Liêm, Nguyễn Thiệu}}), dưới sự chủ trì của {{Nguyễn Ái Quốc}} - đại biểu QTCS." },
+  { id: 48, grp: "g1", q: "Câu 48. Cương lĩnh chính trị đầu tiên xác định nhiệm vụ chủ yếu trước mắt của cách mạng Việt Nam là gì?",
+    pills: ["Đánh đổ đế quốc Pháp", "Làm cho nước Nam hoàn toàn độc lập"],
+    cloze: "{{Đánh đổ đế quốc chủ nghĩa Pháp}}, làm cho {{nước Nam hoàn toàn độc lập}}." },
+  { id: 49, grp: "g1", q: "Câu 49. Cương lĩnh chính trị đầu tiên xác định lực lượng cách mạng.",
+    pills: ["Công nhân & nông dân là lực lượng cơ bản", "Giai cấp công nhân lãnh đạo", "Đoàn kết mọi giai cấp, lực lượng tiến bộ yêu nước"],
+    cloze: "{{Công nhân, nông dân}} là lực lượng cơ bản, trong đó {{giai cấp công nhân lãnh đạo}}; đồng thời đoàn kết {{tất cả các giai cấp, các lực lượng tiến bộ yêu nước}}, tập trung chống đế quốc và tay sai." },
+  { id: 50, grp: "g1", q: "Câu 50. Quy luật ra đời của Đảng Cộng sản Việt Nam.",
+    pills: ["Chủ nghĩa Mác - Lênin", "Phong trào công nhân", "Phong trào yêu nước"],
+    cloze: "Kết hợp 3 yếu tố: {{Chủ nghĩa Mác - Lênin}}, {{phong trào công nhân}} và {{phong trào yêu nước}}." },
+  { id: 51, grp: "g1", q: "Câu 51. Vai trò lãnh đạo của Đảng Cộng sản Đông Dương trong Luận cương Chính trị tháng 10 năm 1930.",
+    pills: ["Sự lãnh đạo của Đảng", "Là điều kiện cốt yếu cho thắng lợi"],
+    cloze: "Sự lãnh đạo của Đảng là {{điều kiện cốt yếu}} cho {{thắng lợi của cách mạng}}." },
+  { id: 52, grp: "g1", q: "Câu 52. Trong nội dung chuyển hướng chỉ đạo chiến lược của Đảng (1939-1945) xác định nhiệm vụ trung tâm của Đảng và nhân dân ta trong giai đoạn hiện tại là gì?",
+    pills: ["Xúc tiến chuẩn bị khởi nghĩa vũ trang"],
+    cloze: "Nhiệm vụ trung tâm: {{Xúc tiến chuẩn bị khởi nghĩa vũ trang}}." },
+  { id: 53, grp: "g1", q: "Câu 53. Ý nghĩa chủ trương chuyển hướng chiến lược của Đảng ta giai đoạn 1939-1945.",
+    pills: ["Là ngọn cờ dẫn đường", "Đánh Pháp, đuổi Nhật", "Giành độc lập dân tộc, tự do cho nhân dân"],
+    cloze: "Là {{ngọn cờ dẫn đường}} cho nhân dân ta tiến lên giành thắng lợi trong sự nghiệp {{đánh Pháp, đuổi Nhật}}, giành {{độc lập cho dân tộc và tự do cho nhân dân}}." },
+  { id: 54, grp: "g1", q: "Câu 54. Năm 1943, trong bản Đề cương văn hóa Việt Nam của đồng chí Trường Chinh có đề ra những nguyên tắc xây dựng nền văn hóa mới Việt Nam. Đó là những nguyên tắc nào?",
+    pills: ["1. Dân tộc hóa", "2. Khoa học hóa", "3. Đại chúng hóa"],
+    cloze: "3 nguyên tắc: {{Dân tộc hóa}}, {{Khoa học hóa}}, {{Đại chúng hóa}}." },
+  { id: 55, grp: "g1", q: "Câu 55. Ý nghĩa Tuyên ngôn Độc lập ngày 2-9-1945 do Hồ Chí Minh đọc tại quảng trường Ba Đình, Hà Nội.",
+    pills: ["Thiên anh hùng ca chiến đấu và chiến thắng", "Chứa chan sức mạnh và niềm tin", "Giành và giữ nền độc lập, tự do"],
+    cloze: "Đó là {{thiên anh hùng ca chiến đấu và chiến thắng}}, chứa chan {{sức mạnh và niềm tin}}, tràn đầy lòng tự hào và ý chí đấu tranh của nhân dân Việt Nam trong sự nghiệp {{giành và giữ nền độc lập, tự do}}." },
+  { id: 56, grp: "g2", q: "Câu 56. Ngày 3-9-1945, trong phiên họp đầu tiên của Hội đồng Chính phủ, Hồ Chí Minh đề nghị nhiệm vụ đầu tiên về xây dựng văn hoá của nước Việt Nam độc lập là những nhiệm vụ nào?",
+    pills: ["Chống nạn mù chữ", "Giáo dục lại tinh thần nhân dân"],
+    cloze: "{{Chống nạn mù chữ}} và {{giáo dục lại tinh thần nhân dân}}." },
+  { id: 57, grp: "g2", q: "Câu 57. Ngày 25-11-1945, BCH TW Đảng ra chỉ thị về “Kháng chiến, kiến quốc” đã nêu bốn nhiệm vụ chủ yếu và cấp bách, gồm những nhiệm vụ nào?",
+    pills: ["1. Củng cố chính quyền", "2. Chống thực dân Pháp", "3. Bài trừ nội phản", "4. Cải thiện đời sống dân"],
+    cloze: "4 nhiệm vụ: (1) {{Củng cố chính quyền cách mạng}}; (2) {{Chống thực dân Pháp xâm lược}}; (3) {{Bài trừ nội phản}}; (4) {{Cải thiện đời sống nhân dân}}." },
+  { id: 58, grp: "g2", q: "Câu 58. Thời gian, địa điểm Đại hội đại biểu toàn quốc lần thứ II.",
+    pills: ["TG: 11 đến 19/2/1951", "ĐĐ: Vinh Quang, Chiêm Hóa, Tuyên Quang"],
+    cloze: "Thời gian: từ ngày {{11 đến 19/2/1951}}. Địa điểm: tại {{xã Vinh Quang, huyện Chiêm Hóa, tỉnh Tuyên Quang}}." },
+  { id: 59, grp: "g2", q: "Câu 59. Thế nào là kháng chiến toàn dân?",
+    pills: ["Đem toàn bộ sức dân, lực dân, tài dân", "Động viên toàn dân tích cực kháng chiến"],
+    cloze: "Là đem toàn bộ {{sức dân, lực dân, tài dân}}, động viên {{toàn dân tích cực tham gia kháng chiến}}." },
+  { id: 60, grp: "g2", q: "Câu 60. Hội nghị Geneve (Giơnevơ, Thụy Sỹ) 1954 kết thúc thắng lợi có ý nghĩa gì đối với cách mạng Việt Nam?",
+    pills: ["Mở ra 1 trang sử mới", "Mở đường đấu tranh giành độc lập, thống nhất hoàn toàn cho 3 nước Đông Dương"],
+    cloze: "Mở ra {{một trang sử mới}} cho dân tộc VN, mở đường cho cuộc đấu tranh {{giành độc lập, thống nhất hoàn toàn}} cho nhân dân 3 nước Đông Dương sau này." },
+  { id: 61, grp: "g2", q: "Câu 61. Hội nghị Trung ương lần thứ 15, tháng 1-1959 của Đảng đã ra nghị quyết về cách mạng miền Nam với tinh thần cơ bản là gì?",
+    pills: ["Tiếp tục CM dân chủ nhân dân", "Sử dụng bạo lực CM (chính trị & vũ trang)", "Kết hợp chính trị với quân sự", "Khởi nghĩa vũ trang giành chính quyền"],
+    cloze: "Tiếp tục cuộc {{cách mạng dân chủ nhân dân}}, sử dụng {{bạo lực cách mạng}} với 2 lực lượng {{chính trị và vũ trang}}, kết hợp đấu tranh chính trị với quân sự, tiến tới {{khởi nghĩa vũ trang giành chính quyền}} về tay nhân dân." },
+  { id: 62, grp: "g2", q: "Câu 62. Tháng 9 năm 1960, Đại hội đại biểu toàn quốc lần thứ III của Đảng họp tại Thủ đô Hà Nội xác định đường lối chung của cách mạng Việt Nam là gì?",
+    pills: ["Miền Bắc: Đẩy mạnh CM XHCN", "Miền Nam: Tiến hành CM DTDCND", "Thực hiện thống nhất nước nhà, hoàn thành độc lập dân chủ"],
+    cloze: "Đẩy mạnh {{cách mạng XHCN ở miền Bắc}}, tiến hành {{cách mạng dân tộc dân chủ nhân dân ở miền Nam}}, thực hiện {{thống nhất nước nhà}}, hoàn thành độc lập và dân chủ trong cả nước." },
+  { id: 63, grp: "g2", q: "Câu 63. Tháng 9-1960, tại Đại hội đại biểu toàn quốc lần thứ III của Đảng, đã đưa ra triển vọng của cuộc kháng chiến chống Mỹ cứu nước như thế nào?",
+    pills: ["Thắng lợi cuối cùng thuộc về nhân dân ta", "Nam Bắc nhất định sum họp 1 nhà"],
+    cloze: "{{Thắng lợi cuối cùng}} nhất định thuộc về nhân dân ta, {{Nam Bắc nhất định sum họp một nhà}}." },
+  { id: 64, grp: "g2", q: "Câu 64. Ngày 15-2-1961, các lực lượng vũ trang ở miền Nam được thống nhất với tên gọi là gì?",
+    pills: ["Quân giải phóng miền Nam Việt Nam"],
+    cloze: "Tên gọi: {{Quân giải phóng miền Nam Việt Nam}}." },
+  { id: 65, grp: "g2", q: "Câu 65. Cuộc tổng tiến công và nổi dậy Xuân 1975 diễn ra trong thời gian nào?",
+    pills: ["55 ngày đêm (10/3 đến 30/4/1975)", "11h30 ngày 30/4/1975 cắm cờ trên Dinh Độc Lập"],
+    cloze: "Diễn ra trong {{55 ngày đêm từ ngày 10/3 đến 30/4/1975}}. Vào {{11h30 phút ngày 30/4/1975}}, lá cờ cách mạng được cắm trên nóc {{Dinh Độc Lập}}, đánh dấu kết thúc cuộc kháng chiến chống Mỹ, cứu nước vĩ đại.",
+    warn: "⚠️ Cẩn thận: Trong file Word gốc bị gõ nhầm là 'năm 1974', đi thi phải ghi đúng là 30/4/1975!" },
+  { id: 66, grp: "g3", q: "Câu 66. Nền kinh tế thị trường định hướng xã hội chủ nghĩa ở nước ta hiện nay nhằm mục tiêu gì?",
+    pills: ["Dân giàu", "Nước mạnh", "Dân chủ", "Công bằng", "Văn minh"],
+    cloze: "Mục tiêu: {{Dân giàu, nước mạnh, dân chủ, công bằng, văn minh}}." },
+  { id: 67, grp: "g3", q: "Câu 67. Theo quan điểm của Đảng ta trong công nghiệp hóa, hiện đại hóa hiện nay để tăng trưởng kinh tế cần những yếu tố chủ yếu nào? Yếu tố nào là quyết định?",
+    pills: ["5 yếu tố: Vốn + KH&CN + Con người + Cơ cấu KT + Thể chế & QLNN", "Quyết định: Con người"],
+    cloze: "5 yếu tố chủ yếu: {{Vốn}}, {{Khoa học và công nghệ}}, {{Con người}}, {{Cơ cấu kinh tế}}, {{Thể chế chính trị và quản lý nhà nước}}. Trong đó {{Con người}} là yếu tố quyết định." },
+  { id: 68, grp: "g3", q: "Câu 68. Nghị quyết Hội nghị Trung ương 8 (khóa XI) về chiến lược bảo vệ Tổ quốc trong thời kỳ mới xác định đối tác trong chính sách đối ngoại của Đảng ta hiện nay là gì?",
+    pills: ["Tôn trọng độc lập, chủ quyền", "Hữu nghị, hợp tác bình đẳng, cùng có lợi = Đối tác"],
+    cloze: "Những ai {{tôn trọng độc lập, chủ quyền}}, thiết lập và mở rộng quan hệ {{hữu nghị, hợp tác bình đẳng, cùng có lợi}} với Việt Nam đều là {{đối tác}}." },
+  { id: 69, grp: "g3", q: "Câu 69. Quan điểm về xây dựng văn hóa trong Nghị quyết hội nghị Trung ương IX (khóa XI) xác định trọng tâm là vấn đề gì?",
+    pills: ["Chăm lo xây dựng con người có nhân cách, lối sống tốt đẹp", "7 đặc tính: Yêu nước, nhân ái, nghĩa tình, trung thực, đoàn kết, cần cù, sáng tạo"],
+    cloze: "Chăm lo {{xây dựng con người có nhân cách, lối sống tốt đẹp}} với các đặc tính cơ bản: {{yêu nước, nhân ái, nghĩa tình, trung thực, đoàn kết, cần cù, sáng tạo}}." },
+  { id: 70, grp: "g3", q: "Câu 70. Văn hóa có vai trò gì đối với sự phát triển xã hội?",
+    pills: ["Nền tảng tinh thần", "Mục tiêu", "Động lực phát triển bền vững"],
+    cloze: "Văn hóa là {{nền tảng tinh thần}} của xã hội, là {{mục tiêu}}, là {{động lực phát triển bền vững}} của xã hội." },
+  { id: 71, grp: "g3", q: "Câu 71. Cương lĩnh năm 2011 do Đại hội lần thứ XI của Đảng thông qua, có bổ sung mới đặc trưng nào về xã hội xã hội chủ nghĩa mà nhân dân ta xây dựng?",
+    pills: ["1. Dân giàu, nước mạnh, dân chủ, công bằng, văn minh", "2. Có Nhà nước pháp quyền XHCN của dân, do dân, vì dân do ĐCS lãnh đạo"],
+    cloze: "Bổ sung 2 đặc trưng bao trùm: (1) “{{Dân giàu, nước mạnh, dân chủ, công bằng, văn minh}}” và (2) “{{Có Nhà nước pháp quyền XHCN của nhân dân, do nhân dân và vì nhân dân do ĐCS lãnh đạo}}”." },
+  { id: 72, grp: "g3", q: "Câu 72. Đại hội XII của Đảng xác định trong nền kinh tế thị trường định hướng xã hội chủ nghĩa ở nước ta hiện nay có những thành phần kinh tế nào đang hình thành và phát triển?",
+    pills: ["1. Kinh tế nhà nước", "2. Kinh tế tập thể", "3. Kinh tế tư nhân", "4. Kinh tế có vốn đầu tư nước ngoài"],
+    cloze: "4 thành phần: {{Kinh tế nhà nước}}, {{kinh tế tập thể}}, {{kinh tế tư nhân}} và {{kinh tế có vốn đầu tư nước ngoài}}." },
+  { id: 73, grp: "g3", q: "Câu 73. Theo quan điểm Đại hội XII của Đảng, để tiếp tục đẩy mạnh thực hiện mô hình công nghiệp hóa, hiện đại hóa trong điều kiện phát triển kinh tế thị trường định hướng xã hội chủ nghĩa và hội nhập quốc tế gắn với phát triển kinh tế tri thức, cần lấy những yếu tố nào làm động lực chủ yếu?",
+    pills: ["Khoa học", "Công nghệ", "Tri thức", "Nguồn nhân lực chất lượng cao"],
+    cloze: "Động lực chủ yếu: {{Khoa học, công nghệ}}, {{tri thức}} và {{nguồn nhân lực chất lượng cao}}." },
+  { id: 74, grp: "g3", q: "Câu 74. Mối quan hệ giữa hội nhập kinh tế và các lĩnh vực khác được Đại hội XII xác định như thế nào?",
+    pills: ["Hội nhập kinh tế là trọng tâm", "Lĩnh vực khác tạo thuận lợi cho HNKT"],
+    cloze: "{{Hội nhập kinh tế là trọng tâm}}, các lĩnh vực khác phải {{tạo thuận lợi cho hội nhập kinh tế}}." },
+  { id: 75, grp: "g3", q: "Câu 75. Đảng Cộng sản Việt Nam từ năm 1930 đến nay đã lãnh đạo giai cấp công nhân, nhân dân lao động và toàn thể dân tộc Việt Nam giành được những thắng lợi vĩ đại, đó là những thắng lợi nào?",
+    pills: ["1. CM Tháng Tám 1945 (lập nước VNDCCH)", "2. Các cuộc kháng chiến giải phóng dân tộc, bảo vệ Tổ quốc", "3. Sự nghiệp Đổi mới quá độ lên CNXH"],
+    cloze: "3 thắng lợi vĩ đại:\n1. Thắng lợi của {{Cách mạng Tháng Tám năm 1945}}, thành lập nước VNDCCH.\n2. Thắng lợi của {{các cuộc kháng chiến oanh liệt}} để giải phóng dân tộc, bảo vệ Tổ quốc.\n3. Thắng lợi của {{sự nghiệp đổi mới}} và từng bước đưa đất nước quá độ lên CNXH." }
+];
+
+// ============================================================================
+// 3. DỮ LIỆU 6 CÂU TỰ LUẬN (TÁCH RÕ: SƠ ĐỒ SIÊU RÚT GỌN VS. BÀI VIẾT THI CÔ ĐỌNG)
+// ============================================================================
+const essayList = [
+  {
+    id: 76,
+    name: "CM Tháng Tám 1945 & Sinh viên",
+    fullQ: "Câu 76. Trình bày ý nghĩa lịch sử Cách mạng Tháng Tám năm 1945. Liên hệ trách nhiệm sinh viên trong việc góp phần xây dựng và bảo vệ Tổ quốc hiện nay.",
+    mindmap: [
+      {
+        branch: "VẾ 1: Ý NGHĨA CM THÁNG TÁM 1945 (Nhớ 5 từ khóa: 3 Dân tộc + 2 Quốc tế)",
+        steps: [
+          "Đập tan 2 xiềng xích (hơn 80 năm thực dân + nghìn năm phong kiến) → Lập nước VNDCCH.",
+          "Đổi đời: Dân từ nô lệ thành người làm chủ → Mở kỷ nguyên Độc lập, Tự do & lên CNXH.",
+          "Đảng: Từ hoạt động bí mật → Trở thành Đảng cầm quyền.",
+          "Quốc tế 1: Mở đầu sự suy sụp, tan rã của chủ nghĩa thực dân cũ.",
+          "Quốc tế 2: Cổ vũ phong trào giải phóng dân tộc thế giới & làm phong phú lý luận Mác-Lênin."
+        ]
+      },
+      {
+        branch: "VẾ 2: TRÁCH NHIỆM SINH VIÊN (Nhớ 3 trụ cột: Tư tưởng - Học tập - Hành động)",
+        steps: [
+          "Tư tưởng: Kiên định ĐLDT & CNXH, tin Đảng, chống 'diễn biến hòa bình' trên mạng.",
+          "Xây dựng TQ: Học giỏi chuyên môn, ngoại ngữ, công nghệ số, khởi nghiệp sáng tạo.",
+          "Bảo vệ TQ: Chấp hành pháp luật, Luật Nghĩa vụ quân sự, bảo vệ chủ quyền biển đảo."
+        ]
+      }
+    ],
+    examText: [
+      {
+        title: "1. Ý nghĩa lịch sử Cách mạng Tháng Tám năm 1945",
+        lines: [
+          "• Đối với dân tộc: (1) <span class='hl'>Đập tan xiềng xích nô lệ của chủ nghĩa đế quốc</span> hơn 80 năm và chấm dứt chế độ quân chủ chuyên chế ngót nghìn năm, lập nên nước Việt Nam Dân chủ Cộng hòa — nhà nước công nông đầu tiên ở Đông Nam Á. (2) Đưa nhân dân ta từ thân phận nô lệ lên <span class='hl'>địa vị người làm chủ</span>; mở ra kỷ nguyên mới: <span class='hl'>kỷ nguyên độc lập, tự do và hướng tới CNXH</span>. (3) Đảng Cộng sản Đông Dương từ hoạt động bí mật trở thành một <span class='hl'>đảng cầm quyền</span>.",
+          "• Đối với quốc tế: (1) Chọc thủng khâu quan trọng trong hệ thống thuộc địa, <span class='hl'>mở đầu thời kỳ suy sụp, tan rã của chủ nghĩa thực dân cũ</span>. (2) Cổ vũ mạnh mẽ các dân tộc thuộc địa đấu tranh tự giải phóng và <span class='hl'>bổ sung kho tàng lý luận Mác - Lênin</span> về cách mạng giải phóng dân tộc."
+        ]
+      },
+      {
+        title: "2. Liên hệ trách nhiệm sinh viên hiện nay",
+        lines: [
+          "• Về tư tưởng: Kiên định mục tiêu độc lập dân tộc gắn liền với CNXH; cảnh giác, đấu tranh phản bác các luận điệu xuyên tạc, âm mưu “diễn biến hòa bình” trên không gian mạng.",
+          "• Về xây dựng Tổ quốc: Tích cực học tập chuyên môn, ngoại ngữ, làm chủ khoa học - công nghệ, chuyển đổi số; rèn luyện đạo đức và tinh thần khởi nghiệp.",
+          "• Về bảo vệ Tổ quốc: Chấp hành nghiêm pháp luật và Luật Nghĩa vụ quân sự; học tốt môn Giáo dục quốc phòng - an ninh; tham gia tình nguyện và bảo vệ chủ quyền biên giới, biển đảo."
+        ]
+      }
+    ]
+  },
+  {
+    id: 77,
+    name: "Bài học Chống Mỹ & Phát huy",
+    fullQ: "Câu 77. Trình bày một số bài học kinh nghiệm trong cuộc kháng chiến chống Mỹ, cứu nước của nhân dân Việt Nam (1954-1975). Theo anh (chị) Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay.",
+    mindmap: [
+      {
+        branch: "VẾ 1: 4 BÀI HỌC KHÁNG CHIẾN CHỐNG MỸ (1954–1975)",
+        steps: [
+          "Ngọn cờ: Giương cao ngọn cờ Độc lập dân tộc và Chủ nghĩa xã hội (kết hợp 2 miền Nam - Bắc).",
+          "Phương pháp: Khởi nghĩa toàn dân & chiến tranh nhân dân, phương pháp CM tổng hợp (3 mũi giáp công, 3 vùng, 3 mặt trận).",
+          "Tổ chức: Công tác tổ chức chiến đấu giỏi, giành thắng lợi từng bước đến thắng lợi hoàn toàn.",
+          "Lực lượng & Quốc tế: Coi trọng xây dựng Đảng, lực lượng CM và tranh thủ sự ủng hộ quốc tế."
+        ]
+      },
+      {
+        branch: "VẾ 2: 4 VIỆC ĐẢNG CẦN LÀM ĐỂ KẾ THỪA HIỆN NAY",
+        steps: [
+          "Kiên định mục tiêu Độc lập dân tộc gắn liền với CNXH.",
+          "Phát huy đại đoàn kết toàn dân ('dân là gốc') kết hợp sức mạnh thời đại (CMCN 4.0).",
+          "Xây dựng nền quốc phòng toàn dân & an ninh nhân dân, bảo vệ Tổ quốc 'từ sớm, từ xa'.",
+          "Xây dựng, chỉnh đốn Đảng trong sạch, vững mạnh; chống tham nhũng, tiêu cực."
+        ]
+      }
+    ],
+    examText: [
+      {
+        title: "1. Bài học kinh nghiệm trong kháng chiến chống Mỹ (1954–1975)",
+        lines: [
+          "• Một là: Giương cao ngọn cờ <span class='hl'>độc lập dân tộc và chủ nghĩa xã hội</span>, kết hợp sức mạnh tiền tuyến lớn miền Nam với hậu phương lớn miền Bắc, huy động toàn dân đánh Mỹ.",
+          "• Hai là: Tìm ra <span class='hl'>phương pháp đấu tranh đúng đắn, sáng tạo</span>, thực hiện khởi nghĩa toàn dân và chiến tranh nhân dân, sử dụng phương pháp cách mạng tổng hợp.",
+          "• Ba là: Phải có <span class='hl'>công tác tổ chức chiến đấu giỏi</span> của các cấp bộ Đảng và chi ủy quân đội, giành thắng lợi từng bước đến thắng lợi hoàn toàn.",
+          "• Bốn là: Hết sức coi trọng <span class='hl'>xây dựng Đảng, xây dựng lực lượng cách mạng</span> và tranh thủ tối đa sự đồng tình, ủng hộ quốc tế."
+        ]
+      },
+      {
+        title: "2. Đảng cần làm gì để kế thừa, phát huy hiện nay",
+        lines: [
+          "• Kiên định mục tiêu độc lập dân tộc và CNXH; vận dụng sáng tạo chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh.",
+          "• Phát huy sức mạnh đại đoàn kết toàn dân tộc (<span class='hl'>“lấy dân làm gốc”</span>) kết hợp với sức mạnh thời đại và thành tựu CMCN 4.0.",
+          "• Củng cố quốc phòng toàn dân, an ninh nhân dân và “thế trận lòng dân”, <span class='hl'>bảo vệ Tổ quốc từ sớm, từ xa</span>.",
+          "• Đẩy mạnh xây dựng, chỉnh đốn Đảng trong sạch, vững mạnh; kiên quyết phòng, chống tham nhũng, tiêu cực."
+        ]
+      }
+    ]
+  },
+  {
+    id: 78,
+    name: "CNH Đại hội VIII & Sinh viên",
+    fullQ: "Câu 78. Trình bày quan điểm của Đảng về công nghiệp hóa trong thời kì đổi mới được nêu ra tại Đại hội VIII (7/1996) của Đảng. Sinh viên có thể làm gì để đóng góp vào quá trình công nghiệp hóa, hiện đại hóa đất nước theo định hướng của Đảng?",
+    mindmap: [
+      {
+        branch: "VẾ 1: 6 QUAN ĐIỂM CNH-HĐH TẠI ĐẠI HỘI VIII (7/1996)",
+        steps: [
+          "Độc lập tự chủ + Hợp tác quốc tế (Dựa vào nguồn lực trong nước là chính).",
+          "Sự nghiệp của toàn dân, mọi thành phần KT (Kinh tế nhà nước giữ vai trò chủ đạo).",
+          "Con người là yếu tố cơ bản cho sự phát triển nhanh và bền vững.",
+          "Khoa học và công nghệ là động lực (kết hợp truyền thống & đi nhanh vào hiện đại).",
+          "Hiệu quả kinh tế - xã hội là tiêu chuẩn cơ bản để chọn phương án đầu tư.",
+          "Kết hợp chặt chẽ kinh tế với quốc phòng và an ninh."
+        ]
+      },
+      {
+        branch: "VẾ 2: 3 ĐÓNG GÓP CỦA SINH VIÊN",
+        steps: [
+          "Tri thức & Công nghệ: Học chuyên môn, ngoại ngữ, AI, chuyển đổi số → Nhân lực chất lượng cao.",
+          "Tác phong & Sáng tạo: Rèn kỷ luật công nghiệp, nghiên cứu khoa học, khởi nghiệp.",
+          "Bền vững: Giữ bản sắc văn hóa dân tộc và bảo vệ môi trường (kinh tế xanh)."
+        ]
+      }
+    ],
+    examText: [
+      {
+        title: "1. Sáu quan điểm về CNH, HĐH tại Đại hội VIII (7/1996)",
+        lines: [
+          "1. Giữ vững <span class='hl'>độc lập, tự chủ</span> đi đôi với mở rộng hợp tác quốc tế; dựa vào <span class='hl'>nguồn lực trong nước là chính</span> đi đôi với tranh thủ tối đa nguồn lực bên ngoài.",
+          "2. CNH, HĐH là <span class='hl'>sự nghiệp của toàn dân</span>, của mọi thành phần kinh tế, trong đó <span class='hl'>kinh tế nhà nước giữ vai trò chủ đạo</span>.",
+          "3. Lấy việc phát huy <span class='hl'>nguồn lực con người là yếu tố cơ bản</span> cho sự phát triển nhanh và bền vững.",
+          "4. <span class='hl'>Khoa học và công nghệ là động lực</span> của CNH, HĐH; kết hợp công nghệ truyền thống với công nghệ hiện đại.",
+          "5. Lấy <span class='hl'>hiệu quả kinh tế - xã hội làm tiêu chuẩn cơ bản</span> để xác định phương án phát triển, lựa chọn dự án đầu tư và công nghệ.",
+          "6. <span class='hl'>Kết hợp chặt chẽ kinh tế với quốc phòng và an ninh</span>."
+        ]
+      },
+      {
+        title: "2. Đóng góp của sinh viên vào quá trình CNH, HĐH",
+        lines: [
+          "• Làm chủ tri thức và KH-CN: Học tập chuyên môn sâu, ngoại ngữ, kỹ năng số, AI để trở thành nguồn nhân lực chất lượng cao.",
+          "• Rèn luyện tác phong công nghiệp: Xây dựng kỷ luật lao động, tích cực nghiên cứu khoa học và khởi nghiệp sáng tạo.",
+          "• Trách nhiệm xã hội: Giữ gìn bản sắc văn hóa dân tộc và bảo vệ môi trường hướng tới phát triển bền vững."
+        ]
+      }
+    ]
+  },
+  {
+    id: 79,
+    name: "Hội nhập quốc tế & Sinh viên",
+    fullQ: "Câu 79. Trong bối cảnh quốc tế hiện nay Đảng ta cần phải làm gì để tăng cường hội nhập quốc tế, góp phần xây dựng và phát triển đất nước. Liên hệ trách nhiệm sinh viên.",
+    mindmap: [
+      {
+        branch: "VẾ 1: 4 GIẢI PHÁP ĐẢNG TĂNG CƯỜNG HỘI NHẬP QUỐC TẾ",
+        steps: [
+          "Đường lối: Độc lập, tự chủ, đa phương hóa, đa dạng hóa; bảo đảm lợi ích tối cao của quốc gia - dân tộc.",
+          "Trọng tâm: Chủ động hội nhập toàn diện, lấy Hội nhập kinh tế làm trọng tâm.",
+          "Nội lực: Nâng cao sức cạnh tranh, thực hiện 3 đột phá chiến lược (thể chế, nhân lực, hạ tầng).",
+          "Nguyên tắc: Nắm vững 2 mặt hợp tác và đấu tranh; giữ vững chủ quyền & bản sắc ('hòa nhập không hòa tan')."
+        ]
+      },
+      {
+        branch: "VẾ 2: 3 TRÁCH NHIỆM SINH VIÊN KHI HỘI NHẬP",
+        steps: [
+          "Năng lực toàn cầu: Giỏi chuyên môn, thông thạo ngoại ngữ, công nghệ số và kỹ năng mềm.",
+          "Văn hóa: Tiếp thu tinh hoa nhân loại nhưng giữ gìn và quảng bá bản sắc Việt Nam.",
+          "Bản lĩnh: Thượng tôn pháp luật, tỉnh táo trước thông tin xấu độc xuyên tạc."
+        ]
+      }
+    ],
+    examText: [
+      {
+        title: "1. Đảng ta cần làm gì để tăng cường hội nhập quốc tế hiện nay",
+        lines: [
+          "• Thực hiện nhất quán đường lối đối ngoại <span class='hl'>độc lập, tự chủ, hòa bình, hợp tác và phát triển</span>; đa phương hóa, đa dạng hóa; bảo đảm <span class='hl'>lợi ích tối cao của quốc gia - dân tộc</span> trên cơ sở luật pháp quốc tế.",
+          "• Chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng, trong đó <span class='hl'>lấy hội nhập kinh tế là trọng tâm</span>, hội nhập các lĩnh vực khác phải tạo thuận lợi cho hội nhập kinh tế.",
+          "• Phát huy nội lực, xây dựng nền kinh tế độc lập, tự chủ gắn với thực hiện <span class='hl'>3 đột phá chiến lược</span> (hoàn thiện thể chế KTTT, phát triển nhân lực chất lượng cao, xây dựng hạ tầng hiện đại).",
+          "• <span class='hl'>Nắm vững hai mặt hợp tác và đấu tranh</span>; giữ vững ổn định chính trị, bảo vệ chủ quyền và bản sắc văn hóa dân tộc (“hội nhập nhưng không hòa tan”)."
+        ]
+      },
+      {
+        title: "2. Liên hệ trách nhiệm của sinh viên",
+        lines: [
+          "• Trang bị hành trang công dân toàn cầu: Nâng cao trình độ chuyên môn, ngoại ngữ, tin học và kỹ năng làm việc quốc tế.",
+          "• Hòa nhập nhưng không hòa tan: Tiếp thu tinh hoa nhân loại đồng thời bảo tồn, lan tỏa hình ảnh văn hóa Việt Nam.",
+          "• Giữ vững bản lĩnh chính trị: Tuân thủ pháp luật Việt Nam và quốc tế, đấu tranh phản bác các quan điểm sai trái."
+        ]
+      }
+    ]
+  },
+  {
+    id: 80,
+    name: "Đổi mới Đại hội VI (1986)",
+    fullQ: "Câu 80. Phân tích nội dung đường lối đổi mới toàn diện đất nước được Đảng Cộng sản Việt Nam đề ra tại Đại hội VI (1986). Những bài học kinh nghiệm mà Đảng ta đã đúc kết cho công cuộc phát triển đất nước trong giai đoạn hiện nay.",
+    mindmap: [
+      {
+        branch: "VẾ 1: ĐƯỜNG LỐI ĐỔI MỚI ĐẠI HỘI VI (12/1986)",
+        steps: [
+          "Tinh thần chung: Nhìn thẳng sự thật → Đổi mới toàn diện, TRỌNG TÂM LÀ ĐỔI MỚI KINH TẾ.",
+          "Cơ chế quản lý: Xóa bỏ tập trung quan liêu, bao cấp → Chuyển sang hạch toán, kinh doanh, kết hợp kế hoạch với thị trường.",
+          "Cơ cấu kinh tế: Phát triển kinh tế hàng hóa nhiều thành phần.",
+          "Ba chương trình kinh tế lớn: (1) Lương thực - thực phẩm, (2) Hàng tiêu dùng, (3) Hàng xuất khẩu.",
+          "Xã hội, QP-AN, Xây dựng Đảng: 4 chính sách xã hội + Mở rộng đối ngoại + Đổi mới tư duy & cán bộ ('Dân biết, dân bàn, dân làm, dân kiểm tra')."
+        ]
+      },
+      {
+        branch: "VẾ 2: 4 BÀI HỌC KINH NGHIỆM QUÝ BÁU",
+        steps: [
+          "Bài học 1: Quán triệt tư tưởng “Lấy dân làm gốc”.",
+          "Bài học 2: Luôn xuất phát từ thực tế, tôn trọng và hành động theo quy luật khách quan.",
+          "Bài học 3: Kết hợp sức mạnh dân tộc với sức mạnh thời đại trong điều kiện mới.",
+          "Bài học 4: Chăm lo xây dựng Đảng ngang tầm với một đảng cầm quyền."
+        ]
+      }
+    ],
+    examText: [
+      {
+        title: "1. Nội dung đường lối đổi mới toàn diện tại Đại hội VI (12/1986)",
+        lines: [
+          "• Phương châm chung: <span class='hl'>“Nhìn thẳng vào sự thật, đánh giá đúng sự thật, nói rõ sự thật”</span>; đổi mới toàn diện và đồng bộ, trong đó <span class='hl'>trọng tâm là đổi mới kinh tế</span>.",
+          "• Đổi mới kinh tế: (1) Xóa bỏ cơ chế tập trung quan liêu, bao cấp, chuyển sang <span class='hl'>hạch toán, kinh doanh, kết hợp kế hoạch với thị trường</span>. (2) Phát triển nền <span class='hl'>kinh tế nhiều thành phần</span>. (3) Tập trung thực hiện <span class='hl'>Ba chương trình kinh tế lớn</span>: Lương thực - thực phẩm, Hàng tiêu dùng và Hàng xuất khẩu. (4) Mở rộng kinh tế đối ngoại.",
+          "• Đổi mới các lĩnh vực khác: Giải quyết việc làm, chăm lo văn hóa, giáo dục, y tế; tăng cường quốc phòng - an ninh; đổi mới tư duy và sự lãnh đạo của Đảng theo phương châm <span class='hl'>“Dân biết, dân bàn, dân làm, dân kiểm tra”</span>."
+        ]
+      },
+      {
+        title: "2. Bốn bài học kinh nghiệm được Đại hội VI đúc kết",
+        lines: [
+          "1. Trong toàn bộ hoạt động, Đảng phải quán triệt tư tưởng <span class='hl'>“lấy dân làm gốc”</span>, phát huy quyền làm chủ của nhân dân.",
+          "2. Đảng phải luôn <span class='hl'>xuất phát từ thực tế, tôn trọng và hành động theo quy luật khách quan</span>.",
+          "3. Phải biết <span class='hl'>kết hợp sức mạnh dân tộc với sức mạnh của thời đại</span> trong điều kiện mới.",
+          "4. Chăm lo <span class='hl'>xây dựng Đảng ngang tầm với một đảng cầm quyền</span> lãnh đạo cách mạng XHCN."
+        ]
+      }
+    ]
+  },
+  {
+    id: 81,
+    name: "Thành tựu 1986-2021 & ĐH XIII",
+    fullQ: "Câu 81. Trình bày những thành tựu cơ bản trong công cuộc đổi mới đất nước (1986-2021). Theo anh (chị) để phát huy những thành tựu đó trong thực hiện nghị quyết Đại hội XIII giai đoạn 2021 - 2026 Đảng ta cần phải làm gì?",
+    mindmap: [
+      {
+        branch: "VẾ 1: THÀNH TỰU ĐỔI MỚI 1986–2021 (1 Nhận định + 4 Lĩnh vực)",
+        steps: [
+          "Nhận định vàng ĐH XIII: 'Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay'.",
+          "Kinh tế: Thoát khủng hoảng, thành nước đang phát triển có thu nhập trung bình; KTTT định hướng XHCN dần hoàn thiện.",
+          "Văn hóa - Xã hội: Đời sống dân nâng cao, xóa đói giảm nghèo là điểm sáng quốc tế.",
+          "Chính trị, QP-AN, Đối ngoại: Giữ vững ổn định & chủ quyền; phá thế bao vây, quan hệ ngoại giao 189/193 nước LHQ.",
+          "Xây dựng Đảng: Lý luận về CNXH ngày càng sáng tỏ; chống tham nhũng đạt kết quả quan trọng."
+        ]
+      },
+      {
+        branch: "VẾ 2: 5 NHIỆM VỤ THỰC HIỆN NGHỊ QUYẾT ĐẠI HỘI XIII (2021–2026)",
+        steps: [
+          "Xây dựng, chỉnh đốn Đảng & hệ thống chính trị trong sạch, vững mạnh; chống tham nhũng, tiêu cực.",
+          "Đổi mới mô hình tăng trưởng, đẩy mạnh CNH-HĐH dựa trên KH-CN, đổi mới sáng tạo & chuyển đổi số.",
+          "Khơi dậy khát vọng phát triển đất nước phồn vinh, hạnh phúc; phát triển văn hóa, con người & an sinh.",
+          "Giữ vững độc lập, tự chủ; củng cố QP-AN từ sớm, từ xa; hội nhập quốc tế sâu rộng.",
+          "Đẩy mạnh đồng bộ 3 đột phá chiến lược (Thể chế phát triển - Nhân lực chất lượng cao - Hạ tầng hiện đại)."
+        ]
+      }
+    ],
+    examText: [
+      {
+        title: "1. Những thành tựu cơ bản qua 35 năm đổi mới (1986–2021)",
+        lines: [
+          "• Tổng quát: Đại hội XIII khẳng định: <span class='hl'>“Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”</span>.",
+          "• Kinh tế: Ra khỏi khủng hoảng kinh tế - xã hội, trở thành <span class='hl'>nước đang phát triển có thu nhập trung bình</span>; quy mô kinh tế tăng mạnh; thể chế KTTT định hướng XHCN từng bước hoàn thiện.",
+          "• Văn hóa - Xã hội: Đời sống nhân dân cải thiện rõ rệt; giảm nghèo bền vững đạt kết quả ấn tượng; giáo dục, y tế, KH-CN phát triển tích cực.",
+          "• Quốc phòng, an ninh, đối ngoại & Xây dựng Đảng: Giữ vững ổn định chính trị và chủ quyền; hội nhập quốc tế sâu rộng; hệ thống lý luận đổi mới hoàn thiện và công tác xây dựng, chỉnh đốn Đảng đạt kết quả quan trọng."
+        ]
+      },
+      {
+        title: "2. Để phát huy thành tựu trong thực hiện Nghị quyết Đại hội XIII (2021–2026), Đảng cần làm gì",
+        lines: [
+          "1. Tiếp tục đẩy mạnh <span class='hl'>xây dựng, chỉnh đốn Đảng</span> và hệ thống chính trị trong sạch, vững mạnh; kiên quyết chống tham nhũng, tiêu cực.",
+          "2. <span class='hl'>Đổi mới mô hình tăng trưởng, cơ cấu lại nền kinh tế</span> dựa trên KH-CN, đổi mới sáng tạo, chuyển đổi số, kinh tế số, kinh tế xanh.",
+          "3. <span class='hl'>Khơi dậy khát vọng phát triển đất nước phồn vinh, hạnh phúc</span>; phát huy giá trị văn hóa, sức mạnh con người Việt Nam và bảo đảm an sinh xã hội.",
+          "4. Tăng cường <span class='hl'>quốc phòng, an ninh</span> bảo vệ Tổ quốc từ sớm, từ xa; chủ động hội nhập quốc tế toàn diện, sâu rộng.",
+          "5. Thực hiện đồng bộ <span class='hl'>3 đột phá chiến lược</span> (hoàn thiện thể chế phát triển; phát triển nhân lực chất lượng cao; xây dựng kết cấu hạ tầng đồng bộ, hiện đại)."
+        ]
+      }
+    ]
+  }
+];
+
+// ============================================================================
+// APP STATE & STORAGE
+// ============================================================================
+const STORE_KEY = "lsd_study_state_v1";
+let state = {
+  mcqAnswers: {},
+  mcqStarred: {},
+  shortStatus: {},
+  essayRead: {},
+  theme: 'light',
+  mcqView: 'focus',
+  mcqIndex: 0,
+  mcqOrder: mcqList.map(q => q.id),
+  mobilePaletteOpen: false,
+  shortView: 'cloze',
+  fcShortIdx: 0,
+  fcShortFlipped: false,
+  allClozeOpen: false,
+  essayId: 76,
+  maskEssay: false,
+  essayMobileCol: 'both' // 'both' | 'mindmap' | 'text'
+};
+
+function initApp() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) {
+      const p = JSON.parse(raw);
+      state.mcqAnswers = p.mcqAnswers || {};
+      state.mcqStarred = p.mcqStarred || {};
+      state.shortStatus = p.shortStatus || {};
+      state.essayRead = p.essayRead || {};
+      state.theme = p.theme || 'light';
+    }
+  } catch (e) {}
+
+  applyThemeUI();
+  updateStats();
+  renderMcqTab();
+  renderShortTab();
+  renderEssayTab();
+  setupTouchSwipe();
+}
+
+function saveApp() {
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify({
+      mcqAnswers: state.mcqAnswers,
+      mcqStarred: state.mcqStarred,
+      shortStatus: state.shortStatus,
+      essayRead: state.essayRead,
+      theme: state.theme
+    }));
+  } catch (e) {}
+  updateStats();
+}
+
+function applyThemeUI() {
+  const icon = document.getElementById('theme-icon');
+  const text = document.getElementById('theme-text');
+  if (state.theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    if (icon) icon.textContent = '☀️';
+    if (text) text.textContent = 'Giao diện sáng';
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    if (icon) icon.textContent = '🌙';
+    if (text) text.textContent = 'Giao diện tối';
+  }
+}
+
+function toggleTheme() {
+  state.theme = state.theme === 'dark' ? 'light' : 'dark';
+  applyThemeUI();
+  saveApp();
+}
+
+function updateStats() {
+  const okMcq = mcqList.filter(q => state.mcqAnswers[q.id] === q.ans).length;
+  const okShort = shortList.filter(s => state.shortStatus[s.id] === 'mastered').length;
+  const okEssay = essayList.filter(e => state.essayRead[e.id]).length;
+
+  document.getElementById('nav-stat-mcq').textContent = `${okMcq}/45`;
+  document.getElementById('nav-stat-short').textContent = `${okShort}/30`;
+  document.getElementById('nav-stat-essay').textContent = `${okEssay}/6`;
+
+  const palSum = document.getElementById('palette-summary');
+  if (palSum) palSum.textContent = `${okMcq}/45 câu đúng`;
+}
+
+function switchTab(tab, btn) {
+  document.querySelectorAll('.nav-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ============================================================================
+// PHẦN 1: TRẮC NGHIỆM (CHẾ ĐỘ TẬP TRUNG + BẢNG PHẢN XẠ 3 GIÂY + DANH SÁCH)
+// ============================================================================
+function getFilteredMcqIds() {
+  const f = document.getElementById('mcq-filter').value;
+  return state.mcqOrder.filter(id => {
+    const q = mcqList.find(x => x.id === id);
+    const ua = state.mcqAnswers[id];
+    if (f === 'wrong') return ua !== undefined && ua !== q.ans;
+    if (f === 'unanswered') return ua === undefined;
+    if (f === 'starred') return !!state.mcqStarred[id];
+    return true;
+  });
+}
+
+function setMcqView(v) {
+  state.mcqView = v;
+  document.getElementById('mcq-view-focus').classList.toggle('active', v === 'focus');
+  document.getElementById('mcq-view-reflex').classList.toggle('active', v === 'reflex');
+  document.getElementById('mcq-view-list').classList.toggle('active', v === 'list');
+
+  document.getElementById('mcq-focus-layout').style.display = (v === 'focus') ? 'grid' : 'none';
+  document.getElementById('mcq-reflex-layout').style.display = (v === 'reflex') ? 'grid' : 'none';
+  document.getElementById('mcq-list-layout').style.display = (v === 'list') ? 'flex' : 'none';
+
+  renderMcqTab();
+}
+
+function toggleMobilePalette() {
+  state.mobilePaletteOpen = !state.mobilePaletteOpen;
+  const pal = document.getElementById('mcq-palette-card');
+  const btn = document.getElementById('btn-mobile-palette');
+  pal.classList.toggle('mobile-open', state.mobilePaletteOpen);
+  btn.textContent = state.mobilePaletteOpen
+    ? '🔼 Thu gọn Bản đồ 45 câu hỏi'
+    : '🗺️ Mở Bản đồ 45 câu hỏi (Chọn nhanh câu)';
+}
+
+function applyMcqFilter() {
+  state.mcqIndex = 0;
+  renderMcqTab();
+}
+
+function shuffleMcqQuestions() {
+  state.mcqOrder = [...state.mcqOrder].sort(() => Math.random() - 0.5);
+  state.mcqIndex = 0;
+  renderMcqTab();
+}
+
+function resetMcq() {
+  if (!confirm("Làm lại toàn bộ 45 câu trắc nghiệm từ đầu?")) return;
+  state.mcqAnswers = {};
+  state.mcqIndex = 0;
+  saveApp();
+  renderMcqTab();
+}
+
+function renderMcqTab() {
+  if (state.mcqView === 'focus') {
+    renderMcqFocus();
+    renderMcqPalette();
+  } else if (state.mcqView === 'reflex') {
+    renderMcqReflex();
+  } else {
+    renderMcqListAll();
+  }
+}
+
+function renderMcqFocus() {
+  const ids = getFilteredMcqIds();
+  const box = document.getElementById('mcq-focus-box');
+
+  if (ids.length === 0) {
+    box.innerHTML = `<div style="text-align:center; padding:32px 16px;">
+      <h3>🎉 Không có câu hỏi nào trong mục lọc này!</h3>
+      <p style="color:var(--text-muted); margin-top:8px;">Hãy chọn lại bộ lọc "Tất cả (45 câu)" để tiếp tục.</p>
+    </div>`;
+    return;
+  }
+
+  if (state.mcqIndex >= ids.length) state.mcqIndex = 0;
+  if (state.mcqIndex < 0) state.mcqIndex = ids.length - 1;
+
+  const qId = ids[state.mcqIndex];
+  const q = mcqList.find(x => x.id === qId);
+  const ua = state.mcqAnswers[q.id];
+  const answered = ua !== undefined;
+  const starred = !!state.mcqStarred[q.id];
+  const letters = ['A', 'B', 'C', 'D'];
+
+  box.innerHTML = `
+    <div class="focus-top">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="q-num-pill">Câu ${q.id} / 45</span>
+        <span style="font-size:0.8rem; color:var(--text-muted); font-weight:600;">(${state.mcqIndex + 1}/${ids.length})</span>
+      </div>
+      <button class="icon-btn" style="padding:6px 10px; font-size:0.8rem; ${starred ? 'border-color:#f59e0b; color:#d97706;' : ''}" onclick="toggleStar(${q.id})">
+        ${starred ? '⭐ Đã lưu' : '☆ Lưu câu khó'}
+      </button>
+    </div>
+
+    <div class="q-text-large">${q.q}</div>
+
+    <div class="opt-grid">
+      ${q.opts.map((opt, idx) => {
+        let cls = 'opt-item';
+        if (answered) {
+          if (idx === q.ans) cls += ' correct';
+          else if (idx === ua && ua !== q.ans) cls += ' wrong';
+        }
+        return `<button class="${cls}" onclick="pickMcq(${q.id}, ${idx})">
+          <span class="opt-key">${letters[idx]}</span>
+          <span style="flex:1;">${opt}</span>
+        </button>`;
+      }).join('')}
+    </div>
+
+    ${answered ? `
+      <div class="instant-memory-box">
+        <div style="font-size:0.75rem; font-weight:800; color:var(--warning-dark); text-transform:uppercase;">
+          ⚡ MẸO NHỚ 3 GIÂY:
+        </div>
+        <div class="memory-chip-row">
+          <span class="kw-tag">🔍 ${q.kwQ}</span>
+          <strong>➔</strong>
+          <span class="ans-tag">✅ ${q.kwA}</span>
+        </div>
+      </div>
+    ` : ''}
+
+    <div class="focus-footer">
+      <button class="icon-btn" onclick="stepMcq(-1)">⬅️ Câu trước</button>
+      <div class="footer-status" style="font-size:0.82rem; color:var(--text-muted); font-weight:600;">
+        ${answered ? (ua === q.ans ? '🟢 Chính xác!' : '🔴 Chưa đúng — Xem mẹo nhớ ở trên!') : '⚪ Chạm chọn 1 đáp án'}
+      </div>
+      <button class="icon-btn" style="background:var(--primary); color:#fff; border-color:var(--primary);" onclick="stepMcq(1)">Câu tiếp ➡️</button>
+    </div>
+  `;
+}
+
+function renderMcqPalette() {
+  const ids = getFilteredMcqIds();
+  const currentId = ids[state.mcqIndex];
+  const grid = document.getElementById('mcq-palette-grid');
+
+  grid.innerHTML = mcqList.map(q => {
+    const ua = state.mcqAnswers[q.id];
+    let cls = 'p-cell';
+    if (q.id === currentId) cls += ' current';
+    if (ua !== undefined) {
+      cls += (ua === q.ans) ? ' done-ok' : ' done-bad';
+    }
+    if (state.mcqStarred[q.id]) cls += ' starred';
+    return `<button class="${cls}" onclick="jumpToMcq(${q.id})">${q.id}</button>`;
+  }).join('');
+}
+
+function pickMcq(qId, idx) {
+  state.mcqAnswers[qId] = idx;
+  saveApp();
+  renderMcqTab();
+}
+
+function toggleStar(qId) {
+  if (state.mcqStarred[qId]) delete state.mcqStarred[qId];
+  else state.mcqStarred[qId] = true;
+  saveApp();
+  renderMcqTab();
+}
+
+function stepMcq(delta) {
+  state.mcqIndex += delta;
+  renderMcqFocus();
+  renderMcqPalette();
+}
+
+function jumpToMcq(qId) {
+  const fSelect = document.getElementById('mcq-filter');
+  const ids = getFilteredMcqIds();
+  let pos = ids.indexOf(qId);
+  if (pos === -1) {
+    fSelect.value = 'all';
+    pos = state.mcqOrder.indexOf(qId);
+  }
+  state.mcqIndex = pos;
+  renderMcqFocus();
+  renderMcqPalette();
+  if (window.innerWidth <= 960) {
+    document.getElementById('mcq-focus-box').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+function renderMcqReflex() {
+  const ids = getFilteredMcqIds();
+  const container = document.getElementById('mcq-reflex-layout');
+  container.innerHTML = ids.map(id => {
+    const q = mcqList.find(x => x.id === id);
+    return `<div class="reflex-card">
+      <div class="reflex-top">
+        <span>CÂU ${q.id}</span>
+        <span>Mẹo nhớ 3 giây</span>
+      </div>
+      <div class="reflex-pair">
+        <span class="kw-tag">${q.kwQ}</span>
+        <span>➔</span>
+        <span class="ans-tag">${q.kwA}</span>
+      </div>
+      <div style="font-size:0.83rem; color:var(--text-muted); border-top:1px dashed var(--border); padding-top:6px;">
+        <strong>Câu hỏi gốc:</strong> ${q.q}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderMcqListAll() {
+  const ids = getFilteredMcqIds();
+  const letters = ['A', 'B', 'C', 'D'];
+  const container = document.getElementById('mcq-list-layout');
+  container.innerHTML = ids.map(id => {
+    const q = mcqList.find(x => x.id === id);
+    const ua = state.mcqAnswers[q.id];
+    const answered = ua !== undefined;
+    return `<div class="focus-card" style="padding:18px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+        <span class="q-num-pill">Câu ${q.id}</span>
+        <span style="font-size:0.8rem; font-weight:700; color:var(--primary);">⚡ ${q.kwQ} ➔ ${q.kwA}</span>
+      </div>
+      <div style="font-weight:700; font-size:1rem; margin-bottom:12px;">${q.q}</div>
+      <div class="opt-grid">
+        ${q.opts.map((opt, idx) => {
+          let cls = 'opt-item';
+          if (answered) {
+            if (idx === q.ans) cls += ' correct';
+            else if (idx === ua && ua !== q.ans) cls += ' wrong';
+          }
+          return `<button class="${cls}" style="padding:10px 12px;" onclick="pickMcq(${q.id}, ${idx})">
+            <span class="opt-key">${letters[idx]}</span>
+            <span style="flex:1;">${opt}</span>
+          </button>`;
+        }).join('')}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// Keyboard shortcuts for Desktop Focus Mode
+window.addEventListener('keydown', (e) => {
+  const activeMcq = document.getElementById('tab-mcq').classList.contains('active');
+  if (!activeMcq || state.mcqView !== 'focus') return;
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+
+  const ids = getFilteredMcqIds();
+  if (!ids.length) return;
+  const qId = ids[state.mcqIndex];
+
+  if (['1', 'a', 'A'].includes(e.key)) pickMcq(qId, 0);
+  if (['2', 'b', 'B'].includes(e.key)) pickMcq(qId, 1);
+  if (['3', 'c', 'C'].includes(e.key)) pickMcq(qId, 2);
+  if (['4', 'd', 'D'].includes(e.key)) pickMcq(qId, 3);
+  if (e.key === 'ArrowRight') stepMcq(1);
+  if (e.key === 'ArrowLeft') stepMcq(-1);
+});
+
+// Touch Swipe Left/Right for Mobile Focus Mode & Flashcards
+function setupTouchSwipe() {
+  let startX = 0;
+  let startY = 0;
+
+  document.addEventListener('touchstart', (e) => {
+    if (!e.touches || e.touches.length !== 1) return;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchend', (e) => {
+    if (!e.changedTouches || e.changedTouches.length !== 1) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+
+    if (Math.abs(dx) > 65 && Math.abs(dx) > Math.abs(dy) * 1.8) {
+      const mcqActive = document.getElementById('tab-mcq').classList.contains('active');
+      const shortActive = document.getElementById('tab-short').classList.contains('active');
+
+      if (mcqActive && state.mcqView === 'focus') {
+        stepMcq(dx < 0 ? 1 : -1);
+      } else if (shortActive && state.shortView === 'flashcard') {
+        stepShortFc(dx < 0 ? 1 : -1);
+      }
+    }
+  }, { passive: true });
+}
+
+// ============================================================================
+// PHẦN 2: CÂU HỎI NGẮN RÚT GỌN (CLOZE CHẠM MỞ TỪ KHÓA + FLASHCARD + PILLS)
+// ============================================================================
+function setShortView(v) {
+  state.shortView = v;
+  document.getElementById('short-view-cloze').classList.toggle('active', v === 'cloze');
+  document.getElementById('short-view-flashcard').classList.toggle('active', v === 'flashcard');
+  document.getElementById('short-view-compare').classList.toggle('active', v === 'compare');
+  document.getElementById('btn-cloze-toggle').style.display = (v === 'cloze') ? 'inline-flex' : 'none';
+  renderShortTab();
+}
+
+function getFilteredShortList() {
+  const f = document.getElementById('short-group-filter').value;
+  return shortList.filter(s => {
+    if (f === 'g1' || f === 'g2' || f === 'g3') return s.grp === f;
+    if (f === 'unmastered') return state.shortStatus[s.id] !== 'mastered';
+    return true;
+  });
+}
+
+function formatClozeHtml(clozeText, openAll) {
+  return clozeText.replace(/\{\{(.+?)\}\}/g, (_, word) => {
+    const rev = openAll ? 'revealed' : '';
+    return `<span class="cloze-token ${rev}" onclick="this.classList.toggle('revealed')">${word}</span>`;
+  }).replace(/\n/g, '<br>');
+}
+
+function toggleAllCloze() {
+  state.allClozeOpen = !state.allClozeOpen;
+  document.getElementById('btn-cloze-toggle').textContent = state.allClozeOpen
+    ? '🙈 Ẩn lại từ khóa'
+    : '👁️ Mở hết từ khóa';
+  renderShortTab();
+}
+
+function markShort(id, st) {
+  if (state.shortStatus[id] === st) delete state.shortStatus[id];
+  else state.shortStatus[id] = st;
+  saveApp();
+  renderShortTab();
+}
+
+function renderShortTab() {
+  const list = getFilteredShortList();
+  const area = document.getElementById('short-content-area');
+
+  if (!list.length) {
+    area.innerHTML = `<div class="focus-card" style="text-align:center;">🎉 Bạn đã thuộc hết các câu trong nhóm này!</div>`;
+    return;
+  }
+
+  if (state.shortView === 'flashcard') {
+    if (state.fcShortIdx >= list.length) state.fcShortIdx = 0;
+    if (state.fcShortIdx < 0) state.fcShortIdx = list.length - 1;
+    const item = list[state.fcShortIdx];
+    const st = state.shortStatus[item.id] || '';
+
+    area.innerHTML = `
+      <div class="fc-stage">
+        <div class="fc-card-modern">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:6px;">
+              <span class="q-num-pill">Thẻ ${state.fcShortIdx + 1}/${list.length} • Câu ${item.id}</span>
+              <span style="font-size:0.8rem; color:var(--text-muted);">Gồm <strong>${item.pills.length} ý cốt lõi</strong></span>
+            </div>
+            <div style="font-size:1.12rem; font-weight:800; margin-bottom:16px;">${item.q}</div>
+
+            ${state.fcShortFlipped ? `
+              <div class="ultra-short-box" style="margin-bottom:12px;">
+                <span class="ultra-label">⚡ Chốt ý nhớ nhanh:</span>
+                ${item.pills.map(p => `<span class="pill-kw">${p}</span>`).join('')}
+              </div>
+              <div class="full-ans-line">
+                <strong>📝 Câu đầy đủ viết thi:</strong><br>
+                ${formatClozeHtml(item.cloze, true)}
+              </div>
+              ${item.warn ? `<div class="warning-banner" style="margin-top:10px;">${item.warn}</div>` : ''}
+            ` : `
+              <div style="padding:32px 16px; text-align:center; background:var(--bg-subtle); border:2px dashed var(--border-strong); border-radius:14px; cursor:pointer;" onclick="flipShortFc()">
+                <div style="font-size:1rem; font-weight:700; color:var(--primary);">👆 Chạm để Lật Xem Từ Khóa & Đáp Án</div>
+                <div style="font-size:0.82rem; color:var(--text-muted); margin-top:4px;">Hãy tự nhẩm thử ${item.pills.length} ý chính trước khi mở!</div>
+              </div>
+            `}
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:18px; padding-top:14px; border-top:1px solid var(--border);">
+            <div style="display:flex; gap:6px;">
+              <button class="icon-btn" style="padding:6px 10px; font-size:0.8rem; ${st==='hard'?'border-color:var(--danger);color:var(--danger);':''}" onclick="markShort(${item.id}, 'hard')">🔴 Khó</button>
+              <button class="icon-btn" style="padding:6px 10px; font-size:0.8rem; ${st==='mastered'?'background:var(--success);color:#fff;border-color:var(--success);':''}" onclick="markShort(${item.id}, 'mastered')">🟢 Đã thuộc</button>
+            </div>
+            <div style="display:flex; gap:6px;">
+              <button class="icon-btn" style="padding:6px 10px;" onclick="stepShortFc(-1)">⬅️</button>
+              <button class="icon-btn" style="padding:6px 12px;" onclick="flipShortFc()">🔄 Lật</button>
+              <button class="icon-btn" style="padding:6px 10px; background:var(--primary);color:#fff;border-color:var(--primary);" onclick="stepShortFc(1)">➡️</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  if (state.shortView === 'compare') {
+    area.innerHTML = `<div class="short-grid">
+      ${list.map(item => {
+        const st = state.shortStatus[item.id] || '';
+        return `<div class="scard ${st}">
+          <div class="scard-head">
+            <div class="scard-q">${item.q}</div>
+            <div class="scard-actions">
+              <button class="icon-btn" style="padding:5px 10px; font-size:0.78rem; ${st==='mastered'?'background:var(--success);color:#fff;':''}" onclick="markShort(${item.id}, 'mastered')">
+                ${st === 'mastered' ? '🟢 Đã thuộc' : '⚪ Đánh dấu thuộc'}
+              </button>
+            </div>
+          </div>
+          <div class="ultra-short-box">
+            <span class="ultra-label">⚡ Chỉ cần nhớ ${item.pills.length} ý:</span>
+            ${item.pills.map(p => `<span class="pill-kw">${p}</span>`).join('')}
+          </div>
+          ${item.warn ? `<div class="warning-banner">${item.warn}</div>` : ''}
+        </div>`;
+      }).join('')}
+    </div>`;
+    return;
+  }
+
+  // Default: Cloze Interactive Mode
+  area.innerHTML = `<div class="short-grid">
+    ${list.map(item => {
+      const st = state.shortStatus[item.id] || '';
+      return `<div class="scard ${st}">
+        <div class="scard-head">
+          <div class="scard-q">${item.q}</div>
+          <div class="scard-actions" style="display:flex; gap:6px;">
+            <button class="icon-btn" style="padding:4px 8px; font-size:0.76rem; ${st==='hard'?'border-color:var(--danger);color:var(--danger);':''}" onclick="markShort(${item.id}, 'hard')">🔴 Khó</button>
+            <button class="icon-btn" style="padding:4px 10px; font-size:0.76rem; ${st==='mastered'?'background:var(--success);color:#fff;border-color:var(--success);':''}" onclick="markShort(${item.id}, 'mastered')">
+              ${st === 'mastered' ? '🟢 Đã thuộc' : '⚪ Thuộc'}
+            </button>
+          </div>
+        </div>
+
+        <div class="ultra-short-box">
+          <span class="ultra-label">⚡ Tóm tắt ${item.pills.length} ý chính:</span>
+          ${item.pills.map(p => `<span class="pill-kw">${p}</span>`).join('')}
+        </div>
+
+        <div class="full-ans-line">
+          <div style="font-size:0.75rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">
+            🧩 BẢN TỰ DÒ TỪ KHÓA (Chạm vào từng ô vàng để mở):
+          </div>
+          ${formatClozeHtml(item.cloze, state.allClozeOpen)}
+        </div>
+
+        ${item.warn ? `<div class="warning-banner">${item.warn}</div>` : ''}
+      </div>`;
+    }).join('')}
+  </div>`;
+}
+
+function flipShortFc() {
+  state.fcShortFlipped = !state.fcShortFlipped;
+  renderShortTab();
+}
+
+function stepShortFc(d) {
+  state.fcShortIdx += d;
+  state.fcShortFlipped = false;
+  renderShortTab();
+}
+
+// ============================================================================
+// PHẦN 3: TỰ LUẬN SƠ ĐỒ Ý CHÍNH (CỘT RÚT GỌN 2 PHÚT VS CỘT VIẾT THI)
+// ============================================================================
+function setEssayMobileCol(mode, btn) {
+  state.essayMobileCol = mode;
+  document.querySelectorAll('#mobile-essay-tabs .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderEssayTab();
+}
+
+function renderEssayTab() {
+  const bar = document.getElementById('essay-selector-bar');
+  bar.innerHTML = essayList.map(e => {
+    const done = !!state.essayRead[e.id];
+    const act = state.essayId === e.id;
+    return `<button class="e-btn ${act ? 'active' : ''}" onclick="pickEssay(${e.id})">
+      <div class="e-btn-num">Câu ${e.id} ${done ? '✅' : ''}</div>
+      <div class="e-btn-name">${e.name}</div>
+    </button>`;
+  }).join('');
+
+  const e = essayList.find(x => x.id === state.essayId);
+  const done = !!state.essayRead[e.id];
+  const view = document.getElementById('essay-main-view');
+
+  const isMobile = window.innerWidth <= 960;
+  const showLeft = !isMobile || state.essayMobileCol === 'both' || state.essayMobileCol === 'mindmap';
+  const showRight = !isMobile || state.essayMobileCol === 'both' || state.essayMobileCol === 'text';
+
+  view.innerHTML = `
+    <div class="focus-card" style="margin-bottom:16px; padding:16px 18px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap;">
+        <div style="font-size:1rem; font-weight:800; flex:1; min-width:220px;">📌 ${e.fullQ}</div>
+        <button class="icon-btn" style="font-size:0.8rem; ${done ? 'background:var(--success);color:#fff;border-color:var(--success);' : ''}" onclick="toggleEssayDone(${e.id})">
+          ${done ? '✅ Đã thuộc câu này' : '⚪ Đánh dấu đã thuộc'}
+        </button>
+      </div>
+    </div>
+
+    <div class="essay-dual-layout">
+      <!-- CỘT TRÁI: BẢN SIÊU RÚT GỌN -->
+      <div class="essay-pane" style="display:${showLeft ? 'block' : 'none'};">
+        <div class="pane-badge" style="background:var(--primary-soft); color:var(--primary);">
+          ⚡ CỘT 1: BẢN SIÊU RÚT GỌN (CHỈ CẦN THUỘC KHUNG NÀY)
+        </div>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:14px;">
+          Mỗi câu tự luận đã được cô đọng thành các từ khóa ngắn nhất. Nhớ các đầu mục này là nắm trọn 100% ý chính!
+        </p>
+
+        ${e.mindmap.map(m => `
+          <div class="mindmap-branch">
+            <div class="mindmap-title">${m.branch}</div>
+            ${m.steps.map((s, idx) => `
+              <div class="mini-step">
+                <span class="mini-step-num">Ý ${idx + 1}</span>
+                <span style="font-weight:600;">${s}</span>
+              </div>
+            `).join('')}
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- CỘT PHẢI: BẢN VIẾT VÀO GIẤY THI -->
+      <div class="essay-pane" style="display:${showRight ? 'block' : 'none'};">
+        <div class="pane-badge" style="background:var(--success-soft); color:var(--success-dark);">
+          📝 CỘT 2: CÂU VĂN CÔ ĐỌNG ĐỂ VIẾT VÀO BÀI THI
+        </div>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:14px;">
+          Chạm vào từng khung để <strong>Che / Mở</strong> khi tự nhẩm bài. Các cụm từ tô vàng là <strong>từ khóa chấm điểm (Barem)</strong>.
+        </p>
+
+        ${e.examText.map(sec => `
+          <div class="exam-ready-block ${state.maskEssay ? 'masked' : ''}" onclick="this.classList.toggle('masked')" title="Chạm để Ẩn/Hiện nội dung">
+            <div style="font-weight:800; font-size:0.94rem; color:var(--text); margin-bottom:8px;">
+              ${sec.title}
+            </div>
+            <div class="exam-ready-body" style="display:flex; flex-direction:column; gap:8px; font-size:0.91rem; color:var(--text-secondary);">
+              ${sec.lines.map(line => `<div>${line}</div>`).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function pickEssay(id) {
+  state.essayId = id;
+  renderEssayTab();
+}
+
+function toggleMaskEssay() {
+  state.maskEssay = !state.maskEssay;
+  document.getElementById('btn-mask-essay').textContent = state.maskEssay
+    ? '👁️ Hiện bài viết'
+    : '🙈 Che bài viết để tự nhẩm';
+  renderEssayTab();
+}
+
+function toggleEssayDone(id) {
+  if (state.essayRead[id]) delete state.essayRead[id];
+  else state.essayRead[id] = true;
+  saveApp();
+  renderEssayTab();
+}
+
+window.addEventListener('resize', () => {
+  if (document.getElementById('tab-essay').classList.contains('active')) {
+    renderEssayTab();
+  }
+});
+
+initApp();
+</script>
+</body>
+</html>
