@@ -129,17 +129,30 @@
 
 ### Câu 77. Trình bày một số bài học kinh nghiệm trong cuộc kháng chiến chống Mỹ, cứu nước của nhân dân Việt Nam (1954-1975). Theo anh (chị) Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay.
 
-**1. Một số bài học kinh nghiệm trong kháng chiến chống Mỹ, cứu nước (1954–1975):**
-- **Một là:** Giương cao ngọn cờ **độc lập dân tộc và chủ nghĩa xã hội**, kết hợp chặt chẽ hai nhiệm vụ chiến lược ở hai miền Nam - Bắc nhằm huy động sức mạnh toàn dân đánh Mỹ, cả nước đánh Mỹ.
+> **📌 Lưu ý quan trọng khi đối chiếu Giáo trình Lịch sử Đảng Cộng sản Việt Nam (2021) – Chương 2:**
+> - **Trang 155–157 (3 ảnh chụp của bạn):** Nằm ở cuối Mục I của Chương 2 (*b. Kinh nghiệm của Đảng về lãnh đạo kháng chiến* — gồm **5 bài học**).
+> - **Trang 235–236:** Nằm ở cuối Mục II của Chương 2 (*b. Kinh nghiệm lãnh đạo của Đảng* trong kháng chiến chống Mỹ, cứu nước 1954–1975 — gồm **4 bài học**).
+> - Để đảm bảo đạt điểm tối đa 100% dù giảng viên chấm theo **5 bài học ở trang 155–157 (ảnh chụp)** hay **4 bài học ở trang 235–236**, dưới đây trình bày súc tích, chuẩn nguyên văn cả hai phần:
+
+**1A. Năm bài học kinh nghiệm của Đảng về lãnh đạo kháng chiến (Chuẩn nguyên văn ảnh chụp Giáo trình trang 155–157):**
+- **Một là:** **Đề ra đường lối đúng đắn, sáng tạo, phù hợp với thực tiễn lịch sử của cuộc kháng chiến ngay từ những ngày đầu.** Đường lối cơ bản là “kháng chiến và kiến quốc”; kháng chiến toàn dân, toàn diện, tự lực cánh sinh là chính; khơi dậy sức mạnh đại đoàn kết toàn dân tộc kết hợp tranh thủ sự ủng hộ, giúp đỡ quốc tế.
+- **Hai là:** **Kết hợp chặt chẽ và giải quyết đúng đắn mối quan hệ giữa hai nhiệm vụ cơ bản vừa kháng chiến vừa kiến quốc, chống đế quốc và chống phong kiến.** Kháng chiến toàn diện trên các mặt trận, lấy quân sự làm nòng cốt, xây dựng hậu phương - căn cứ địa vững chắc.
+- **Ba là:** **Ngày càng hoàn thiện phương thức lãnh đạo, tổ chức điều hành cuộc kháng chiến phù hợp với đặc thù của từng giai đoạn.** Phát triển loại hình chiến tranh nhân dân, toàn dân, toàn diện; kết hợp chiến tranh chính quy với chiến tranh du kích, thắng từng bước tiến lên giành thắng lợi quyết định.
+- **Bốn là:** **Xây dựng và phát triển lực lượng vũ trang ba thứ quân: bộ đội chủ lực, bộ đội địa phương, dân quân du kích một cách thích hợp, đáp ứng kịp thời yêu cầu của nhiệm vụ chính trị - quân sự của cuộc kháng chiến.** Xây dựng Quân đội nhân dân (“Bộ đội Cụ Hồ”) và Công an nhân dân (“bạn dân”) vững mạnh về tư tưởng - chính trị, làm nòng cốt cho toàn dân đánh giặc.
+- **Năm là:** **Coi trọng công tác xây dựng, chỉnh đốn Đảng; nâng cao vai trò lãnh đạo toàn diện của Đảng đối với cuộc kháng chiến trên tất cả mọi lĩnh vực, mặt trận.** Phát huy sự nêu gương và vai trò tiên phong của các tổ chức đảng và đội ngũ cán bộ, đảng viên; củng cố lòng tin vững chắc của nhân dân đối với thắng lợi cuối cùng của cuộc kháng chiến.
+
+**1B. Bốn bài học kinh nghiệm lãnh đạo kháng chiến chống Mỹ, cứu nước 1954–1975 (Chuẩn nguyên văn Giáo trình trang 235–236):**
+- **Một là:** Giương cao ngọn cờ **độc lập dân tộc và chủ nghĩa xã hội**, nhằm huy động sức mạnh toàn dân đánh Mỹ, cả nước đánh Mỹ (kết hợp tiền tuyến lớn miền Nam với hậu phương lớn miền Bắc).
 - **Hai là:** Tìm ra **phương pháp đấu tranh đúng đắn, sáng tạo**, thực hiện khởi nghĩa toàn dân và chiến tranh nhân dân, sử dụng phương pháp cách mạng tổng hợp (kết hợp đấu tranh quân sự, chính trị, ngoại giao; 3 mũi giáp công trên 3 vùng chiến lược).
 - **Ba là:** Phải có **công tác tổ chức chiến đấu giỏi** của các cấp bộ Đảng và các cấp chi ủy quân đội, thực hiện giành thắng lợi từng bước đến thắng lợi hoàn toàn.
-- **Bốn là:** Hết sức coi trọng **công tác xây dựng Đảng, xây dựng lực lượng cách mạng** ở miền Nam và trong cả nước; đồng thời kết hợp sức mạnh dân tộc với sức mạnh thời đại, tranh thủ tối đa sự ủng hộ quốc tế.
+- **Bốn là:** Hết sức coi trọng **công tác xây dựng Đảng, xây dựng lực lượng cách mạng** ở miền Nam và tổ chức xây dựng lực lượng chiến đấu trong cả nước, tranh thủ tối đa sự đồng tình, ủng hộ của quốc tế.
 
-**2. Đảng phải làm gì để kế thừa, phát huy những bài học đó trong bối cảnh hiện nay:**
-- **Kiên định mục tiêu chiến lược:** Giữ vững ngọn cờ độc lập dân tộc gắn liền với chủ nghĩa xã hội; vận dụng sáng tạo chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh.
-- **Phát huy sức mạnh đại đoàn kết toàn dân tộc kết hợp sức mạnh thời đại:** Thực hiện tốt phương châm “dân là gốc”, khơi dậy khát vọng phát triển đất nước phồn vinh, hạnh phúc gắn với hội nhập quốc tế sâu rộng và tận dụng Cách mạng công nghiệp 4.0.
-- **Tăng cường quốc phòng, an ninh, bảo vệ Tổ quốc “từ sớm, từ xa”:** Xây dựng nền quốc phòng toàn dân gắn với thế trận an ninh nhân dân và “thế trận lòng dân” vững chắc; kết hợp chặt chẽ kinh tế - xã hội với quốc phòng, an ninh, đối ngoại.
-- **Đẩy mạnh xây dựng, chỉnh đốn Đảng và hệ thống chính trị:** Xây dựng Đảng trong sạch, vững mạnh toàn diện; kiên quyết đấu tranh phòng, chống tham nhũng, tiêu cực.
+**2. Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay (Trả lời hoàn chỉnh, súc tích, đúng trọng tâm):**
+- **Một là (Về đường lối):** Kiên định mục tiêu **độc lập dân tộc gắn liền với chủ nghĩa xã hội**; vận dụng sáng tạo chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh để đề ra đường lối đổi mới đúng đắn, sáng tạo, sát hợp với thực tiễn đất nước và xu thế thời đại.
+- **Hai là (Về kết hợp hai nhiệm vụ chiến lược):** Kết hợp chặt chẽ hai nhiệm vụ chiến lược là **xây dựng thành công chủ nghĩa xã hội và bảo vệ vững chắc Tổ quốc Việt Nam XHCN**; gắn phát triển kinh tế - xã hội với củng cố quốc phòng - an ninh.
+- **Ba là (Về phát huy sức mạnh dân tộc và thời đại):** Khơi dậy sức mạnh **đại đoàn kết toàn dân tộc** theo phương châm “lấy dân làm gốc”, phát huy ý chí tự lực, tự cường đi đôi với chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng.
+- **Bốn là (Về xây dựng lực lượng vũ trang và quốc phòng):** Xây dựng Quân đội nhân dân, Công an nhân dân cách mạng, chính quy, tinh nhuệ, hiện đại; củng cố nền quốc phòng toàn dân gắn với thế trận an ninh nhân dân và “thế trận lòng dân” vững chắc, **bảo vệ Tổ quốc từ sớm, từ xa**.
+- **Năm là (Về công tác xây dựng Đảng):** Thường xuyên coi trọng **xây dựng, chỉnh đốn Đảng trong sạch, vững mạnh toàn diện**; đổi mới phương thức lãnh đạo, phát huy vai trò tiên phong, nêu gương của cán bộ, đảng viên và kiên quyết phòng, chống tham nhũng, tiêu cực để củng cố niềm tin của nhân dân.
 
 ---
 
