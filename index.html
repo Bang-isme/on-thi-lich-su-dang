@@ -586,11 +586,11 @@
       flex-wrap: wrap;
     }
 
-    /* ==================== SECTION 2: SHORT ANSWERS (CLOZE & CONDENSED) ==================== */
+    /* ==================== SECTION 2: SHORT ANSWERS (CLEAN & FOCUSED) ==================== */
     .short-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
-      gap: 16px;
+      gap: 14px;
     }
 
     .scard {
@@ -603,13 +603,11 @@
       flex-direction: column;
       gap: 12px;
       min-width: 0;
+      transition: border-color 0.15s;
     }
 
     .scard.mastered {
       border-left: 5px solid var(--success);
-    }
-    .scard.hard {
-      border-left: 5px solid var(--danger);
     }
 
     .scard-head {
@@ -627,40 +625,19 @@
       min-width: 0;
     }
 
-    /* Ultra-short Memory Pill Box */
-    .ultra-short-box {
+    .kw-inline {
       background: var(--primary-soft);
-      border: 1px solid var(--primary-border);
-      border-radius: 11px;
-      padding: 10px 12px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .ultra-label {
-      font-size: 0.74rem;
-      font-weight: 800;
-      text-transform: uppercase;
       color: var(--primary);
-      width: 100%;
-      margin-bottom: 2px;
-    }
-
-    .pill-kw {
-      background: var(--bg-elevated);
-      border: 1px solid var(--primary-border);
-      color: var(--text);
-      padding: 4px 10px;
-      border-radius: 99px;
-      font-size: 0.82rem;
       font-weight: 700;
-      line-height: 1.35;
-      word-break: break-word;
+      padding: 1px 6px;
+      border-radius: 5px;
     }
 
-    /* Interactive Cloze Token - Never overflows on short words */
+    [data-theme="dark"] .kw-inline {
+      color: #a5b4fc;
+    }
+
+    /* Interactive Cloze Token */
     .cloze-token {
       display: inline-flex;
       align-items: center;
@@ -669,10 +646,10 @@
       border: 1.5px dashed var(--warning);
       color: transparent;
       border-radius: 6px;
-      padding: 2px 10px;
+      padding: 1px 8px;
       margin: 2px 2px;
-      min-width: 92px;
-      min-height: 26px;
+      min-width: 80px;
+      min-height: 25px;
       cursor: pointer;
       user-select: none;
       position: relative;
@@ -683,9 +660,9 @@
     }
 
     .cloze-token::after {
-      content: "👆 Chạm mở";
+      content: "Chạm mở";
       color: var(--warning-dark);
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 700;
       position: absolute;
       left: 50%;
@@ -707,15 +684,49 @@
       content: none;
     }
 
-    .full-ans-line {
-      font-size: 0.93rem;
+    .short-ans-box {
+      font-size: 0.94rem;
       color: var(--text-secondary);
       background: var(--bg-subtle);
-      padding: 12px 14px;
-      border-radius: 10px;
+      padding: 13px 15px;
+      border-radius: 12px;
       border: 1px solid var(--border);
-      line-height: 1.75;
+      line-height: 1.7;
       word-break: break-word;
+      position: relative;
+    }
+
+    .short-ans-box.blind-mode {
+      cursor: pointer;
+    }
+
+    .short-ans-box.blind-mode .short-ans-content {
+      filter: blur(6px);
+      user-select: none;
+      transition: filter 0.18s;
+    }
+
+    .short-ans-box.blind-mode.unmasked .short-ans-content {
+      filter: none;
+      user-select: text;
+    }
+
+    .short-dash-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .short-dash-line:last-child {
+      margin-bottom: 0;
+    }
+
+    .dash-bullet {
+      font-weight: 800;
+      color: var(--primary);
+      flex-shrink: 0;
+      line-height: 1.65;
     }
 
     /* 3D Flashcard for Short Answers */
@@ -730,18 +741,19 @@
       border-radius: var(--radius-xl);
       padding: 28px 24px;
       box-shadow: var(--shadow-lg);
-      min-height: 300px;
+      min-height: 280px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    /* ==================== SECTION 3: ESSAYS (SIÊU RÚT GỌN VS ĐẦY ĐỦ) ==================== */
+    /* ==================== SECTION 3: ESSAYS (SINGLE FOCUSED VISUAL CARD) ==================== */
     .essay-selector {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 10px;
-      margin-bottom: 18px;
+      margin: 0 auto 18px;
+      max-width: 960px;
     }
 
     .e-btn {
@@ -781,107 +793,131 @@
       line-height: 1.35;
     }
 
-    /* Mobile Essay Column Switcher (hidden on desktop) */
-    .mobile-essay-switcher {
-      display: none;
-      margin-bottom: 14px;
-    }
-
-    /* Comparison Dual Grid for Essays */
-    .essay-dual-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.25fr;
-      gap: 20px;
-      align-items: start;
-    }
-
-    .essay-pane {
+    .essay-single-card {
+      max-width: 960px;
+      margin: 0 auto;
       background: var(--bg-elevated);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      padding: 22px;
+      padding: 26px 28px;
       box-shadow: var(--shadow-md);
-      min-width: 0;
     }
 
-    .pane-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 11px;
-      border-radius: 99px;
-      font-size: 0.75rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      line-height: 1.3;
-    }
-
-    .mindmap-branch {
-      border-left: 3px solid var(--primary);
-      padding-left: 12px;
-      margin-bottom: 16px;
-    }
-
-    .mindmap-title {
-      font-weight: 800;
-      font-size: 0.93rem;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .mini-step {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 9px 11px;
-      margin-bottom: 8px;
-      font-size: 0.88rem;
+    .essay-q-header {
       display: flex;
-      align-items: baseline;
-      gap: 8px;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
     }
 
-    .mini-step-num {
-      background: var(--primary);
-      color: #fff;
+    .essay-q-title {
+      font-size: 1.08rem;
       font-weight: 800;
-      font-size: 0.72rem;
-      padding: 2px 7px;
-      border-radius: 6px;
-      flex-shrink: 0;
+      color: var(--text);
+      line-height: 1.5;
+      flex: 1;
+      min-width: 220px;
     }
 
-    .exam-ready-block {
+    .essay-section-block {
+      margin-bottom: 22px;
+    }
+
+    .essay-section-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .essay-sec-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--primary);
+      background: var(--primary-soft);
+      border-left: 4px solid var(--primary);
+      padding: 9px 14px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 12px;
+    }
+
+    [data-theme="dark"] .essay-sec-title {
+      color: #a5b4fc;
+    }
+
+    .essay-dash-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .essay-dash-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
       background: var(--bg-subtle);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 14px;
-      margin-bottom: 12px;
-      cursor: pointer;
-      transition: all 0.15s;
+      padding: 12px 15px;
+      font-size: 0.94rem;
+      line-height: 1.65;
+      transition: border-color 0.15s, background-color 0.15s;
     }
 
-    .exam-ready-block.masked .exam-ready-body {
-      filter: blur(6px);
+    .essay-dash-item.clickable {
+      cursor: pointer;
+    }
+
+    .essay-dash-item.clickable:hover {
+      border-color: var(--primary);
+    }
+
+    .essay-dash-mark {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--primary);
+      flex-shrink: 0;
+      line-height: 1.5;
       user-select: none;
     }
 
-    .hl {
-      background: rgba(245, 158, 11, 0.22);
-      color: inherit;
+    .essay-dash-body {
+      flex: 1;
+      min-width: 0;
+      color: var(--text-secondary);
+      transition: filter 0.18s;
+    }
+
+    .essay-key-head {
       font-weight: 700;
-      padding: 1px 5px;
-      border-radius: 4px;
+      color: var(--text);
+    }
+
+    .essay-single-card.keywords-only .essay-key-detail {
+      display: none;
+    }
+
+    .essay-single-card.keywords-only .essay-key-head {
+      color: var(--primary);
+    }
+
+    [data-theme="dark"] .essay-single-card.keywords-only .essay-key-head {
+      color: #a5b4fc;
+    }
+
+    .essay-dash-item.masked .essay-dash-body {
+      filter: blur(6px);
+      user-select: none;
     }
 
     .warning-banner {
       background: var(--danger-soft);
       border: 1px solid var(--danger-border);
       color: var(--danger-dark);
-      padding: 10px 12px;
+      padding: 9px 12px;
       border-radius: 10px;
-      font-size: 0.84rem;
+      font-size: 0.83rem;
       font-weight: 600;
     }
 
@@ -912,16 +948,6 @@
 
       .essay-selector {
         grid-template-columns: repeat(3, 1fr);
-      }
-
-      .essay-dual-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .mobile-essay-switcher {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
       }
     }
 
@@ -992,6 +1018,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3px;
+      }
+
+      .seg-group.seg-group-4 {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .seg-btn {
@@ -1066,22 +1096,14 @@
       }
 
       .scard-head {
-        flex-direction: column;
         gap: 8px;
-      }
-
-      .scard-actions {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
       }
 
       .fc-card-modern {
         padding: 18px 14px;
-        min-height: 260px;
+        min-height: 250px;
       }
 
-      /* Essay selector horizontal scroll or compact 2-col on mobile */
       .essay-selector {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
@@ -1095,9 +1117,14 @@
         font-size: 0.79rem;
       }
 
-      .essay-pane {
+      .essay-single-card {
         padding: 16px 14px;
         border-radius: 16px;
+      }
+
+      .essay-dash-item {
+        padding: 10px 12px;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -1111,7 +1138,7 @@
         <div class="brand-logo">A+</div>
         <div>
           <div class="brand-title">Lịch Sử Đảng CSVN (81 Câu)</div>
-          <div class="brand-sub">Bản Rút Gọn Từ Khóa & Nhớ Nhanh</div>
+          <div class="brand-sub">Ôn Tập Trọng Tâm • Chuẩn Giáo Trình</div>
         </div>
       </div>
 
@@ -1125,7 +1152,7 @@
           <span class="nav-count" id="nav-stat-short">0/30</span>
         </button>
         <button class="nav-pill" onclick="switchTab('essay', this)">
-          <span>🧠 Tự Luận</span>
+          <span>📝 Tự Luận</span>
           <span class="nav-count" id="nav-stat-essay">0/6</span>
         </button>
       </nav>
@@ -1196,18 +1223,21 @@
       <div id="mcq-list-layout" style="display:none; flex-direction:column; gap:14px;"></div>
     </section>
 
-    <!-- ==================== TAB 2: CÂU HỎI NGẮN RÚT GỌN (30 CÂU: 46–75) ==================== -->
+    <!-- ==================== TAB 2: CÂU HỎI NGẮN (30 CÂU: 46–75) ==================== -->
     <section id="tab-short" class="tab-section">
       <div class="subbar">
-        <div class="seg-group">
-          <button class="seg-btn active" id="short-view-cloze" onclick="setShortView('cloze')">
-            🧩 Tự Dò Từ Khóa
+        <div class="seg-group seg-group-4">
+          <button class="seg-btn active" id="short-view-read" onclick="setShortView('read')">
+            📖 Đáp án chuẩn
+          </button>
+          <button class="seg-btn" id="short-view-cloze" onclick="setShortView('cloze')">
+            🧩 Tự dò từ khóa
+          </button>
+          <button class="seg-btn" id="short-view-blind" onclick="setShortView('blind')">
+            🙈 Ẩn để tự nhớ
           </button>
           <button class="seg-btn" id="short-view-flashcard" onclick="setShortView('flashcard')">
-            🗂️ Thẻ Flashcard
-          </button>
-          <button class="seg-btn" id="short-view-compare" onclick="setShortView('compare')">
-            ⚡ Siêu Rút Gọn
+            🗂️ Flashcard
           </button>
         </div>
 
@@ -1219,8 +1249,8 @@
             <option value="g3">Đổi mới (Câu 66–75)</option>
             <option value="unmastered">Chưa thuộc lòng</option>
           </select>
-          <button class="icon-btn" id="btn-cloze-toggle" onclick="toggleAllCloze()" style="grid-column: span 2;">
-            👁️ Mở hết từ khóa
+          <button class="icon-btn" id="btn-short-aux" onclick="toggleShortAux()" style="display:none; grid-column: span 2;">
+            👁️ Mở hết
           </button>
         </div>
       </div>
@@ -1228,24 +1258,25 @@
       <div id="short-content-area"></div>
     </section>
 
-    <!-- ==================== TAB 3: TỰ LUẬN SƠ ĐỒ Ý CHÍNH (6 CÂU: 76–81) ==================== -->
+    <!-- ==================== TAB 3: TỰ LUẬN DÀI (6 CÂU: 76–81) ==================== -->
     <section id="tab-essay" class="tab-section">
-      <div class="subbar">
-        <div style="font-size:0.86rem; font-weight:600; color:var(--text-secondary); flex:1;">
-          💡 <strong>Sơ đồ Từ Khóa (2 phút thuộc khung)</strong> + <strong>Câu văn cô đọng chuẩn Giáo trình</strong>.
-        </div>
-        <button class="icon-btn" id="btn-mask-essay" onclick="toggleMaskEssay()">
-          🙈 Che bài viết để tự nhẩm
-        </button>
-      </div>
-
       <div class="essay-selector" id="essay-selector-bar"></div>
 
-      <!-- Mobile column switcher for Essays -->
-      <div class="seg-group mobile-essay-switcher" id="mobile-essay-tabs">
-        <button class="seg-btn active" onclick="setEssayMobileCol('both', this)">🔀 Xem cả 2</button>
-        <button class="seg-btn" onclick="setEssayMobileCol('mindmap', this)">⚡ Sơ đồ Rút gọn</button>
-        <button class="seg-btn" onclick="setEssayMobileCol('text', this)">📝 Bài viết thi</button>
+      <div class="subbar" style="max-width:960px; margin:0 auto 16px;">
+        <div class="seg-group">
+          <button class="seg-btn active" id="essay-mode-full" onclick="setEssayMode('full')">
+            📖 Đáp án chuẩn
+          </button>
+          <button class="seg-btn" id="essay-mode-keywords" onclick="setEssayMode('keywords')">
+            🔑 Chỉ hiện ý chính
+          </button>
+          <button class="seg-btn" id="essay-mode-mask" onclick="setEssayMode('mask')">
+            🙈 Che từng ý tự dò
+          </button>
+        </div>
+        <button class="icon-btn" id="btn-essay-mark-header" onclick="toggleEssayDone(state.essayId)">
+          ⚪ Đánh dấu đã thuộc
+        </button>
       </div>
 
       <div id="essay-main-view"></div>
@@ -1306,146 +1337,117 @@ const mcqList = [
 ];
 
 // ============================================================================
-// 2. DỮ LIỆU 30 CÂU HỎI NGẮN (CÓ BẢN SIÊU RÚT GỌN + CLOZE TEST TỰ DÒ)
+// 2. DỮ LIỆU 30 CÂU HỎI NGẮN (CÔ ĐỌNG, GẠCH ĐẦU DÒNG RÕ RÀNG, CHUẨN GIÁO TRÌNH)
 // ============================================================================
 const shortList = [
   { id: 46, grp: "g1", q: "Câu 46. Đối tượng nghiên cứu của khoa học Lịch sử Đảng Cộng sản Việt Nam.",
-    pills: ["Sự ra đời", "Phát triển", "Hoạt động lãnh đạo qua các thời kỳ"],
-    cloze: "{{Sự ra đời}}, {{phát triển}} và {{hoạt động lãnh đạo}} của Đảng qua các thời kỳ." },
+    ans: "{{Sự ra đời}}, {{phát triển}} và {{hoạt động lãnh đạo}} của Đảng qua các thời kỳ lịch sử." },
   { id: 47, grp: "g1", q: "Câu 47. Thời gian, địa điểm, thành phần dự Hội nghị thành lập Đảng Cộng sản Việt Nam.",
-    pills: ["TG: 6/1 – 7/2/1930", "ĐĐ: Cửu Long (Hồng Kông)", "2 ĐDCSĐ: Trịnh Đình Cửu, Nguyễn Đức Cảnh", "2 ANCSĐ: Châu Văn Liêm, Nguyễn Thiệu", "Chủ trì: Nguyễn Ái Quốc"],
-    cloze: "• TG: Từ {{6/1 đến 7/2/1930}} | ĐĐ: {{Cửu Long (Hồng Kông)}}.\n• Thành phần: 2 đại biểu Đông Dương CSĐ ({{Trịnh Đình Cửu, Nguyễn Đức Cảnh}}), 2 đại biểu An Nam CSĐ ({{Châu Văn Liêm, Nguyễn Thiệu}}), dưới sự chủ trì của {{Nguyễn Ái Quốc}} - đại biểu QTCS." },
+    ans: "- Thời gian: Từ ngày {{6/1 đến 7/2/1930}}.\n- Địa điểm: {{Cửu Long (Hồng Kông)}}.\n- Thành phần: 2 đại biểu Đông Dương Cộng sản Đảng ({{Trịnh Đình Cửu, Nguyễn Đức Cảnh}}), 2 đại biểu An Nam Cộng sản Đảng ({{Châu Văn Liêm, Nguyễn Thiệu}}), do {{Nguyễn Ái Quốc}} (đại biểu Quốc tế Cộng sản) chủ trì." },
   { id: 48, grp: "g1", q: "Câu 48. Cương lĩnh chính trị đầu tiên xác định nhiệm vụ chủ yếu trước mắt của cách mạng Việt Nam là gì?",
-    pills: ["Đánh đổ đế quốc Pháp", "Làm cho nước Nam hoàn toàn độc lập"],
-    cloze: "{{Đánh đổ đế quốc chủ nghĩa Pháp}}, làm cho {{nước Nam hoàn toàn độc lập}}." },
+    ans: "{{Đánh đổ đế quốc chủ nghĩa Pháp}}, làm cho {{nước Nam hoàn toàn độc lập}}." },
   { id: 49, grp: "g1", q: "Câu 49. Cương lĩnh chính trị đầu tiên xác định lực lượng cách mạng.",
-    pills: ["Công nhân & nông dân là lực lượng cơ bản", "Giai cấp công nhân lãnh đạo", "Đoàn kết mọi giai cấp, lực lượng tiến bộ yêu nước"],
-    cloze: "{{Công nhân, nông dân}} là lực lượng cơ bản, trong đó {{giai cấp công nhân lãnh đạo}}; đồng thời đoàn kết {{tất cả các giai cấp, các lực lượng tiến bộ yêu nước}}, tập trung chống đế quốc và tay sai." },
+    ans: "{{Công nhân, nông dân}} là lực lượng cơ bản, trong đó {{giai cấp công nhân lãnh đạo}}; đồng thời chủ trương {{đoàn kết tất cả các giai cấp, lực lượng tiến bộ, yêu nước}}, tập trung chống đế quốc và tay sai." },
   { id: 50, grp: "g1", q: "Câu 50. Quy luật ra đời của Đảng Cộng sản Việt Nam.",
-    pills: ["Chủ nghĩa Mác - Lênin", "Phong trào công nhân", "Phong trào yêu nước"],
-    cloze: "Kết hợp 3 yếu tố: {{Chủ nghĩa Mác - Lênin}}, {{phong trào công nhân}} và {{phong trào yêu nước}}." },
+    ans: "Kết hợp 3 yếu tố: {{Chủ nghĩa Mác - Lênin}}, {{phong trào công nhân}} và {{phong trào yêu nước}}." },
   { id: 51, grp: "g1", q: "Câu 51. Vai trò lãnh đạo của Đảng Cộng sản Đông Dương trong Luận cương Chính trị tháng 10 năm 1930.",
-    pills: ["Sự lãnh đạo của Đảng", "Là điều kiện cốt yếu cho thắng lợi"],
-    cloze: "Sự lãnh đạo của Đảng là {{điều kiện cốt yếu}} cho {{thắng lợi của cách mạng}}." },
+    ans: "Sự lãnh đạo của Đảng là {{điều kiện cốt yếu}} cho {{thắng lợi của cách mạng}}." },
   { id: 52, grp: "g1", q: "Câu 52. Trong nội dung chuyển hướng chỉ đạo chiến lược của Đảng (1939-1945) xác định nhiệm vụ trung tâm của Đảng và nhân dân ta trong giai đoạn hiện tại là gì?",
-    pills: ["Xúc tiến chuẩn bị khởi nghĩa vũ trang"],
-    cloze: "Nhiệm vụ trung tâm: {{Xúc tiến chuẩn bị khởi nghĩa vũ trang}}." },
+    ans: "{{Xúc tiến chuẩn bị khởi nghĩa vũ trang}}." },
   { id: 53, grp: "g1", q: "Câu 53. Ý nghĩa chủ trương chuyển hướng chiến lược của Đảng ta giai đoạn 1939-1945.",
-    pills: ["Là ngọn cờ dẫn đường", "Đánh Pháp, đuổi Nhật", "Giành độc lập dân tộc, tự do cho nhân dân"],
-    cloze: "Là {{ngọn cờ dẫn đường}} cho nhân dân ta tiến lên giành thắng lợi trong sự nghiệp {{đánh Pháp, đuổi Nhật}}, giành {{độc lập cho dân tộc và tự do cho nhân dân}}." },
+    ans: "Là {{ngọn cờ dẫn đường}} cho nhân dân ta tiến lên giành thắng lợi trong sự nghiệp {{đánh Pháp, đuổi Nhật}}, giành {{độc lập cho dân tộc và tự do cho nhân dân}}." },
   { id: 54, grp: "g1", q: "Câu 54. Năm 1943, trong bản Đề cương văn hóa Việt Nam của đồng chí Trường Chinh có đề ra những nguyên tắc xây dựng nền văn hóa mới Việt Nam. Đó là những nguyên tắc nào?",
-    pills: ["1. Dân tộc hóa", "2. Khoa học hóa", "3. Đại chúng hóa"],
-    cloze: "3 nguyên tắc: {{Dân tộc hóa}}, {{Khoa học hóa}}, {{Đại chúng hóa}}." },
+    ans: "- {{Dân tộc hóa}}\n- {{Khoa học hóa}}\n- {{Đại chúng hóa}}" },
   { id: 55, grp: "g1", q: "Câu 55. Ý nghĩa Tuyên ngôn Độc lập ngày 2-9-1945 do Hồ Chí Minh đọc tại quảng trường Ba Đình, Hà Nội.",
-    pills: ["Thiên anh hùng ca chiến đấu và chiến thắng", "Chứa chan sức mạnh và niềm tin", "Giành và giữ nền độc lập, tự do"],
-    cloze: "Đó là {{thiên anh hùng ca chiến đấu và chiến thắng}}, chứa chan {{sức mạnh và niềm tin}}, tràn đầy lòng tự hào và ý chí đấu tranh của nhân dân Việt Nam trong sự nghiệp {{giành và giữ nền độc lập, tự do}}." },
+    ans: "Là {{thiên anh hùng ca chiến đấu và chiến thắng}}, chứa chan {{sức mạnh và niềm tin}}, tràn đầy lòng tự hào và ý chí đấu tranh của nhân dân Việt Nam trong sự nghiệp {{giành và giữ nền độc lập, tự do}}." },
   { id: 56, grp: "g2", q: "Câu 56. Ngày 3-9-1945, trong phiên họp đầu tiên của Hội đồng Chính phủ, Hồ Chí Minh đề nghị nhiệm vụ đầu tiên về xây dựng văn hoá của nước Việt Nam độc lập là những nhiệm vụ nào?",
-    pills: ["Chống nạn mù chữ", "Giáo dục lại tinh thần nhân dân"],
-    cloze: "{{Chống nạn mù chữ}} và {{giáo dục lại tinh thần nhân dân}}." },
+    ans: "{{Chống nạn mù chữ}} và {{giáo dục lại tinh thần nhân dân}}." },
   { id: 57, grp: "g2", q: "Câu 57. Ngày 25-11-1945, BCH TW Đảng ra chỉ thị về “Kháng chiến, kiến quốc” đã nêu bốn nhiệm vụ chủ yếu và cấp bách, gồm những nhiệm vụ nào?",
-    pills: ["1. Củng cố chính quyền", "2. Chống thực dân Pháp", "3. Bài trừ nội phản", "4. Cải thiện đời sống dân"],
-    cloze: "4 nhiệm vụ: (1) {{Củng cố chính quyền cách mạng}}; (2) {{Chống thực dân Pháp xâm lược}}; (3) {{Bài trừ nội phản}}; (4) {{Cải thiện đời sống nhân dân}}." },
+    ans: "- {{Củng cố chính quyền cách mạng}}\n- {{Chống thực dân Pháp xâm lược}}\n- {{Bài trừ nội phản}}\n- {{Cải thiện đời sống nhân dân}}" },
   { id: 58, grp: "g2", q: "Câu 58. Thời gian, địa điểm Đại hội đại biểu toàn quốc lần thứ II.",
-    pills: ["TG: 11 đến 19/2/1951", "ĐĐ: Vinh Quang, Chiêm Hóa, Tuyên Quang"],
-    cloze: "Thời gian: từ ngày {{11 đến 19/2/1951}}. Địa điểm: tại {{xã Vinh Quang, huyện Chiêm Hóa, tỉnh Tuyên Quang}}." },
+    ans: "- Thời gian: Từ ngày {{11 đến 19/2/1951}}.\n- Địa điểm: Tại {{xã Vinh Quang, huyện Chiêm Hóa, tỉnh Tuyên Quang}}." },
   { id: 59, grp: "g2", q: "Câu 59. Thế nào là kháng chiến toàn dân?",
-    pills: ["Đem toàn bộ sức dân, lực dân, tài dân", "Động viên toàn dân tích cực kháng chiến"],
-    cloze: "Là đem toàn bộ {{sức dân, lực dân, tài dân}}, động viên {{toàn dân tích cực tham gia kháng chiến}}." },
+    ans: "Là đem toàn bộ {{sức dân, lực dân, tài dân}}, động viên {{toàn dân tích cực tham gia kháng chiến}}." },
   { id: 60, grp: "g2", q: "Câu 60. Hội nghị Geneve (Giơnevơ, Thụy Sỹ) 1954 kết thúc thắng lợi có ý nghĩa gì đối với cách mạng Việt Nam?",
-    pills: ["Mở ra 1 trang sử mới", "Mở đường đấu tranh giành độc lập, thống nhất hoàn toàn cho 3 nước Đông Dương"],
-    cloze: "Mở ra {{một trang sử mới}} cho dân tộc VN, mở đường cho cuộc đấu tranh {{giành độc lập, thống nhất hoàn toàn}} cho nhân dân 3 nước Đông Dương sau này." },
+    ans: "Mở ra {{một trang sử mới}} cho dân tộc Việt Nam, {{mở đường cho cuộc đấu tranh giành độc lập, thống nhất hoàn toàn}} cho nhân dân 3 nước Đông Dương sau này." },
   { id: 61, grp: "g2", q: "Câu 61. Hội nghị Trung ương lần thứ 15, tháng 1-1959 của Đảng đã ra nghị quyết về cách mạng miền Nam với tinh thần cơ bản là gì?",
-    pills: ["Tiếp tục CM dân chủ nhân dân", "Sử dụng bạo lực CM (chính trị & vũ trang)", "Kết hợp chính trị với quân sự", "Khởi nghĩa vũ trang giành chính quyền"],
-    cloze: "Tiếp tục cuộc {{cách mạng dân chủ nhân dân}}, sử dụng {{bạo lực cách mạng}} với 2 lực lượng {{chính trị và vũ trang}}, kết hợp đấu tranh chính trị với quân sự, tiến tới {{khởi nghĩa vũ trang giành chính quyền}} về tay nhân dân." },
+    ans: "Tiếp tục cuộc {{cách mạng dân tộc dân chủ nhân dân}}, sử dụng {{bạo lực cách mạng}} với hai lực lượng {{chính trị và vũ trang}}, kết hợp đấu tranh chính trị với quân sự, tiến tới {{khởi nghĩa vũ trang giành chính quyền}} về tay nhân dân." },
   { id: 62, grp: "g2", q: "Câu 62. Tháng 9 năm 1960, Đại hội đại biểu toàn quốc lần thứ III của Đảng họp tại Thủ đô Hà Nội xác định đường lối chung của cách mạng Việt Nam là gì?",
-    pills: ["Miền Bắc: Đẩy mạnh CM XHCN", "Miền Nam: Tiến hành CM DTDCND", "Thực hiện thống nhất nước nhà, hoàn thành độc lập dân chủ"],
-    cloze: "Đẩy mạnh {{cách mạng XHCN ở miền Bắc}}, tiến hành {{cách mạng dân tộc dân chủ nhân dân ở miền Nam}}, thực hiện {{thống nhất nước nhà}}, hoàn thành độc lập và dân chủ trong cả nước." },
+    ans: "Đẩy mạnh {{cách mạng xã hội chủ nghĩa ở miền Bắc}}, tiến hành {{cách mạng dân tộc dân chủ nhân dân ở miền Nam}}, thực hiện {{thống nhất nước nhà}}, hoàn thành độc lập và dân chủ trong cả nước." },
   { id: 63, grp: "g2", q: "Câu 63. Tháng 9-1960, tại Đại hội đại biểu toàn quốc lần thứ III của Đảng, đã đưa ra triển vọng của cuộc kháng chiến chống Mỹ cứu nước như thế nào?",
-    pills: ["Thắng lợi cuối cùng thuộc về nhân dân ta", "Nam Bắc nhất định sum họp 1 nhà"],
-    cloze: "{{Thắng lợi cuối cùng}} nhất định thuộc về nhân dân ta, {{Nam Bắc nhất định sum họp một nhà}}." },
+    ans: "{{Thắng lợi cuối cùng}} nhất định thuộc về nhân dân ta, {{Nam Bắc nhất định sum họp một nhà}}." },
   { id: 64, grp: "g2", q: "Câu 64. Ngày 15-2-1961, các lực lượng vũ trang ở miền Nam được thống nhất với tên gọi là gì?",
-    pills: ["Quân giải phóng miền Nam Việt Nam"],
-    cloze: "Tên gọi: {{Quân giải phóng miền Nam Việt Nam}}." },
+    ans: "{{Quân giải phóng miền Nam Việt Nam}}." },
   { id: 65, grp: "g2", q: "Câu 65. Cuộc tổng tiến công và nổi dậy Xuân 1975 diễn ra trong thời gian nào?",
-    pills: ["55 ngày đêm (10/3 đến 30/4/1975)", "11h30 ngày 30/4/1975 cắm cờ trên Dinh Độc Lập"],
-    cloze: "Diễn ra trong {{55 ngày đêm từ ngày 10/3 đến 30/4/1975}}. Vào {{11h30 phút ngày 30/4/1975}}, lá cờ cách mạng được cắm trên nóc {{Dinh Độc Lập}}, đánh dấu kết thúc cuộc kháng chiến chống Mỹ, cứu nước vĩ đại.",
-    warn: "⚠️ Cẩn thận: Trong file Word gốc bị gõ nhầm là 'năm 1974', đi thi phải ghi đúng là 30/4/1975!" },
+    ans: "Diễn ra trong {{55 ngày đêm từ ngày 10/3 đến 30/4/1975}}. Vào {{11h30 phút ngày 30/4/1975}}, lá cờ cách mạng được cắm trên nóc {{Dinh Độc Lập}}, kết thúc thắng lợi cuộc kháng chiến chống Mỹ, cứu nước.",
+    warn: "Lưu ý: Tài liệu gốc gõ nhầm 'năm 1974', mốc chuẩn xác là ngày 30/4/1975." },
   { id: 66, grp: "g3", q: "Câu 66. Nền kinh tế thị trường định hướng xã hội chủ nghĩa ở nước ta hiện nay nhằm mục tiêu gì?",
-    pills: ["Dân giàu", "Nước mạnh", "Dân chủ", "Công bằng", "Văn minh"],
-    cloze: "Mục tiêu: {{Dân giàu, nước mạnh, dân chủ, công bằng, văn minh}}." },
+    ans: "{{Dân giàu, nước mạnh, dân chủ, công bằng, văn minh}}." },
   { id: 67, grp: "g3", q: "Câu 67. Theo quan điểm của Đảng ta trong công nghiệp hóa, hiện đại hóa hiện nay để tăng trưởng kinh tế cần những yếu tố chủ yếu nào? Yếu tố nào là quyết định?",
-    pills: ["5 yếu tố: Vốn + KH&CN + Con người + Cơ cấu KT + Thể chế & QLNN", "Quyết định: Con người"],
-    cloze: "5 yếu tố chủ yếu: {{Vốn}}, {{Khoa học và công nghệ}}, {{Con người}}, {{Cơ cấu kinh tế}}, {{Thể chế chính trị và quản lý nhà nước}}. Trong đó {{Con người}} là yếu tố quyết định." },
+    ans: "- 5 yếu tố chủ yếu: {{Vốn}}, {{Khoa học và công nghệ}}, {{Con người}}, {{Cơ cấu kinh tế}}, {{Thể chế chính trị và quản lý nhà nước}}.\n- Yếu tố quyết định: {{Con người}}." },
   { id: 68, grp: "g3", q: "Câu 68. Nghị quyết Hội nghị Trung ương 8 (khóa XI) về chiến lược bảo vệ Tổ quốc trong thời kỳ mới xác định đối tác trong chính sách đối ngoại của Đảng ta hiện nay là gì?",
-    pills: ["Tôn trọng độc lập, chủ quyền", "Hữu nghị, hợp tác bình đẳng, cùng có lợi = Đối tác"],
-    cloze: "Những ai {{tôn trọng độc lập, chủ quyền}}, thiết lập và mở rộng quan hệ {{hữu nghị, hợp tác bình đẳng, cùng có lợi}} với Việt Nam đều là {{đối tác}}." },
+    ans: "Những ai {{tôn trọng độc lập, chủ quyền}}, thiết lập và mở rộng {{quan hệ hữu nghị, hợp tác bình đẳng, cùng có lợi}} với Việt Nam đều là {{đối tác}}." },
   { id: 69, grp: "g3", q: "Câu 69. Quan điểm về xây dựng văn hóa trong Nghị quyết hội nghị Trung ương IX (khóa XI) xác định trọng tâm là vấn đề gì?",
-    pills: ["Chăm lo xây dựng con người có nhân cách, lối sống tốt đẹp", "7 đặc tính: Yêu nước, nhân ái, nghĩa tình, trung thực, đoàn kết, cần cù, sáng tạo"],
-    cloze: "Chăm lo {{xây dựng con người có nhân cách, lối sống tốt đẹp}} với các đặc tính cơ bản: {{yêu nước, nhân ái, nghĩa tình, trung thực, đoàn kết, cần cù, sáng tạo}}." },
+    ans: "Chăm lo {{xây dựng con người có nhân cách, lối sống tốt đẹp}}, với các đặc tính cơ bản: {{yêu nước, nhân ái, nghĩa tình, trung thực, đoàn kết, cần cù, sáng tạo}}." },
   { id: 70, grp: "g3", q: "Câu 70. Văn hóa có vai trò gì đối với sự phát triển xã hội?",
-    pills: ["Nền tảng tinh thần", "Mục tiêu", "Động lực phát triển bền vững"],
-    cloze: "Văn hóa là {{nền tảng tinh thần}} của xã hội, là {{mục tiêu}}, là {{động lực phát triển bền vững}} của xã hội." },
+    ans: "Văn hóa là {{nền tảng tinh thần}} của xã hội, là {{mục tiêu}}, là {{động lực phát triển bền vững}} của xã hội." },
   { id: 71, grp: "g3", q: "Câu 71. Cương lĩnh năm 2011 do Đại hội lần thứ XI của Đảng thông qua, có bổ sung mới đặc trưng nào về xã hội xã hội chủ nghĩa mà nhân dân ta xây dựng?",
-    pills: ["1. Dân giàu, nước mạnh, dân chủ, công bằng, văn minh", "2. Có Nhà nước pháp quyền XHCN của dân, do dân, vì dân do ĐCS lãnh đạo"],
-    cloze: "Bổ sung 2 đặc trưng bao trùm: (1) “{{Dân giàu, nước mạnh, dân chủ, công bằng, văn minh}}” và (2) “{{Có Nhà nước pháp quyền XHCN của nhân dân, do nhân dân và vì nhân dân do ĐCS lãnh đạo}}”." },
+    ans: "- “{{Dân giàu, nước mạnh, dân chủ, công bằng, văn minh}}”.\n- “{{Có Nhà nước pháp quyền xã hội chủ nghĩa của nhân dân, do nhân dân, vì nhân dân do Đảng Cộng sản lãnh đạo}}”." },
   { id: 72, grp: "g3", q: "Câu 72. Đại hội XII của Đảng xác định trong nền kinh tế thị trường định hướng xã hội chủ nghĩa ở nước ta hiện nay có những thành phần kinh tế nào đang hình thành và phát triển?",
-    pills: ["1. Kinh tế nhà nước", "2. Kinh tế tập thể", "3. Kinh tế tư nhân", "4. Kinh tế có vốn đầu tư nước ngoài"],
-    cloze: "4 thành phần: {{Kinh tế nhà nước}}, {{kinh tế tập thể}}, {{kinh tế tư nhân}} và {{kinh tế có vốn đầu tư nước ngoài}}." },
+    ans: "- {{Kinh tế nhà nước}}\n- {{Kinh tế tập thể}}\n- {{Kinh tế tư nhân}}\n- {{Kinh tế có vốn đầu tư nước ngoài}}" },
   { id: 73, grp: "g3", q: "Câu 73. Theo quan điểm Đại hội XII của Đảng, để tiếp tục đẩy mạnh thực hiện mô hình công nghiệp hóa, hiện đại hóa trong điều kiện phát triển kinh tế thị trường định hướng xã hội chủ nghĩa và hội nhập quốc tế gắn với phát triển kinh tế tri thức, cần lấy những yếu tố nào làm động lực chủ yếu?",
-    pills: ["Khoa học", "Công nghệ", "Tri thức", "Nguồn nhân lực chất lượng cao"],
-    cloze: "Động lực chủ yếu: {{Khoa học, công nghệ}}, {{tri thức}} và {{nguồn nhân lực chất lượng cao}}." },
+    ans: "{{Khoa học, công nghệ}}, {{tri thức}} và {{nguồn nhân lực chất lượng cao}}." },
   { id: 74, grp: "g3", q: "Câu 74. Mối quan hệ giữa hội nhập kinh tế và các lĩnh vực khác được Đại hội XII xác định như thế nào?",
-    pills: ["Hội nhập kinh tế là trọng tâm", "Lĩnh vực khác tạo thuận lợi cho HNKT"],
-    cloze: "{{Hội nhập kinh tế là trọng tâm}}, các lĩnh vực khác phải {{tạo thuận lợi cho hội nhập kinh tế}}." },
+    ans: "{{Hội nhập kinh tế là trọng tâm}}, các lĩnh vực khác phải {{tạo thuận lợi cho hội nhập kinh tế}}." },
   { id: 75, grp: "g3", q: "Câu 75. Đảng Cộng sản Việt Nam từ năm 1930 đến nay đã lãnh đạo giai cấp công nhân, nhân dân lao động và toàn thể dân tộc Việt Nam giành được những thắng lợi vĩ đại, đó là những thắng lợi nào?",
-    pills: ["1. CM Tháng Tám 1945 (lập nước VNDCCH)", "2. Các cuộc kháng chiến giải phóng dân tộc, bảo vệ Tổ quốc", "3. Sự nghiệp Đổi mới quá độ lên CNXH"],
-    cloze: "3 thắng lợi vĩ đại:\n1. Thắng lợi của {{Cách mạng Tháng Tám năm 1945}}, thành lập nước VNDCCH.\n2. Thắng lợi của {{các cuộc kháng chiến oanh liệt}} để giải phóng dân tộc, bảo vệ Tổ quốc.\n3. Thắng lợi của {{sự nghiệp đổi mới}} và từng bước đưa đất nước quá độ lên CNXH." }
+    ans: "- Thắng lợi của {{Cách mạng Tháng Tám năm 1945}}, thành lập nước Việt Nam Dân chủ Cộng hòa.\n- Thắng lợi của {{các cuộc kháng chiến oanh liệt}} để giải phóng dân tộc, bảo vệ Tổ quốc.\n- Thắng lợi của {{sự nghiệp đổi mới}} và từng bước đưa đất nước quá độ lên chủ nghĩa xã hội." }
 ];
 
 // ============================================================================
-// 3. DỮ LIỆU 6 CÂU TỰ LUẬN (TÁCH RÕ: SƠ ĐỒ SIÊU RÚT GỌN VS. BÀI VIẾT THI CÔ ĐỌNG)
+// 3. DỮ LIỆU 6 CÂU TỰ LUẬN DÀI (GẠCH ĐẦU DÒNG CHUẨN MỰC, CÔ ĐỌNG, CHUẨN GIÁO TRÌNH)
 // ============================================================================
 const essayList = [
   {
     id: 76,
     name: "CM Tháng Tám 1945 & Sinh viên",
     fullQ: "Câu 76. Trình bày ý nghĩa lịch sử Cách mạng Tháng Tám năm 1945. Liên hệ trách nhiệm sinh viên trong việc góp phần xây dựng và bảo vệ Tổ quốc hiện nay.",
-    mindmap: [
+    sections: [
       {
-        branch: "VẾ 1: Ý NGHĨA LỊCH SỬ CM THÁNG TÁM 1945 (Chuẩn Giáo trình tr.120–122: 3 Dân tộc + 2 Quốc tế)",
-        steps: [
-          "Đập tan xiềng xích nô lệ của chủ nghĩa đế quốc gần 1 thế kỷ, chấm dứt chế độ quân chủ chuyên chế ngót nghìn năm → Lập nước VNDCCH (nhà nước của nhân dân đầu tiên ở Đông Nam Á).",
-          "Nhân dân từ thân phận nô lệ bước lên địa vị người làm chủ; nước ta từ thuộc địa thành quốc gia độc lập có chủ quyền → Mở ra kỷ nguyên độc lập, tự do và hướng tới CNXH.",
-          "Đảng Cộng sản Đông Dương từ hoạt động bí mật trở thành một đảng cầm quyền.",
-          "Quốc tế 1: Đột phá khâu quan trọng trong hệ thống thuộc địa của chủ nghĩa đế quốc, mở đầu thời kỳ suy sụp và tan rã của chủ nghĩa thực dân cũ.",
-          "Quốc tế 2: Cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên thế giới; góp phần làm phong phú thêm kho tàng lý luận Mác - Lênin về cách mạng giải phóng dân tộc."
-        ]
-      },
-      {
-        branch: "VẾ 2: LIÊN HỆ TRÁCH NHIỆM SINH VIÊN HIỆN NAY (3 Trụ cột)",
-        steps: [
-          "Tư tưởng - chính trị: Kiên định ĐLDT gắn liền với CNXH; tin tưởng sự lãnh đạo của Đảng; đấu tranh chống 'diễn biến hòa bình', phản bác thông tin sai trái.",
-          "Xây dựng Tổ quốc: Học tập nâng cao trình độ chuyên môn, ngoại ngữ, làm chủ KH-CN, chuyển đổi số; rèn luyện đạo đức và khởi nghiệp sáng tạo.",
-          "Bảo vệ Tổ quốc: Chấp hành nghiêm Hiến pháp, pháp luật, Luật Nghĩa vụ quân sự; học tốt Giáo dục QP-AN; tham gia bảo vệ chủ quyền biên giới, biển đảo."
-        ]
-      }
-    ],
-    examText: [
-      {
-        title: "1. Ý nghĩa lịch sử Cách mạng Tháng Tám năm 1945 (Chuẩn nguyên văn Giáo trình tr.120–122)",
-        lines: [
-          "• Một là: Đã <span class='hl'>đập tan xiềng xích nô lệ của chủ nghĩa đế quốc trong gần một thế kỷ</span>, chấm dứt sự tồn tại của <span class='hl'>chế độ quân chủ chuyên chế ngót nghìn năm</span>, lập nên nước Việt Nam Dân chủ Cộng hòa — nhà nước của nhân dân đầu tiên ở Đông Nam Á.",
-          "• Hai là: Đưa nhân dân Việt Nam từ thân phận nô lệ bước lên <span class='hl'>địa vị người làm chủ đất nước</span>; nước ta từ một nước thuộc địa trở thành một quốc gia độc lập có chủ quyền.",
-          "• Ba là: Đưa Đảng Cộng sản Đông Dương từ chỗ phải hoạt động bí mật trở thành <span class='hl'>một đảng cầm quyền</span>; mở ra kỷ nguyên mới trong lịch sử dân tộc: <span class='hl'>kỷ nguyên độc lập, tự do và hướng tới chủ nghĩa xã hội</span>.",
-          "• Bốn là (Về quốc tế): Lần đầu tiên giành thắng lợi ở một nước thuộc địa, đã đột phá một khâu quan trọng trong hệ thống thuộc địa của chủ nghĩa đế quốc, <span class='hl'>mở đầu thời kỳ suy sụp và tan rã của chủ nghĩa thực dân cũ</span>; cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên thế giới và <span class='hl'>làm phong phú thêm kho tàng lý luận của chủ nghĩa Mác - Lênin</span> về cách mạng giải phóng dân tộc."
+        title: "1. Ý nghĩa lịch sử của Cách mạng Tháng Tám năm 1945",
+        items: [
+          {
+            head: "Đập tan ách thống trị thực dân, phong kiến",
+            detail: "Đập tan xiềng xích nô lệ của chủ nghĩa đế quốc trong gần một thế kỷ, chấm dứt sự tồn tại của chế độ quân chủ chuyên chế ngót nghìn năm, lập nên nước Việt Nam Dân chủ Cộng hòa — nhà nước của nhân dân đầu tiên ở Đông Nam Á."
+          },
+          {
+            head: "Đưa nhân dân lên địa vị làm chủ",
+            detail: "Nhân dân Việt Nam từ thân phận nô lệ bước lên địa vị người làm chủ đất nước; nước ta từ một nước thuộc địa trở thành một quốc gia độc lập có chủ quyền."
+          },
+          {
+            head: "Đưa Đảng trở thành đảng cầm quyền và mở ra kỷ nguyên mới",
+            detail: "Đảng Cộng sản Đông Dương từ hoạt động bí mật trở thành một đảng cầm quyền; mở ra kỷ nguyên mới của dân tộc — kỷ nguyên độc lập, tự do và hướng tới chủ nghĩa xã hội."
+          },
+          {
+            head: "Ý nghĩa quốc tế và lý luận",
+            detail: "Đột phá một khâu quan trọng trong hệ thống thuộc địa của chủ nghĩa đế quốc, mở đầu thời kỳ suy sụp, tan rã của chủ nghĩa thực dân cũ; cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên thế giới và làm phong phú thêm kho tàng lý luận của chủ nghĩa Mác - Lênin."
+          }
         ]
       },
       {
         title: "2. Liên hệ trách nhiệm của sinh viên trong xây dựng và bảo vệ Tổ quốc hiện nay",
-        lines: [
-          "• Về nhận thức, tư tưởng: Kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội; tuyệt đối tin tưởng vào sự lãnh đạo của Đảng; nâng cao cảnh giác trước âm mưu “diễn biến hòa bình”, phản bác các luận điệu xuyên tạc trên không gian mạng.",
-          "• Về học tập, xây dựng Tổ quốc: Ra sức học tập nâng cao trình độ chuyên môn, ngoại ngữ, kỹ năng số và làm chủ khoa học - công nghệ; rèn luyện đạo đức, lối sống lành mạnh và tinh thần khởi nghiệp sáng tạo.",
-          "• Về hành động bảo vệ Tổ quốc: Chấp hành nghiêm chủ trương của Đảng, pháp luật của Nhà nước và Luật Nghĩa vụ quân sự; hoàn thành tốt môn Giáo dục quốc phòng - an ninh; tích cực tham gia bảo vệ chủ quyền biên giới, biển đảo của Tổ quốc."
+        items: [
+          {
+            head: "Về chính trị - tư tưởng",
+            detail: "Kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội; tin tưởng vào sự lãnh đạo của Đảng; nâng cao cảnh giác, đấu tranh phản bác các quan điểm sai trái, âm mưu “diễn biến hòa bình” trên không gian mạng."
+          },
+          {
+            head: "Về học tập, xây dựng Tổ quốc",
+            detail: "Không ngừng học tập nâng cao trình độ chuyên môn, ngoại ngữ, kỹ năng số và làm chủ khoa học - công nghệ; rèn luyện đạo đức cách mạng, lối sống lành mạnh và tinh thần khởi nghiệp, đổi mới sáng tạo."
+          },
+          {
+            head: "Về hành động bảo vệ Tổ quốc",
+            detail: "Chấp hành nghiêm chủ trương của Đảng, chính sách, pháp luật của Nhà nước và Luật Nghĩa vụ quân sự; hoàn thành tốt chương trình Giáo dục quốc phòng - an ninh; tích cực tham gia bảo vệ chủ quyền biên giới, biển đảo của Tổ quốc."
+          }
         ]
       }
     ]
@@ -1454,50 +1456,47 @@ const essayList = [
     id: 77,
     name: "Bài học Chống Mỹ & Phát huy",
     fullQ: "Câu 77. Trình bày một số bài học kinh nghiệm trong cuộc kháng chiến chống Mỹ, cứu nước của nhân dân Việt Nam (1954-1975). Theo anh (chị) Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay.",
-    mindmap: [
+    sections: [
       {
-        branch: "⚠️ LƯU Ý LẬT ĐÚNG TRANG SÁCH GIÁO TRÌNH (TRÁNH NHẦM CHỐNG PHÁP)",
-        steps: [
-          "Đáp án ĐÚNG của Câu 77 (Kháng chiến chống Mỹ 1954–1975) nằm ở TRANG 235–236 trong sách Giáo trình của bạn (gồm 4 bài học bên dưới).",
-          "Không chép trang 155–157 vì trang 155–157 là bài học của cuộc Kháng chiến chống Pháp (1945–1954)!"
+        title: "1. Một số bài học kinh nghiệm trong cuộc kháng chiến chống Mỹ, cứu nước (1954–1975)",
+        items: [
+          {
+            head: "Một là, giương cao ngọn cờ độc lập dân tộc và chủ nghĩa xã hội",
+            detail: "Kết hợp chặt chẽ hai nhiệm vụ chiến lược ở hai miền Nam - Bắc nhằm huy động sức mạnh toàn dân đánh Mỹ, cả nước đánh Mỹ."
+          },
+          {
+            head: "Hai là, tìm ra phương pháp đấu tranh đúng đắn, sáng tạo",
+            detail: "Thực hiện khởi nghĩa toàn dân và chiến tranh nhân dân, sử dụng phương pháp cách mạng tổng hợp (kết hợp đấu tranh quân sự, chính trị, ngoại giao; đánh địch bằng ba mũi giáp công trên ba vùng chiến lược)."
+          },
+          {
+            head: "Ba là, phải có công tác tổ chức chiến đấu giỏi",
+            detail: "Phát huy năng lực chỉ đạo, tổ chức chiến đấu của các cấp bộ Đảng và các cấp chi ủy quân đội, thực hiện giành thắng lợi từng bước đến thắng lợi hoàn toàn."
+          },
+          {
+            head: "Bốn là, hết sức coi trọng công tác xây dựng Đảng, lực lượng cách mạng và đoàn kết quốc tế",
+            detail: "Chú trọng xây dựng Đảng, xây dựng lực lượng cách mạng ở miền Nam và lực lượng chiến đấu trong cả nước; tranh thủ tối đa sự đồng tình, ủng hộ của quốc tế."
+          }
         ]
       },
       {
-        branch: "VẾ 1: 4 BÀI HỌC KHÁNG CHIẾN CHỐNG MỸ, CỨU NƯỚC 1954–1975 (Trang 235–236)",
-        steps: [
-          "Một là: Giương cao ngọn cờ độc lập dân tộc và chủ nghĩa xã hội, nhằm huy động sức mạnh toàn dân đánh Mỹ, cả nước đánh Mỹ.",
-          "Hai là: Tìm ra phương pháp đấu tranh đúng đắn, sáng tạo, thực hiện khởi nghĩa toàn dân và chiến tranh nhân dân, sử dụng phương pháp cách mạng tổng hợp.",
-          "Ba là: Phải có công tác tổ chức chiến đấu giỏi của các cấp bộ Đảng và các cấp chi ủy quân đội, thực hiện giành thắng lợi từng bước đến thắng lợi hoàn toàn.",
-          "Bốn là: Hết sức coi trọng công tác xây dựng Đảng, xây dựng lực lượng cách mạng ở miền Nam và tổ chức xây dựng lực lượng chiến đấu trong cả nước, tranh thủ tối đa sự đồng tình, ủng hộ của quốc tế."
-        ]
-      },
-      {
-        branch: "VẾ 2: 4 VIỆC ĐẢNG CẦN LÀM ĐỂ KẾ THỪA, PHÁT HUY HIỆN NAY (Tương ứng 1–1 với 4 bài học trên)",
-        steps: [
-          "Kế thừa Bài học 1 (Ngọn cờ): Kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội; kết hợp chặt chẽ 2 nhiệm vụ chiến lược là xây dựng và bảo vệ Tổ quốc.",
-          "Kế thừa Bài học 2 (Phương pháp & Sức mạnh toàn dân): Phát huy sức mạnh đại đoàn kết toàn dân tộc ('lấy dân làm gốc'), xây dựng nền quốc phòng toàn dân gắn với thế trận an ninh nhân dân và 'thế trận lòng dân' vững chắc.",
-          "Kế thừa Bài học 3 (Tổ chức thực hiện): Nâng cao năng lực lãnh đạo, chỉ đạo và tổ chức thực hiện nghị quyết của các cấp ủy Đảng; nhạy bén nắm bắt thời cơ phát triển đất nước và bảo vệ Tổ quốc 'từ sớm, từ xa'.",
-          "Kế thừa Bài học 4 (Xây dựng Đảng & Quốc tế): Thường xuyên xây dựng, chỉnh đốn Đảng trong sạch, vững mạnh toàn diện; kết hợp sức mạnh dân tộc với sức mạnh thời đại, chủ động hội nhập quốc tế sâu rộng."
-        ]
-      }
-    ],
-    examText: [
-      {
-        title: "1. Bốn bài học kinh nghiệm lãnh đạo kháng chiến chống Mỹ, cứu nước (1954–1975) — Chuẩn Giáo trình trang 235–236",
-        lines: [
-          "• <strong>Một là:</strong> <span class='hl'>Giương cao ngọn cờ độc lập dân tộc và chủ nghĩa xã hội, nhằm huy động sức mạnh toàn dân đánh Mỹ, cả nước đánh Mỹ</span> (kết hợp chặt chẽ hậu phương lớn miền Bắc với tiền tuyến lớn miền Nam).",
-          "• <strong>Hai là:</strong> <span class='hl'>Tìm ra phương pháp đấu tranh đúng đắn, sáng tạo, thực hiện khởi nghĩa toàn dân và chiến tranh nhân dân, sử dụng phương pháp cách mạng tổng hợp</span> (kết hợp đấu tranh quân sự, chính trị, ngoại giao; đánh địch bằng 3 mũi giáp công trên 3 vùng chiến lược).",
-          "• <strong>Ba là:</strong> <span class='hl'>Phải có công tác tổ chức chiến đấu giỏi của các cấp bộ Đảng và các cấp chi ủy quân đội, thực hiện giành thắng lợi từng bước đến thắng lợi hoàn toàn</span>.",
-          "• <strong>Bốn là:</strong> <span class='hl'>Hết sức coi trọng công tác xây dựng Đảng, xây dựng lực lượng cách mạng ở miền Nam và tổ chức xây dựng lực lượng chiến đấu trong cả nước, tranh thủ tối đa sự đồng tình, ủng hộ của quốc tế</span>."
-        ]
-      },
-      {
-        title: "2. Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay (Hoàn chỉnh, súc tích, khớp 4 bài học)",
-        lines: [
-          "• <strong>Một là (Kế thừa bài học giương cao ngọn cờ ĐLDT và CNXH):</strong> Kiên định mục tiêu <span class='hl'>độc lập dân tộc gắn liền với chủ nghĩa xã hội</span> trên nền tảng chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh; kết hợp chặt chẽ hai nhiệm vụ chiến lược là xây dựng thành công CNXH và bảo vệ vững chắc Tổ quốc Việt Nam XHCN.",
-          "• <strong>Hai là (Kế thừa bài học phát huy sức mạnh toàn dân và phương pháp tổng hợp):</strong> Phát huy cao độ sức mạnh <span class='hl'>đại đoàn kết toàn dân tộc</span> theo phương châm “lấy dân làm gốc”; kết hợp chặt chẽ phát triển kinh tế - xã hội với củng cố quốc phòng, an ninh và đối ngoại; xây dựng thế trận quốc phòng toàn dân gắn với thế trận an ninh nhân dân và “thế trận lòng dân” vững chắc.",
-          "• <strong>Ba là (Kế thừa bài học công tác tổ chức, chỉ đạo thực tiễn):</strong> Nâng cao năng lực dự báo chiến lược, đổi mới phương thức lãnh đạo và <span class='hl'>nâng cao hiệu quả tổ chức thực hiện nghị quyết</span> của các cấp bộ Đảng; chủ động nắm bắt thời cơ phát triển và <span class='hl'>bảo vệ Tổ quốc từ sớm, từ xa</span>.",
-          "• <strong>Bốn là (Kế thừa bài học xây dựng Đảng và tranh thủ quốc tế):</strong> Thường xuyên coi trọng <span class='hl'>xây dựng, chỉnh đốn Đảng trong sạch, vững mạnh toàn diện</span>, kiên quyết phòng, chống tham nhũng, tiêu cực; đồng thời kết hợp sức mạnh dân tộc với sức mạnh thời đại, chủ động và tích cực hội nhập quốc tế toàn diện, sâu rộng."
+        title: "2. Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay",
+        items: [
+          {
+            head: "Kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+            detail: "Vận dụng sáng tạo chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh vào công cuộc đổi mới; kết hợp chặt chẽ hai nhiệm vụ chiến lược là xây dựng và bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa."
+          },
+          {
+            head: "Phát huy sức mạnh đại đoàn kết toàn dân tộc",
+            detail: "Thực hiện nhất quán quan điểm “lấy dân làm gốc”, xây dựng “thế trận lòng dân” vững chắc gắn với thế trận quốc phòng toàn dân và thế trận an ninh nhân dân."
+          },
+          {
+            head: "Nâng cao năng lực lãnh đạo và chỉ đạo thực tiễn",
+            detail: "Đổi mới phương thức lãnh đạo của Đảng, nâng cao năng lực dự báo chiến lược, nhạy bén nắm bắt thời cơ phát triển đất nước và chủ động bảo vệ Tổ quốc “từ sớm, từ xa”."
+          },
+          {
+            head: "Tăng cường xây dựng, chỉnh đốn Đảng và hội nhập quốc tế",
+            detail: "Xây dựng Đảng trong sạch, vững mạnh toàn diện, kiên quyết phòng, chống tham nhũng, tiêu cực; đồng thời kết hợp sức mạnh dân tộc với sức mạnh thời đại, chủ động, tích cực hội nhập quốc tế sâu rộng."
+          }
         ]
       }
     ]
@@ -1506,45 +1505,51 @@ const essayList = [
     id: 78,
     name: "CNH Đại hội VIII & Sinh viên",
     fullQ: "Câu 78. Trình bày quan điểm của Đảng về công nghiệp hóa trong thời kì đổi mới được nêu ra tại Đại hội VIII (7/1996) của Đảng. Sinh viên có thể làm gì để đóng góp vào quá trình công nghiệp hóa, hiện đại hóa đất nước theo định hướng của Đảng?",
-    mindmap: [
+    sections: [
       {
-        branch: "VẾ 1: 6 QUAN ĐIỂM CNH-HĐH TẠI ĐẠI HỘI VIII (Chuẩn Giáo trình tr.286–287)",
-        steps: [
-          "1. Giữ vững độc lập, tự chủ, đi đôi với mở rộng quan hệ quốc tế, đa phương hóa, đa dạng hóa quan hệ đối ngoại. Dựa vào nguồn lực trong nước là chính đi đôi với tranh thủ tối đa nguồn lực bên ngoài.",
-          "2. CNH, HĐH là sự nghiệp của toàn dân, của mọi thành phần kinh tế, trong đó kinh tế nhà nước giữ vai trò chủ đạo.",
-          "3. Lấy việc phát huy nguồn lực con người là yếu tố cơ bản cho sự phát triển nhanh và bền vững.",
-          "4. Khoa học và công nghệ là động lực của CNH, HĐH. Kết hợp công nghệ truyền thống với công nghệ hiện đại, tranh thủ đi nhanh vào hiện đại ở những khâu quyết định.",
-          "5. Lấy hiệu quả kinh tế - xã hội làm tiêu chuẩn cơ bản để xác định phương án phát triển, lựa chọn dự án đầu tư và công nghệ.",
-          "6. Kết hợp kinh tế với quốc phòng và an ninh."
+        title: "1. Quan điểm của Đảng về công nghiệp hóa trong thời kỳ đổi mới tại Đại hội VIII (7/1996)",
+        items: [
+          {
+            head: "Một là, giữ vững độc lập, tự chủ gắn với mở rộng hợp tác quốc tế",
+            detail: "Đa phương hóa, đa dạng hóa quan hệ đối ngoại; dựa vào nguồn lực trong nước là chính đi đôi với tranh thủ tối đa nguồn lực bên ngoài."
+          },
+          {
+            head: "Hai là, công nghiệp hóa, hiện đại hóa là sự nghiệp của toàn dân",
+            detail: "Huy động sức mạnh của mọi thành phần kinh tế, trong đó kinh tế nhà nước giữ vai trò chủ đạo."
+          },
+          {
+            head: "Ba là, lấy phát huy nguồn lực con người là yếu tố cơ bản",
+            detail: "Bảo đảm cho sự phát triển nhanh và bền vững; tăng trưởng kinh tế gắn với cải thiện đời sống nhân dân, phát triển văn hóa, giáo dục, thực hiện tiến bộ, công bằng xã hội và bảo vệ môi trường."
+          },
+          {
+            head: "Bốn là, khoa học và công nghệ là động lực",
+            detail: "Kết hợp công nghệ truyền thống với công nghệ hiện đại, tranh thủ đi nhanh vào hiện đại ở những khâu quyết định."
+          },
+          {
+            head: "Năm là, lấy hiệu quả kinh tế - xã hội làm tiêu chuẩn cơ bản",
+            detail: "Làm căn cứ để xác định phương án phát triển, lựa chọn dự án đầu tư và công nghệ."
+          },
+          {
+            head: "Sáu là, kết hợp kinh tế với quốc phòng và an ninh",
+            detail: "Bảo đảm gắn kết chặt chẽ giữa phát triển kinh tế với củng cố quốc phòng - an ninh."
+          }
         ]
       },
       {
-        branch: "VẾ 2: 3 ĐÓNG GÓP CỦA SINH VIÊN VÀO CNH, HĐH",
-        steps: [
-          "Làm chủ tri thức & KH-CN: Học tập chuyên môn sâu, ngoại ngữ, chuyển đổi số, AI → Trở thành nguồn nhân lực chất lượng cao.",
-          "Tác phong công nghiệp & Sáng tạo: Rèn kỷ luật lao động, tư duy khoa học, tích cực nghiên cứu khoa học và khởi nghiệp.",
-          "Phát triển bền vững: Giữ gìn bản sắc văn hóa dân tộc khi hội nhập, nâng cao ý thức bảo vệ môi trường (kinh tế xanh)."
-        ]
-      }
-    ],
-    examText: [
-      {
-        title: "1. Sáu quan điểm của Đảng về CNH, HĐH tại Đại hội VIII (Chuẩn nguyên văn Giáo trình tr.286–287)",
-        lines: [
-          "1) <span class='hl'>Giữ vững độc lập, tự chủ, đi đôi với mở rộng quan hệ quốc tế, đa phương hóa, đa dạng hóa quan hệ đối ngoại</span>. Dựa vào <span class='hl'>nguồn lực trong nước là chính</span> đi đôi với tranh thủ tối đa nguồn lực bên ngoài.",
-          "2) Công nghiệp hóa, hiện đại hóa là <span class='hl'>sự nghiệp của toàn dân, của mọi thành phần kinh tế</span>, trong đó <span class='hl'>kinh tế nhà nước giữ vai trò chủ đạo</span>.",
-          "3) Lấy việc phát huy <span class='hl'>nguồn lực con người là yếu tố cơ bản</span> cho sự phát triển nhanh và bền vững. Tăng trưởng kinh tế gắn liền với cải thiện đời sống nhân dân, phát triển văn hóa, giáo dục, thực hiện tiến bộ và công bằng xã hội, bảo vệ môi trường.",
-          "4) <span class='hl'>Khoa học và công nghệ là động lực</span> của công nghiệp hóa, hiện đại hóa. Kết hợp công nghệ truyền thống với công nghệ hiện đại, tranh thủ đi nhanh vào hiện đại ở những khâu quyết định.",
-          "5) Lấy <span class='hl'>hiệu quả kinh tế - xã hội làm tiêu chuẩn cơ bản</span> để xác định phương án phát triển, lựa chọn dự án đầu tư và công nghệ.",
-          "6) <span class='hl'>Kết hợp kinh tế với quốc phòng và an ninh</span>."
-        ]
-      },
-      {
-        title: "2. Sinh viên có thể làm gì để đóng góp vào quá trình CNH, HĐH đất nước",
-        lines: [
-          "• Phát triển bản thân thành nguồn nhân lực chất lượng cao: Không ngừng học tập nâng cao trình độ chuyên môn, ngoại ngữ, tin học, làm chủ khoa học - công nghệ hiện đại và chuyển đổi số.",
-          "• Rèn luyện tác phong công nghiệp và đổi mới sáng tạo: Xây dựng kỷ luật lao động, tác phong làm việc chuyên nghiệp; tích cực tham gia nghiên cứu khoa học và khởi nghiệp sáng tạo.",
-          "• Gắn phát triển với trách nhiệm xã hội và bảo vệ môi trường: Rèn luyện đạo đức cách mạng, giữ gìn bản sắc văn hóa dân tộc trong hội nhập quốc tế và thực hiện lối sống xanh, bảo vệ môi trường."
+        title: "2. Sinh viên có thể làm gì để đóng góp vào quá trình công nghiệp hóa, hiện đại hóa đất nước",
+        items: [
+          {
+            head: "Phấn đấu trở thành nguồn nhân lực chất lượng cao",
+            detail: "Tích cực học tập nâng cao trình độ chuyên môn, ngoại ngữ, kỹ năng số và làm chủ khoa học - công nghệ hiện đại."
+          },
+          {
+            head: "Rèn luyện tác phong công nghiệp và tinh thần sáng tạo",
+            detail: "Xây dựng ý thức kỷ luật lao động, tác phong làm việc chuyên nghiệp; chủ động tham gia nghiên cứu khoa học và khởi nghiệp đổi mới sáng tạo."
+          },
+          {
+            head: "Gắn phát triển kinh tế với văn hóa và bảo vệ môi trường",
+            detail: "Rèn luyện đạo đức, giữ gìn bản sắc văn hóa dân tộc trong hội nhập quốc tế và thực hiện lối sống xanh, bảo vệ môi trường bền vững."
+          }
         ]
       }
     ]
@@ -1553,41 +1558,43 @@ const essayList = [
     id: 79,
     name: "Hội nhập quốc tế & Sinh viên",
     fullQ: "Câu 79. Trong bối cảnh quốc tế hiện nay Đảng ta cần phải làm gì để tăng cường hội nhập quốc tế, góp phần xây dựng và phát triển đất nước. Liên hệ trách nhiệm sinh viên.",
-    mindmap: [
+    sections: [
       {
-        branch: "VẾ 1: 4 GIẢI PHÁP ĐẢNG TĂNG CƯỜNG HỘI NHẬP QUỐC TẾ",
-        steps: [
-          "Đường lối: Độc lập, tự chủ, đa phương hóa, đa dạng hóa; bảo đảm lợi ích tối cao của quốc gia - dân tộc.",
-          "Trọng tâm: Chủ động hội nhập toàn diện, lấy Hội nhập kinh tế làm trọng tâm.",
-          "Nội lực: Nâng cao sức cạnh tranh, thực hiện 3 đột phá chiến lược (thể chế, nhân lực, hạ tầng).",
-          "Nguyên tắc: Nắm vững 2 mặt hợp tác và đấu tranh; giữ vững chủ quyền & bản sắc ('hòa nhập không hòa tan')."
+        title: "1. Những chủ trương, giải pháp của Đảng để tăng cường hội nhập quốc tế hiện nay",
+        items: [
+          {
+            head: "Thực hiện nhất quán đường lối đối ngoại độc lập, tự chủ",
+            detail: "Kiên trì đường lối đối ngoại hòa bình, hữu nghị, hợp tác và phát triển; đa phương hóa, đa dạng hóa quan hệ đối ngoại; bảo đảm cao nhất lợi ích quốc gia - dân tộc trên cơ sở các nguyên tắc cơ bản của luật pháp quốc tế, bình đẳng, cùng có lợi."
+          },
+          {
+            head: "Chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng",
+            detail: "Lấy hội nhập kinh tế là trọng tâm; hội nhập trong các lĩnh vực chính trị, quốc phòng, an ninh, văn hóa - xã hội, khoa học - công nghệ phải tạo thuận lợi cho hội nhập kinh tế."
+          },
+          {
+            head: "Nâng cao nội lực và sức cạnh tranh của nền kinh tế",
+            detail: "Xây dựng nền kinh tế độc lập, tự chủ gắn với hội nhập kinh tế quốc tế; đẩy mạnh thực hiện ba đột phá chiến lược về thể chế, nguồn nhân lực chất lượng cao và kết cấu hạ tầng đồng bộ."
+          },
+          {
+            head: "Nắm vững hai mặt hợp tác và đấu tranh trong quan hệ quốc tế",
+            detail: "Kết hợp chặt chẽ đối ngoại Đảng, ngoại giao Nhà nước và đối ngoại nhân dân; giữ vững ổn định chính trị - xã hội, bảo vệ chủ quyền quốc gia và giữ gìn bản sắc văn hóa dân tộc."
+          }
         ]
       },
       {
-        branch: "VẾ 2: 3 TRÁCH NHIỆM SINH VIÊN KHI HỘI NHẬP",
-        steps: [
-          "Năng lực toàn cầu: Giỏi chuyên môn, thông thạo ngoại ngữ, công nghệ số và kỹ năng mềm.",
-          "Văn hóa: Tiếp thu tinh hoa nhân loại nhưng giữ gìn và quảng bá bản sắc Việt Nam.",
-          "Bản lĩnh: Thượng tôn pháp luật, tỉnh táo trước thông tin xấu độc xuyên tạc."
-        ]
-      }
-    ],
-    examText: [
-      {
-        title: "1. Đảng ta cần làm gì để tăng cường hội nhập quốc tế hiện nay",
-        lines: [
-          "• Thực hiện nhất quán đường lối đối ngoại <span class='hl'>độc lập, tự chủ, hòa bình, hợp tác và phát triển</span>; đa phương hóa, đa dạng hóa; bảo đảm <span class='hl'>lợi ích tối cao của quốc gia - dân tộc</span> trên cơ sở luật pháp quốc tế.",
-          "• Chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng, trong đó <span class='hl'>lấy hội nhập kinh tế là trọng tâm</span>, hội nhập các lĩnh vực khác phải tạo thuận lợi cho hội nhập kinh tế.",
-          "• Phát huy nội lực, xây dựng nền kinh tế độc lập, tự chủ gắn với thực hiện <span class='hl'>3 đột phá chiến lược</span> (hoàn thiện thể chế KTTT, phát triển nhân lực chất lượng cao, xây dựng hạ tầng hiện đại).",
-          "• <span class='hl'>Nắm vững hai mặt hợp tác và đấu tranh</span>; giữ vững ổn định chính trị, bảo vệ chủ quyền và bản sắc văn hóa dân tộc (“hội nhập nhưng không hòa tan”)."
-        ]
-      },
-      {
-        title: "2. Liên hệ trách nhiệm của sinh viên",
-        lines: [
-          "• Trang bị hành trang công dân toàn cầu: Nâng cao trình độ chuyên môn, ngoại ngữ, tin học và kỹ năng làm việc quốc tế.",
-          "• Hòa nhập nhưng không hòa tan: Tiếp thu tinh hoa nhân loại đồng thời bảo tồn, lan tỏa hình ảnh văn hóa Việt Nam.",
-          "• Giữ vững bản lĩnh chính trị: Tuân thủ pháp luật Việt Nam và quốc tế, đấu tranh phản bác các quan điểm sai trái."
+        title: "2. Liên hệ trách nhiệm của sinh viên trong hội nhập quốc tế",
+        items: [
+          {
+            head: "Trang bị năng lực hội nhập quốc tế",
+            detail: "Chủ động nâng cao kiến thức chuyên môn, thông thạo ngoại ngữ, công nghệ số và rèn luyện kỹ năng làm việc trong môi trường quốc tế."
+          },
+          {
+            head: "Giữ gìn và phát huy bản sắc văn hóa dân tộc",
+            detail: "Tiếp thu có chọn lọc tinh hoa văn hóa, tri thức nhân loại theo phương châm “hòa nhập nhưng không hòa tan”; tích cực quảng bá hình ảnh đất nước, con người Việt Nam."
+          },
+          {
+            head: "Giữ vững bản lĩnh chính trị và ý thức pháp luật",
+            detail: "Nắm vững đường lối đối ngoại của Đảng, tuân thủ pháp luật Việt Nam và quốc tế; cảnh giác, đấu tranh phản bác các quan điểm sai trái, thù địch."
+          }
         ]
       }
     ]
@@ -1596,43 +1603,51 @@ const essayList = [
     id: 80,
     name: "Đổi mới Đại hội VI (1986)",
     fullQ: "Câu 80. Phân tích nội dung đường lối đổi mới toàn diện đất nước được Đảng Cộng sản Việt Nam đề ra tại Đại hội VI (1986). Những bài học kinh nghiệm mà Đảng ta đã đúc kết cho công cuộc phát triển đất nước trong giai đoạn hiện nay.",
-    mindmap: [
+    sections: [
       {
-        branch: "VẾ 1: ĐƯỜNG LỐI ĐỔI MỚI ĐẠI HỘI VI (12/1986)",
-        steps: [
-          "Tinh thần chung: Nhìn thẳng sự thật → Đổi mới toàn diện, TRỌNG TÂM LÀ ĐỔI MỚI KINH TẾ.",
-          "Cơ chế quản lý: Xóa bỏ tập trung quan liêu, bao cấp → Chuyển sang hạch toán, kinh doanh, kết hợp kế hoạch với thị trường.",
-          "Cơ cấu kinh tế: Phát triển kinh tế hàng hóa nhiều thành phần.",
-          "Ba chương trình kinh tế lớn: (1) Lương thực - thực phẩm, (2) Hàng tiêu dùng, (3) Hàng xuất khẩu.",
-          "Xã hội, QP-AN, Xây dựng Đảng: 4 chính sách xã hội + Mở rộng đối ngoại + Đổi mới tư duy & cán bộ ('Dân biết, dân bàn, dân làm, dân kiểm tra')."
+        title: "1. Nội dung đường lối đổi mới toàn diện đất nước tại Đại hội VI (12/1986)",
+        items: [
+          {
+            head: "Phương châm và trọng tâm đổi mới",
+            detail: "Quán triệt tinh thần “nhìn thẳng vào sự thật, đánh giá đúng sự thật, nói rõ sự thật”; thực hiện đổi mới toàn diện, đồng bộ trên các lĩnh vực, trong đó trọng tâm là đổi mới kinh tế."
+          },
+          {
+            head: "Đổi mới cơ chế quản lý và cơ cấu kinh tế",
+            detail: "Xóa bỏ cơ chế tập trung quan liêu, hành chính, bao cấp, chuyển sang hạch toán, kinh doanh, kết hợp kế hoạch với thị trường; phát triển nền kinh tế nhiều thành phần theo định hướng xã hội chủ nghĩa."
+          },
+          {
+            head: "Thực hiện Ba chương trình kinh tế lớn",
+            detail: "Bố trí lại cơ cấu sản xuất, điều chỉnh cơ cấu đầu tư, tập trung thực hiện ba chương trình mục tiêu về Lương thực - thực phẩm, Hàng tiêu dùng và Hàng xuất khẩu; coi nông nghiệp là mặt trận hàng đầu."
+          },
+          {
+            head: "Đổi mới chính sách xã hội, quốc phòng - an ninh và đối ngoại",
+            detail: "Giải quyết việc làm, thực hiện công bằng xã hội, chăm lo giáo dục, văn hóa, y tế; tăng cường quốc phòng - an ninh; mở rộng và nâng cao hiệu quả kinh tế đối ngoại."
+          },
+          {
+            head: "Đổi mới sự lãnh đạo của Đảng và quản lý của Nhà nước",
+            detail: "Đổi mới tư duy (trước hết là tư duy kinh tế), đổi mới công tác cán bộ và phong cách làm việc; phát huy quyền làm chủ của nhân dân theo phương châm “Dân biết, dân bàn, dân làm, dân kiểm tra”."
+          }
         ]
       },
       {
-        branch: "VẾ 2: 4 BÀI HỌC KINH NGHIỆM QUÝ BÁU",
-        steps: [
-          "Bài học 1: Quán triệt tư tưởng “Lấy dân làm gốc”.",
-          "Bài học 2: Luôn xuất phát từ thực tế, tôn trọng và hành động theo quy luật khách quan.",
-          "Bài học 3: Kết hợp sức mạnh dân tộc với sức mạnh thời đại trong điều kiện mới.",
-          "Bài học 4: Chăm lo xây dựng Đảng ngang tầm với một đảng cầm quyền."
-        ]
-      }
-    ],
-    examText: [
-      {
-        title: "1. Nội dung đường lối đổi mới toàn diện tại Đại hội VI (12/1986)",
-        lines: [
-          "• Phương châm chung: <span class='hl'>“Nhìn thẳng vào sự thật, đánh giá đúng sự thật, nói rõ sự thật”</span>; đổi mới toàn diện và đồng bộ, trong đó <span class='hl'>trọng tâm là đổi mới kinh tế</span>.",
-          "• Đổi mới kinh tế: (1) Xóa bỏ cơ chế tập trung quan liêu, bao cấp, chuyển sang <span class='hl'>hạch toán, kinh doanh, kết hợp kế hoạch với thị trường</span>. (2) Phát triển nền <span class='hl'>kinh tế nhiều thành phần</span>. (3) Tập trung thực hiện <span class='hl'>Ba chương trình kinh tế lớn</span>: Lương thực - thực phẩm, Hàng tiêu dùng và Hàng xuất khẩu. (4) Mở rộng kinh tế đối ngoại.",
-          "• Đổi mới các lĩnh vực khác: Giải quyết việc làm, chăm lo văn hóa, giáo dục, y tế; tăng cường quốc phòng - an ninh; đổi mới tư duy và sự lãnh đạo của Đảng theo phương châm <span class='hl'>“Dân biết, dân bàn, dân làm, dân kiểm tra”</span>."
-        ]
-      },
-      {
-        title: "2. Bốn bài học kinh nghiệm được Đại hội VI đúc kết",
-        lines: [
-          "1. Trong toàn bộ hoạt động, Đảng phải quán triệt tư tưởng <span class='hl'>“lấy dân làm gốc”</span>, phát huy quyền làm chủ của nhân dân.",
-          "2. Đảng phải luôn <span class='hl'>xuất phát từ thực tế, tôn trọng và hành động theo quy luật khách quan</span>.",
-          "3. Phải biết <span class='hl'>kết hợp sức mạnh dân tộc với sức mạnh của thời đại</span> trong điều kiện mới.",
-          "4. Chăm lo <span class='hl'>xây dựng Đảng ngang tầm với một đảng cầm quyền</span> lãnh đạo cách mạng XHCN."
+        title: "2. Bốn bài học kinh nghiệm quý báu được Đảng đúc kết",
+        items: [
+          {
+            head: "Một là, quán triệt tư tưởng “lấy dân làm gốc”",
+            detail: "Trong toàn bộ hoạt động của mình, Đảng phải xây dựng và phát huy quyền làm chủ của nhân dân lao động."
+          },
+          {
+            head: "Hai là, tôn trọng và hành động theo quy luật khách quan",
+            detail: "Đảng phải luôn luôn xuất phát từ thực tế, khắc phục bệnh chủ quan, duy ý chí."
+          },
+          {
+            head: "Ba là, kết hợp sức mạnh dân tộc với sức mạnh thời đại",
+            detail: "Biết tranh thủ và phát huy sức mạnh tổng hợp của dân tộc và thời đại trong điều kiện lịch sử mới."
+          },
+          {
+            head: "Bốn là, chăm lo xây dựng Đảng ngang tầm nhiệm vụ",
+            detail: "Xây dựng Đảng ngang tầm với một đảng cầm quyền lãnh đạo nhân dân tiến hành cuộc cách mạng xã hội chủ nghĩa."
+          }
         ]
       }
     ]
@@ -1641,46 +1656,55 @@ const essayList = [
     id: 81,
     name: "Thành tựu 1986-2021 & ĐH XIII",
     fullQ: "Câu 81. Trình bày những thành tựu cơ bản trong công cuộc đổi mới đất nước (1986-2021). Theo anh (chị) để phát huy những thành tựu đó trong thực hiện nghị quyết Đại hội XIII giai đoạn 2021 - 2026 Đảng ta cần phải làm gì?",
-    mindmap: [
+    sections: [
       {
-        branch: "VẾ 1: THÀNH TỰU ĐỔI MỚI 1986–2021 (1 Nhận định + 4 Lĩnh vực)",
-        steps: [
-          "Nhận định vàng ĐH XIII: 'Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay'.",
-          "Kinh tế: Thoát khủng hoảng, thành nước đang phát triển có thu nhập trung bình; KTTT định hướng XHCN dần hoàn thiện.",
-          "Văn hóa - Xã hội: Đời sống dân nâng cao, xóa đói giảm nghèo là điểm sáng quốc tế.",
-          "Chính trị, QP-AN, Đối ngoại: Giữ vững ổn định & chủ quyền; phá thế bao vây, quan hệ ngoại giao 189/193 nước LHQ.",
-          "Xây dựng Đảng: Lý luận về CNXH ngày càng sáng tỏ; chống tham nhũng đạt kết quả quan trọng."
+        title: "1. Những thành tựu cơ bản trong công cuộc đổi mới đất nước (1986–2021)",
+        items: [
+          {
+            head: "Đánh giá tổng quát",
+            detail: "Qua 35 năm đổi mới, đất nước đạt được những thành tựu to lớn, có ý nghĩa lịch sử; Đại hội XIII khẳng định: “Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”."
+          },
+          {
+            head: "Về kinh tế",
+            detail: "Đưa đất nước ra khỏi khủng hoảng kinh tế - xã hội và tình trạng kém phát triển, trở thành nước đang phát triển có thu nhập trung bình; quy mô nền kinh tế tăng mạnh và thể chế kinh tế thị trường định hướng XHCN từng bước được hoàn thiện."
+          },
+          {
+            head: "Về văn hóa - xã hội và con người",
+            detail: "Đời sống vật chất và tinh thần của nhân dân được cải thiện rõ rệt; công tác xóa đói, giảm nghèo đạt thành tựu ấn tượng; giáo dục, khoa học - công nghệ, y tế và an sinh xã hội phát triển tích cực."
+          },
+          {
+            head: "Về chính trị, quốc phòng, an ninh và đối ngoại",
+            detail: "Giữ vững ổn định chính trị - xã hội, bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ; phá thế bao vây, cấm vận, hội nhập quốc tế sâu rộng, nâng cao vị thế quốc tế của Việt Nam."
+          },
+          {
+            head: "Về xây dựng Đảng và hệ thống chính trị",
+            detail: "Nhận thức lý luận về chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội ở Việt Nam ngày càng sáng tỏ; công tác xây dựng, chỉnh đốn Đảng và phòng, chống tham nhũng, tiêu cực đạt kết quả quan trọng."
+          }
         ]
       },
       {
-        branch: "VẾ 2: 5 NHIỆM VỤ THỰC HIỆN NGHỊ QUYẾT ĐẠI HỘI XIII (2021–2026)",
-        steps: [
-          "Xây dựng, chỉnh đốn Đảng & hệ thống chính trị trong sạch, vững mạnh; chống tham nhũng, tiêu cực.",
-          "Đổi mới mô hình tăng trưởng, đẩy mạnh CNH-HĐH dựa trên KH-CN, đổi mới sáng tạo & chuyển đổi số.",
-          "Khơi dậy khát vọng phát triển đất nước phồn vinh, hạnh phúc; phát triển văn hóa, con người & an sinh.",
-          "Giữ vững độc lập, tự chủ; củng cố QP-AN từ sớm, từ xa; hội nhập quốc tế sâu rộng.",
-          "Đẩy mạnh đồng bộ 3 đột phá chiến lược (Thể chế phát triển - Nhân lực chất lượng cao - Hạ tầng hiện đại)."
-        ]
-      }
-    ],
-    examText: [
-      {
-        title: "1. Những thành tựu cơ bản qua 35 năm đổi mới (1986–2021)",
-        lines: [
-          "• Tổng quát: Đại hội XIII khẳng định: <span class='hl'>“Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”</span>.",
-          "• Kinh tế: Ra khỏi khủng hoảng kinh tế - xã hội, trở thành <span class='hl'>nước đang phát triển có thu nhập trung bình</span>; quy mô kinh tế tăng mạnh; thể chế KTTT định hướng XHCN từng bước hoàn thiện.",
-          "• Văn hóa - Xã hội: Đời sống nhân dân cải thiện rõ rệt; giảm nghèo bền vững đạt kết quả ấn tượng; giáo dục, y tế, KH-CN phát triển tích cực.",
-          "• Quốc phòng, an ninh, đối ngoại & Xây dựng Đảng: Giữ vững ổn định chính trị và chủ quyền; hội nhập quốc tế sâu rộng; hệ thống lý luận đổi mới hoàn thiện và công tác xây dựng, chỉnh đốn Đảng đạt kết quả quan trọng."
-        ]
-      },
-      {
-        title: "2. Để phát huy thành tựu trong thực hiện Nghị quyết Đại hội XIII (2021–2026), Đảng cần làm gì",
-        lines: [
-          "1. Tiếp tục đẩy mạnh <span class='hl'>xây dựng, chỉnh đốn Đảng</span> và hệ thống chính trị trong sạch, vững mạnh; kiên quyết chống tham nhũng, tiêu cực.",
-          "2. <span class='hl'>Đổi mới mô hình tăng trưởng, cơ cấu lại nền kinh tế</span> dựa trên KH-CN, đổi mới sáng tạo, chuyển đổi số, kinh tế số, kinh tế xanh.",
-          "3. <span class='hl'>Khơi dậy khát vọng phát triển đất nước phồn vinh, hạnh phúc</span>; phát huy giá trị văn hóa, sức mạnh con người Việt Nam và bảo đảm an sinh xã hội.",
-          "4. Tăng cường <span class='hl'>quốc phòng, an ninh</span> bảo vệ Tổ quốc từ sớm, từ xa; chủ động hội nhập quốc tế toàn diện, sâu rộng.",
-          "5. Thực hiện đồng bộ <span class='hl'>3 đột phá chiến lược</span> (hoàn thiện thể chế phát triển; phát triển nhân lực chất lượng cao; xây dựng kết cấu hạ tầng đồng bộ, hiện đại)."
+        title: "2. Phương hướng, nhiệm vụ để phát huy thành tựu trong thực hiện Nghị quyết Đại hội XIII (2021–2026)",
+        items: [
+          {
+            head: "Đẩy mạnh xây dựng, chỉnh đốn Đảng và hệ thống chính trị",
+            detail: "Xây dựng Đảng, Nhà nước và hệ thống chính trị trong sạch, vững mạnh toàn diện; kiên quyết, kiên trì đấu tranh phòng, chống tham nhũng, lãng phí, tiêu cực."
+          },
+          {
+            head: "Đổi mới mô hình tăng trưởng, cơ cấu lại nền kinh tế",
+            detail: "Đẩy mạnh công nghiệp hóa, hiện đại hóa dựa trên nền tảng khoa học - công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia; phát triển kinh tế số, kinh tế xanh, kinh tế tuần hoàn."
+          },
+          {
+            head: "Phát triển văn hóa, con người và bảo đảm an sinh xã hội",
+            detail: "Khơi dậy mạnh mẽ tinh thần yêu nước, ý chí tự cường dân tộc và khát vọng phát triển đất nước phồn vinh, hạnh phúc; nâng cao chất lượng giáo dục, y tế và đời sống nhân dân."
+          },
+          {
+            head: "Tăng cường quốc phòng, an ninh và nâng cao hiệu quả đối ngoại",
+            detail: "Giữ vững độc lập, tự chủ; bảo vệ vững chắc Tổ quốc từ sớm, từ xa; chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng."
+          },
+          {
+            head: "Thực hiện đồng bộ ba đột phá chiến lược",
+            detail: "Hoàn thiện đồng bộ thể chế phát triển (trước hết là thể chế kinh tế thị trường định hướng XHCN); phát triển nguồn nhân lực chất lượng cao; xây dựng hệ thống kết cấu hạ tầng đồng bộ, hiện đại."
+          }
         ]
       }
     ]
@@ -1701,13 +1725,13 @@ let state = {
   mcqIndex: 0,
   mcqOrder: mcqList.map(q => q.id),
   mobilePaletteOpen: false,
-  shortView: 'cloze',
+  shortView: 'read', // 'read' | 'cloze' | 'blind' | 'flashcard'
   fcShortIdx: 0,
   fcShortFlipped: false,
   allClozeOpen: false,
+  allBlindOpen: false,
   essayId: 76,
-  maskEssay: false,
-  essayMobileCol: 'both' // 'both' | 'mindmap' | 'text'
+  essayMode: 'full' // 'full' | 'keywords' | 'mask'
 };
 
 function initApp() {
@@ -2078,14 +2102,39 @@ function setupTouchSwipe() {
 }
 
 // ============================================================================
-// PHẦN 2: CÂU HỎI NGẮN RÚT GỌN (CLOZE CHẠM MỞ TỪ KHÓA + FLASHCARD + PILLS)
+// PHẦN 2: CÂU HỎI NGẮN (ĐÁP ÁN CHUẨN + TỰ DÒ TỪ KHÓA + ẨN TỰ NHỚ + FLASHCARD)
 // ============================================================================
 function setShortView(v) {
   state.shortView = v;
-  document.getElementById('short-view-cloze').classList.toggle('active', v === 'cloze');
-  document.getElementById('short-view-flashcard').classList.toggle('active', v === 'flashcard');
-  document.getElementById('short-view-compare').classList.toggle('active', v === 'compare');
-  document.getElementById('btn-cloze-toggle').style.display = (v === 'cloze') ? 'inline-flex' : 'none';
+  ['read', 'cloze', 'blind', 'flashcard'].forEach(k => {
+    const el = document.getElementById('short-view-' + k);
+    if (el) el.classList.toggle('active', v === k);
+  });
+  updateShortAuxBtn();
+  renderShortTab();
+}
+
+function updateShortAuxBtn() {
+  const btn = document.getElementById('btn-short-aux');
+  if (!btn) return;
+  if (state.shortView === 'cloze') {
+    btn.style.display = 'inline-flex';
+    btn.textContent = state.allClozeOpen ? '🙈 Ẩn lại từ khóa' : '👁️ Mở hết từ khóa';
+  } else if (state.shortView === 'blind') {
+    btn.style.display = 'inline-flex';
+    btn.textContent = state.allBlindOpen ? '🙈 Che lại đáp án' : '👁️ Hiện hết đáp án';
+  } else {
+    btn.style.display = 'none';
+  }
+}
+
+function toggleShortAux() {
+  if (state.shortView === 'cloze') {
+    state.allClozeOpen = !state.allClozeOpen;
+  } else if (state.shortView === 'blind') {
+    state.allBlindOpen = !state.allBlindOpen;
+  }
+  updateShortAuxBtn();
   renderShortTab();
 }
 
@@ -2098,19 +2147,22 @@ function getFilteredShortList() {
   });
 }
 
-function formatClozeHtml(clozeText, openAll) {
-  return clozeText.replace(/\{\{(.+?)\}\}/g, (_, word) => {
-    const rev = openAll ? 'revealed' : '';
-    return `<span class="cloze-token ${rev}" onclick="this.classList.toggle('revealed')">${word}</span>`;
-  }).replace(/\n/g, '<br>');
-}
+function formatShortAnswerHtml(ansText, mode, openAll) {
+  const formatLine = (line) => line.replace(/\{\{(.+?)\}\}/g, (_, word) => {
+    if (mode === 'cloze') {
+      const rev = openAll ? 'revealed' : '';
+      return `<span class="cloze-token ${rev}" onclick="this.classList.toggle('revealed')">${word}</span>`;
+    }
+    return `<span class="kw-inline">${word}</span>`;
+  });
 
-function toggleAllCloze() {
-  state.allClozeOpen = !state.allClozeOpen;
-  document.getElementById('btn-cloze-toggle').textContent = state.allClozeOpen
-    ? '🙈 Ẩn lại từ khóa'
-    : '👁️ Mở hết từ khóa';
-  renderShortTab();
+  return ansText.split('\n').map(raw => {
+    const line = raw.trim();
+    if (line.startsWith('- ')) {
+      return `<div class="short-dash-line"><span class="dash-bullet">-</span><span>${formatLine(line.slice(2))}</span></div>`;
+    }
+    return `<div>${formatLine(line)}</div>`;
+  }).join('');
 }
 
 function markShort(id, st) {
@@ -2141,33 +2193,25 @@ function renderShortTab() {
           <div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:6px;">
               <span class="q-num-pill">Thẻ ${state.fcShortIdx + 1}/${list.length} • Câu ${item.id}</span>
-              <span style="font-size:0.8rem; color:var(--text-muted);">Gồm <strong>${item.pills.length} ý cốt lõi</strong></span>
             </div>
-            <div style="font-size:1.12rem; font-weight:800; margin-bottom:16px;">${item.q}</div>
+            <div style="font-size:1.1rem; font-weight:800; margin-bottom:16px;">${item.q}</div>
 
             ${state.fcShortFlipped ? `
-              <div class="ultra-short-box" style="margin-bottom:12px;">
-                <span class="ultra-label">⚡ Chốt ý nhớ nhanh:</span>
-                ${item.pills.map(p => `<span class="pill-kw">${p}</span>`).join('')}
-              </div>
-              <div class="full-ans-line">
-                <strong>📝 Câu đầy đủ viết thi:</strong><br>
-                ${formatClozeHtml(item.cloze, true)}
+              <div class="short-ans-box">
+                ${formatShortAnswerHtml(item.ans, 'read', true)}
               </div>
               ${item.warn ? `<div class="warning-banner" style="margin-top:10px;">${item.warn}</div>` : ''}
             ` : `
-              <div style="padding:32px 16px; text-align:center; background:var(--bg-subtle); border:2px dashed var(--border-strong); border-radius:14px; cursor:pointer;" onclick="flipShortFc()">
-                <div style="font-size:1rem; font-weight:700; color:var(--primary);">👆 Chạm để Lật Xem Từ Khóa & Đáp Án</div>
-                <div style="font-size:0.82rem; color:var(--text-muted); margin-top:4px;">Hãy tự nhẩm thử ${item.pills.length} ý chính trước khi mở!</div>
+              <div style="padding:36px 16px; text-align:center; background:var(--bg-subtle); border:2px dashed var(--border-strong); border-radius:14px; cursor:pointer;" onclick="flipShortFc()">
+                <div style="font-size:1rem; font-weight:700; color:var(--primary);">👆 Chạm để xem đáp án</div>
               </div>
             `}
           </div>
 
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:18px; padding-top:14px; border-top:1px solid var(--border);">
-            <div style="display:flex; gap:6px;">
-              <button class="icon-btn" style="padding:6px 10px; font-size:0.8rem; ${st==='hard'?'border-color:var(--danger);color:var(--danger);':''}" onclick="markShort(${item.id}, 'hard')">🔴 Khó</button>
-              <button class="icon-btn" style="padding:6px 10px; font-size:0.8rem; ${st==='mastered'?'background:var(--success);color:#fff;border-color:var(--success);':''}" onclick="markShort(${item.id}, 'mastered')">🟢 Đã thuộc</button>
-            </div>
+            <button class="icon-btn" style="padding:6px 12px; font-size:0.82rem; ${st==='mastered'?'background:var(--success);color:#fff;border-color:var(--success);':''}" onclick="markShort(${item.id}, 'mastered')">
+              ${st === 'mastered' ? '🟢 Đã thuộc' : '⚪ Đánh dấu thuộc'}
+            </button>
             <div style="display:flex; gap:6px;">
               <button class="icon-btn" style="padding:6px 10px;" onclick="stepShortFc(-1)">⬅️</button>
               <button class="icon-btn" style="padding:6px 12px;" onclick="flipShortFc()">🔄 Lật</button>
@@ -2180,55 +2224,27 @@ function renderShortTab() {
     return;
   }
 
-  if (state.shortView === 'compare') {
-    area.innerHTML = `<div class="short-grid">
-      ${list.map(item => {
-        const st = state.shortStatus[item.id] || '';
-        return `<div class="scard ${st}">
-          <div class="scard-head">
-            <div class="scard-q">${item.q}</div>
-            <div class="scard-actions">
-              <button class="icon-btn" style="padding:5px 10px; font-size:0.78rem; ${st==='mastered'?'background:var(--success);color:#fff;':''}" onclick="markShort(${item.id}, 'mastered')">
-                ${st === 'mastered' ? '🟢 Đã thuộc' : '⚪ Đánh dấu thuộc'}
-              </button>
-            </div>
-          </div>
-          <div class="ultra-short-box">
-            <span class="ultra-label">⚡ Chỉ cần nhớ ${item.pills.length} ý:</span>
-            ${item.pills.map(p => `<span class="pill-kw">${p}</span>`).join('')}
-          </div>
-          ${item.warn ? `<div class="warning-banner">${item.warn}</div>` : ''}
-        </div>`;
-      }).join('')}
-    </div>`;
-    return;
-  }
+  const isBlind = state.shortView === 'blind';
+  const isCloze = state.shortView === 'cloze';
 
-  // Default: Cloze Interactive Mode
   area.innerHTML = `<div class="short-grid">
     ${list.map(item => {
       const st = state.shortStatus[item.id] || '';
+      const blindCls = isBlind ? `blind-mode ${state.allBlindOpen ? 'unmasked' : ''}` : '';
+      const blindClick = isBlind ? `onclick="this.classList.toggle('unmasked')"` : '';
+
       return `<div class="scard ${st}">
         <div class="scard-head">
           <div class="scard-q">${item.q}</div>
-          <div class="scard-actions" style="display:flex; gap:6px;">
-            <button class="icon-btn" style="padding:4px 8px; font-size:0.76rem; ${st==='hard'?'border-color:var(--danger);color:var(--danger);':''}" onclick="markShort(${item.id}, 'hard')">🔴 Khó</button>
-            <button class="icon-btn" style="padding:4px 10px; font-size:0.76rem; ${st==='mastered'?'background:var(--success);color:#fff;border-color:var(--success);':''}" onclick="markShort(${item.id}, 'mastered')">
-              ${st === 'mastered' ? '🟢 Đã thuộc' : '⚪ Thuộc'}
-            </button>
-          </div>
+          <button class="icon-btn" style="padding:4px 10px; min-height:30px; font-size:0.78rem; flex-shrink:0; ${st==='mastered'?'background:var(--success);color:#fff;border-color:var(--success);':''}" onclick="markShort(${item.id}, 'mastered')">
+            ${st === 'mastered' ? '🟢 Đã thuộc' : '⚪ Thuộc'}
+          </button>
         </div>
 
-        <div class="ultra-short-box">
-          <span class="ultra-label">⚡ Tóm tắt ${item.pills.length} ý chính:</span>
-          ${item.pills.map(p => `<span class="pill-kw">${p}</span>`).join('')}
-        </div>
-
-        <div class="full-ans-line">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">
-            🧩 BẢN TỰ DÒ TỪ KHÓA (Chạm vào từng ô vàng để mở):
+        <div class="short-ans-box ${blindCls}" ${blindClick}>
+          <div class="short-ans-content">
+            ${formatShortAnswerHtml(item.ans, isCloze ? 'cloze' : 'read', state.allClozeOpen)}
           </div>
-          ${formatClozeHtml(item.cloze, state.allClozeOpen)}
         </div>
 
         ${item.warn ? `<div class="warning-banner">${item.warn}</div>` : ''}
@@ -2249,12 +2265,14 @@ function stepShortFc(d) {
 }
 
 // ============================================================================
-// PHẦN 3: TỰ LUẬN SƠ ĐỒ Ý CHÍNH (CỘT RÚT GỌN 2 PHÚT VS CỘT VIẾT THI)
+// PHẦN 3: TỰ LUẬN DÀI (TRÌNH BÀY TRỰC QUAN, GẠCH ĐẦU DÒNG CHUẨN MỰC, CÔ ĐỌNG)
 // ============================================================================
-function setEssayMobileCol(mode, btn) {
-  state.essayMobileCol = mode;
-  document.querySelectorAll('#mobile-essay-tabs .seg-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+function setEssayMode(mode) {
+  state.essayMode = mode;
+  ['full', 'keywords', 'mask'].forEach(k => {
+    const el = document.getElementById('essay-mode-' + k);
+    if (el) el.classList.toggle('active', mode === k);
+  });
   renderEssayTab();
 }
 
@@ -2271,65 +2289,40 @@ function renderEssayTab() {
 
   const e = essayList.find(x => x.id === state.essayId);
   const done = !!state.essayRead[e.id];
+
+  const markBtn = document.getElementById('btn-essay-mark-header');
+  if (markBtn) {
+    markBtn.textContent = done ? '✅ Đã thuộc câu này' : '⚪ Đánh dấu đã thuộc';
+    markBtn.style.background = done ? 'var(--success)' : '';
+    markBtn.style.color = done ? '#fff' : '';
+    markBtn.style.borderColor = done ? 'var(--success)' : '';
+  }
+
+  const isKeywordsOnly = state.essayMode === 'keywords';
+  const isMask = state.essayMode === 'mask';
+
   const view = document.getElementById('essay-main-view');
-
-  const isMobile = window.innerWidth <= 960;
-  const showLeft = !isMobile || state.essayMobileCol === 'both' || state.essayMobileCol === 'mindmap';
-  const showRight = !isMobile || state.essayMobileCol === 'both' || state.essayMobileCol === 'text';
-
   view.innerHTML = `
-    <div class="focus-card" style="margin-bottom:16px; padding:16px 18px;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap;">
-        <div style="font-size:1rem; font-weight:800; flex:1; min-width:220px;">📌 ${e.fullQ}</div>
-        <button class="icon-btn" style="font-size:0.8rem; ${done ? 'background:var(--success);color:#fff;border-color:var(--success);' : ''}" onclick="toggleEssayDone(${e.id})">
-          ${done ? '✅ Đã thuộc câu này' : '⚪ Đánh dấu đã thuộc'}
-        </button>
+    <div class="essay-single-card ${isKeywordsOnly ? 'keywords-only' : ''}">
+      <div class="essay-q-header">
+        <div class="essay-q-title">${e.fullQ}</div>
       </div>
-    </div>
 
-    <div class="essay-dual-layout">
-      <!-- CỘT TRÁI: BẢN SIÊU RÚT GỌN -->
-      <div class="essay-pane" style="display:${showLeft ? 'block' : 'none'};">
-        <div class="pane-badge" style="background:var(--primary-soft); color:var(--primary);">
-          ⚡ CỘT 1: BẢN SIÊU RÚT GỌN (CHỈ CẦN THUỘC KHUNG NÀY)
-        </div>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:14px;">
-          Mỗi câu tự luận đã được cô đọng thành các từ khóa ngắn nhất. Nhớ các đầu mục này là nắm trọn 100% ý chính!
-        </p>
-
-        ${e.mindmap.map(m => `
-          <div class="mindmap-branch">
-            <div class="mindmap-title">${m.branch}</div>
-            ${m.steps.map((s, idx) => `
-              <div class="mini-step">
-                <span class="mini-step-num">Ý ${idx + 1}</span>
-                <span style="font-weight:600;">${s}</span>
+      ${e.sections.map(sec => `
+        <div class="essay-section-block">
+          <div class="essay-sec-title">${sec.title}</div>
+          <div class="essay-dash-list">
+            ${sec.items.map(it => `
+              <div class="essay-dash-item ${isMask ? 'clickable masked' : ''}" ${isMask ? 'onclick="this.classList.toggle(\'masked\')"' : ''}>
+                <span class="essay-dash-mark">-</span>
+                <div class="essay-dash-body">
+                  <span class="essay-key-head">${it.head}</span><span class="essay-key-detail">: ${it.detail}</span>
+                </div>
               </div>
             `).join('')}
           </div>
-        `).join('')}
-      </div>
-
-      <!-- CỘT PHẢI: BẢN VIẾT VÀO GIẤY THI -->
-      <div class="essay-pane" style="display:${showRight ? 'block' : 'none'};">
-        <div class="pane-badge" style="background:var(--success-soft); color:var(--success-dark);">
-          📝 CỘT 2: CÂU VĂN CÔ ĐỌNG ĐỂ VIẾT VÀO BÀI THI
         </div>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:14px;">
-          Chạm vào từng khung để <strong>Che / Mở</strong> khi tự nhẩm bài. Các cụm từ tô vàng là <strong>từ khóa chấm điểm (Barem)</strong>.
-        </p>
-
-        ${e.examText.map(sec => `
-          <div class="exam-ready-block ${state.maskEssay ? 'masked' : ''}" onclick="this.classList.toggle('masked')" title="Chạm để Ẩn/Hiện nội dung">
-            <div style="font-weight:800; font-size:0.94rem; color:var(--text); margin-bottom:8px;">
-              ${sec.title}
-            </div>
-            <div class="exam-ready-body" style="display:flex; flex-direction:column; gap:8px; font-size:0.91rem; color:var(--text-secondary);">
-              ${sec.lines.map(line => `<div>${line}</div>`).join('')}
-            </div>
-          </div>
-        `).join('')}
-      </div>
+      `).join('')}
     </div>
   `;
 }
@@ -2339,26 +2332,12 @@ function pickEssay(id) {
   renderEssayTab();
 }
 
-function toggleMaskEssay() {
-  state.maskEssay = !state.maskEssay;
-  document.getElementById('btn-mask-essay').textContent = state.maskEssay
-    ? '👁️ Hiện bài viết'
-    : '🙈 Che bài viết để tự nhẩm';
-  renderEssayTab();
-}
-
 function toggleEssayDone(id) {
   if (state.essayRead[id]) delete state.essayRead[id];
   else state.essayRead[id] = true;
   saveApp();
   renderEssayTab();
 }
-
-window.addEventListener('resize', () => {
-  if (document.getElementById('tab-essay').classList.contains('active')) {
-    renderEssayTab();
-  }
-});
 
 initApp();
 </script>
