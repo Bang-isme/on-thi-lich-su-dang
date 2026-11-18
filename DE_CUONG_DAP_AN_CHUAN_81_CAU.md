@@ -99,7 +99,7 @@
 - **Câu 62. Đường lối chung của cách mạng Việt Nam tại Đại hội III (9/1960):** Đẩy mạnh **cách mạng xã hội chủ nghĩa ở miền Bắc**, tiến hành **cách mạng dân tộc dân chủ nhân dân ở miền Nam**, thực hiện **thống nhất nước nhà**, hoàn thành độc lập và dân chủ trong cả nước.
 - **Câu 63. Triển vọng cuộc kháng chiến chống Mỹ, cứu nước tại Đại hội III (9/1960):** **Thắng lợi cuối cùng** nhất định thuộc về nhân dân ta, **Nam Bắc nhất định sum họp một nhà**.
 - **Câu 64. Tên gọi thống nhất các lực lượng vũ trang miền Nam (15/2/1961):** **Quân giải phóng miền Nam Việt Nam**.
-- **Câu 65. Thời gian diễn ra cuộc Tổng tiến công và nổi dậy Xuân 1975:** Diễn ra trong **55 ngày đêm từ ngày 10/3 đến 30/4/1975**. Vào **11h30 phút ngày 30/4/1975** *(lưu ý: tài liệu gốc gõ nhầm "năm 1974")*, lá cờ cách mạng được cắm trên nóc **Dinh Độc Lập**, kết thúc thắng lợi cuộc kháng chiến chống Mỹ, cứu nước.
+- **Câu 65. Thời gian diễn ra cuộc Tổng tiến công và nổi dậy Xuân 1975:** Diễn ra trong **55 ngày đêm từ ngày 10/3 đến 30/4/1975**. Vào **11h30 phút ngày 30/4/1975**, lá cờ cách mạng được cắm trên nóc **Dinh Độc Lập**, kết thúc thắng lợi cuộc kháng chiến chống Mỹ, cứu nước.
 - **Câu 66. Mục tiêu nền kinh tế thị trường định hướng xã hội chủ nghĩa ở nước ta hiện nay:** **Dân giàu, nước mạnh, dân chủ, công bằng, văn minh**.
 - **Câu 67. Các yếu tố tăng trưởng kinh tế trong CNH, HĐH & yếu tố quyết định:**
   - 5 yếu tố chủ yếu: **Vốn**, **Khoa học và công nghệ**, **Con người**, **Cơ cấu kinh tế**, **Thể chế chính trị và quản lý nhà nước**.
