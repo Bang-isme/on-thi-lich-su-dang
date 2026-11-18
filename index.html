@@ -1263,15 +1263,18 @@
       <div class="essay-selector" id="essay-selector-bar"></div>
 
       <div class="subbar" style="max-width:960px; margin:0 auto 16px;">
-        <div class="seg-group">
+        <div class="seg-group seg-group-4">
           <button class="seg-btn active" id="essay-mode-full" onclick="setEssayMode('full')">
             📖 Đáp án chuẩn
+          </button>
+          <button class="seg-btn" id="essay-mode-cloze" onclick="setEssayMode('cloze')">
+            🧩 Tự dò thuật ngữ
           </button>
           <button class="seg-btn" id="essay-mode-keywords" onclick="setEssayMode('keywords')">
             🔑 Chỉ hiện ý chính
           </button>
           <button class="seg-btn" id="essay-mode-mask" onclick="setEssayMode('mask')">
-            🙈 Che từng ý tự dò
+            🙈 Che từng dòng
           </button>
         </div>
         <button class="icon-btn" id="btn-essay-mark-header" onclick="toggleEssayDone(state.essayId)">
@@ -1404,7 +1407,7 @@ const shortList = [
 ];
 
 // ============================================================================
-// 3. DỮ LIỆU 6 CÂU TỰ LUẬN DÀI (GẠCH ĐẦU DÒNG CHUẨN MỰC, CÔ ĐỌNG, CHUẨN GIÁO TRÌNH)
+// 3. DỮ LIỆU 6 CÂU TỰ LUẬN DÀI (CHUẨN ĐÁP ÁN CHẤM THI, TÔ SÁNG THUẬT NGỮ DỄ NHỚ)
 // ============================================================================
 const essayList = [
   {
@@ -1414,39 +1417,45 @@ const essayList = [
     sections: [
       {
         title: "1. Ý nghĩa lịch sử của Cách mạng Tháng Tám năm 1945",
+        chain: "Đập tan ách thống trị ➔ Nhân dân làm chủ ➔ Đảng cầm quyền & kỷ nguyên mới ➔ Ý nghĩa quốc tế",
         items: [
           {
             head: "Đập tan ách thống trị thực dân, phong kiến",
-            detail: "Đập tan xiềng xích nô lệ của chủ nghĩa đế quốc trong gần một thế kỷ, chấm dứt sự tồn tại của chế độ quân chủ chuyên chế ngót nghìn năm, lập nên nước Việt Nam Dân chủ Cộng hòa — nhà nước của nhân dân đầu tiên ở Đông Nam Á."
+            detail: "Đập tan {{xiềng xích nô lệ của chủ nghĩa đế quốc}} gần một thế kỷ; chấm dứt {{chế độ quân chủ chuyên chế}} ngót nghìn năm; lập nên nước {{Việt Nam Dân chủ Cộng hòa}}."
           },
           {
             head: "Đưa nhân dân lên địa vị làm chủ",
-            detail: "Nhân dân Việt Nam từ thân phận nô lệ bước lên địa vị người làm chủ đất nước; nước ta từ một nước thuộc địa trở thành một quốc gia độc lập có chủ quyền."
+            detail: "Nhân dân Việt Nam từ thân phận nô lệ trở thành {{người làm chủ đất nước}}; dân tộc Việt Nam trở thành một {{quốc gia độc lập, có chủ quyền}}."
           },
           {
             head: "Đưa Đảng trở thành đảng cầm quyền và mở ra kỷ nguyên mới",
-            detail: "Đảng Cộng sản Đông Dương từ hoạt động bí mật trở thành một đảng cầm quyền; mở ra kỷ nguyên mới của dân tộc — kỷ nguyên độc lập, tự do và hướng tới chủ nghĩa xã hội."
+            detail: "Đảng Cộng sản Đông Dương từ hoạt động bí mật trở thành {{đảng cầm quyền}}; mở ra {{kỷ nguyên độc lập, tự do}} và hướng tới {{chủ nghĩa xã hội}}."
           },
           {
             head: "Ý nghĩa quốc tế và lý luận",
-            detail: "Đột phá một khâu quan trọng trong hệ thống thuộc địa của chủ nghĩa đế quốc, mở đầu thời kỳ suy sụp, tan rã của chủ nghĩa thực dân cũ; cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên thế giới và làm phong phú thêm kho tàng lý luận của chủ nghĩa Mác - Lênin."
+            detail: "Mở đầu thời kỳ {{suy sụp, tan rã của chủ nghĩa thực dân cũ}}; cổ vũ mạnh mẽ {{phong trào giải phóng dân tộc}} trên thế giới; làm phong phú lý luận {{chủ nghĩa Mác – Lênin}}."
           }
         ]
       },
       {
         title: "2. Liên hệ trách nhiệm của sinh viên trong xây dựng và bảo vệ Tổ quốc hiện nay",
+        chain: "Bản lĩnh chính trị ➔ Học tập & KH-CN ➔ Đạo đức & trách nhiệm xã hội ➔ Nghĩa vụ bảo vệ Tổ quốc",
         items: [
           {
-            head: "Về chính trị - tư tưởng",
-            detail: "Kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội; tin tưởng vào sự lãnh đạo của Đảng; nâng cao cảnh giác, đấu tranh phản bác các quan điểm sai trái, âm mưu “diễn biến hòa bình” trên không gian mạng."
+            head: "Rèn luyện bản lĩnh chính trị, tư tưởng",
+            detail: "Kiên định mục tiêu {{độc lập dân tộc và chủ nghĩa xã hội}}; tin tưởng sự lãnh đạo của Đảng; đấu tranh phản bác các {{quan điểm sai trái, thù địch}}."
           },
           {
-            head: "Về học tập, xây dựng Tổ quốc",
-            detail: "Không ngừng học tập nâng cao trình độ chuyên môn, ngoại ngữ, kỹ năng số và làm chủ khoa học - công nghệ; rèn luyện đạo đức cách mạng, lối sống lành mạnh và tinh thần khởi nghiệp, đổi mới sáng tạo."
+            head: "Tích cực học tập, nghiên cứu khoa học",
+            detail: "Nâng cao trình độ {{chuyên môn, ngoại ngữ, kỹ năng số}}; làm chủ {{khoa học – công nghệ}} để góp phần phát triển kinh tế – xã hội."
           },
           {
-            head: "Về hành động bảo vệ Tổ quốc",
-            detail: "Chấp hành nghiêm chủ trương của Đảng, chính sách, pháp luật của Nhà nước và Luật Nghĩa vụ quân sự; hoàn thành tốt chương trình Giáo dục quốc phòng - an ninh; tích cực tham gia bảo vệ chủ quyền biên giới, biển đảo của Tổ quốc."
+            head: "Tu dưỡng đạo đức, lối sống và trách nhiệm xã hội",
+            detail: "Sống có lý tưởng, giữ gìn {{bản sắc văn hóa dân tộc}}; tích cực tham gia các hoạt động tình nguyện, {{khởi nghiệp và đổi mới sáng tạo}}."
+          },
+          {
+            head: "Thực hiện nghĩa vụ bảo vệ Tổ quốc",
+            detail: "Chấp hành nghiêm {{Hiến pháp, pháp luật}} và {{Luật Nghĩa vụ quân sự}}; tham gia giữ gìn an ninh trật tự, bảo vệ {{chủ quyền biên giới, biển đảo}}."
           }
         ]
       }
@@ -1459,43 +1468,49 @@ const essayList = [
     sections: [
       {
         title: "1. Một số bài học kinh nghiệm trong cuộc kháng chiến chống Mỹ, cứu nước (1954–1975)",
+        chain: "Ngọn cờ ĐLDT & CNXH ➔ Phương pháp đấu tranh tổng hợp ➔ Tổ chức chiến đấu giỏi ➔ Xây dựng Đảng & đoàn kết quốc tế",
         items: [
           {
             head: "Một là, giương cao ngọn cờ độc lập dân tộc và chủ nghĩa xã hội",
-            detail: "Kết hợp chặt chẽ hai nhiệm vụ chiến lược ở hai miền Nam - Bắc nhằm huy động sức mạnh toàn dân đánh Mỹ, cả nước đánh Mỹ."
+            detail: "Kết hợp chặt chẽ hai chiến lược cách mạng ở {{hai miền Nam – Bắc}} nhằm huy động sức mạnh {{toàn dân đánh Mỹ, cả nước đánh Mỹ}}."
           },
           {
             head: "Hai là, tìm ra phương pháp đấu tranh đúng đắn, sáng tạo",
-            detail: "Thực hiện khởi nghĩa toàn dân và chiến tranh nhân dân, sử dụng phương pháp cách mạng tổng hợp (kết hợp đấu tranh quân sự, chính trị, ngoại giao; đánh địch bằng ba mũi giáp công trên ba vùng chiến lược)."
+            detail: "Thực hiện {{khởi nghĩa toàn dân}} và {{chiến tranh nhân dân}}; sử dụng {{phương pháp cách mạng tổng hợp}} (kết hợp đấu tranh quân sự, chính trị, ngoại giao)."
           },
           {
             head: "Ba là, phải có công tác tổ chức chiến đấu giỏi",
-            detail: "Phát huy năng lực chỉ đạo, tổ chức chiến đấu của các cấp bộ Đảng và các cấp chi ủy quân đội, thực hiện giành thắng lợi từng bước đến thắng lợi hoàn toàn."
+            detail: "Phát huy năng lực chỉ đạo của {{các cấp bộ Đảng}} và {{các cấp chi ủy quân đội}}; thực hiện {{giành thắng lợi từng bước đến thắng lợi hoàn toàn}}."
           },
           {
-            head: "Bốn là, hết sức coi trọng công tác xây dựng Đảng, lực lượng cách mạng và đoàn kết quốc tế",
-            detail: "Chú trọng xây dựng Đảng, xây dựng lực lượng cách mạng ở miền Nam và lực lượng chiến đấu trong cả nước; tranh thủ tối đa sự đồng tình, ủng hộ của quốc tế."
+            head: "Bốn là, coi trọng xây dựng Đảng, lực lượng cách mạng và đoàn kết quốc tế",
+            detail: "Hết sức coi trọng {{công tác xây dựng Đảng}}, xây dựng {{lực lượng cách mạng}} trong cả nước; tranh thủ tối đa {{sự đồng tình, ủng hộ của quốc tế}}."
           }
         ]
       },
       {
         title: "2. Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay",
+        chain: "Kiên định mục tiêu ➔ Lấy dân làm gốc ➔ Kết hợp kinh tế với QP-AN ➔ Hội nhập quốc tế ➔ Xây dựng, chỉnh đốn Đảng",
         items: [
           {
-            head: "Kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội",
-            detail: "Vận dụng sáng tạo chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh vào công cuộc đổi mới; kết hợp chặt chẽ hai nhiệm vụ chiến lược là xây dựng và bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa."
+            head: "Kiên định mục tiêu độc lập dân tộc và chủ nghĩa xã hội",
+            detail: "Vận dụng sáng tạo {{chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh}}; kết hợp chặt chẽ hai nhiệm vụ chiến lược là {{xây dựng và bảo vệ Tổ quốc}}."
           },
           {
             head: "Phát huy sức mạnh đại đoàn kết toàn dân tộc",
-            detail: "Thực hiện nhất quán quan điểm “lấy dân làm gốc”, xây dựng “thế trận lòng dân” vững chắc gắn với thế trận quốc phòng toàn dân và thế trận an ninh nhân dân."
+            detail: "Thực hiện nhất quán quan điểm {{“lấy dân làm gốc”}}; phát huy {{quyền làm chủ của nhân dân}} và xây dựng {{“thế trận lòng dân”}} vững chắc."
           },
           {
-            head: "Nâng cao năng lực lãnh đạo và chỉ đạo thực tiễn",
-            detail: "Đổi mới phương thức lãnh đạo của Đảng, nâng cao năng lực dự báo chiến lược, nhạy bén nắm bắt thời cơ phát triển đất nước và chủ động bảo vệ Tổ quốc “từ sớm, từ xa”."
+            head: "Kết hợp phát triển kinh tế với củng cố quốc phòng, an ninh",
+            detail: "Xây dựng {{nền quốc phòng toàn dân}} gắn với {{thế trận an ninh nhân dân}} vững mạnh; chủ động bảo vệ Tổ quốc {{từ sớm, từ xa}}."
           },
           {
-            head: "Tăng cường xây dựng, chỉnh đốn Đảng và hội nhập quốc tế",
-            detail: "Xây dựng Đảng trong sạch, vững mạnh toàn diện, kiên quyết phòng, chống tham nhũng, tiêu cực; đồng thời kết hợp sức mạnh dân tộc với sức mạnh thời đại, chủ động, tích cực hội nhập quốc tế sâu rộng."
+            head: "Kết hợp sức mạnh dân tộc với sức mạnh thời đại",
+            detail: "Phát huy nội lực, {{tự lực, tự cường}}; đồng thời chủ động, tích cực {{hội nhập quốc tế}} toàn diện, sâu rộng."
+          },
+          {
+            head: "Xây dựng Đảng và hệ thống chính trị trong sạch, vững mạnh",
+            detail: "Nâng cao {{năng lực lãnh đạo và sức chiến đấu}} của Đảng; giữ vững ổn định chính trị và kiên quyết {{phòng, chống tham nhũng, tiêu cực}}."
           }
         ]
       }
@@ -1508,47 +1523,53 @@ const essayList = [
     sections: [
       {
         title: "1. Quan điểm của Đảng về công nghiệp hóa trong thời kỳ đổi mới tại Đại hội VIII (7/1996)",
+        chain: "Độc lập tự chủ & hợp tác ➔ Sự nghiệp toàn dân ➔ Nguồn lực con người ➔ Khoa học công nghệ ➔ Hiệu quả KT-XH ➔ Kết hợp QP-AN",
         items: [
           {
-            head: "Một là, giữ vững độc lập, tự chủ gắn với mở rộng hợp tác quốc tế",
-            detail: "Đa phương hóa, đa dạng hóa quan hệ đối ngoại; dựa vào nguồn lực trong nước là chính đi đôi với tranh thủ tối đa nguồn lực bên ngoài."
+            head: "Một là, giữ vững độc lập, tự chủ đi đôi với mở rộng hợp tác quốc tế",
+            detail: "{{Đa phương hóa, đa dạng hóa}} quan hệ đối ngoại; dựa vào {{nguồn lực trong nước là chính}} đi đôi với tranh thủ tối đa {{nguồn lực bên ngoài}}."
           },
           {
             head: "Hai là, công nghiệp hóa, hiện đại hóa là sự nghiệp của toàn dân",
-            detail: "Huy động sức mạnh của mọi thành phần kinh tế, trong đó kinh tế nhà nước giữ vai trò chủ đạo."
+            detail: "Huy động sức mạnh của {{mọi thành phần kinh tế}}, trong đó {{kinh tế nhà nước giữ vai trò chủ đạo}}."
           },
           {
             head: "Ba là, lấy phát huy nguồn lực con người là yếu tố cơ bản",
-            detail: "Bảo đảm cho sự phát triển nhanh và bền vững; tăng trưởng kinh tế gắn với cải thiện đời sống nhân dân, phát triển văn hóa, giáo dục, thực hiện tiến bộ, công bằng xã hội và bảo vệ môi trường."
+            detail: "Bảo đảm cho sự {{phát triển nhanh và bền vững}}; gắn tăng trưởng kinh tế với {{tiến bộ, công bằng xã hội}} và bảo vệ môi trường."
           },
           {
             head: "Bốn là, khoa học và công nghệ là động lực",
-            detail: "Kết hợp công nghệ truyền thống với công nghệ hiện đại, tranh thủ đi nhanh vào hiện đại ở những khâu quyết định."
+            detail: "Kết hợp {{công nghệ truyền thống}} với {{công nghệ hiện đại}}; tranh thủ {{đi nhanh vào hiện đại}} ở những khâu quyết định."
           },
           {
-            head: "Năm là, lấy hiệu quả kinh tế - xã hội làm tiêu chuẩn cơ bản",
-            detail: "Làm căn cứ để xác định phương án phát triển, lựa chọn dự án đầu tư và công nghệ."
+            head: "Năm là, lấy hiệu quả kinh tế – xã hội làm tiêu chuẩn cơ bản",
+            detail: "Làm căn cứ để xác định {{phương án phát triển}}, lựa chọn {{dự án đầu tư}} và công nghệ."
           },
           {
             head: "Sáu là, kết hợp kinh tế với quốc phòng và an ninh",
-            detail: "Bảo đảm gắn kết chặt chẽ giữa phát triển kinh tế với củng cố quốc phòng - an ninh."
+            detail: "Bảo đảm gắn kết chặt chẽ giữa {{phát triển kinh tế}} với củng cố {{quốc phòng – an ninh}}."
           }
         ]
       },
       {
         title: "2. Sinh viên có thể làm gì để đóng góp vào quá trình công nghiệp hóa, hiện đại hóa đất nước",
+        chain: "Nhân lực chất lượng cao ➔ Tác phong công nghiệp ➔ Nghiên cứu & đổi mới sáng tạo ➔ Văn hóa & môi trường",
         items: [
           {
-            head: "Phấn đấu trở thành nguồn nhân lực chất lượng cao",
-            detail: "Tích cực học tập nâng cao trình độ chuyên môn, ngoại ngữ, kỹ năng số và làm chủ khoa học - công nghệ hiện đại."
+            head: "Học tập, nâng cao trình độ chuyên môn và kỹ năng số",
+            detail: "Tích cực trau dồi kiến thức, {{ngoại ngữ, công nghệ thông tin}}; phấn đấu trở thành {{nguồn nhân lực chất lượng cao}}."
           },
           {
-            head: "Rèn luyện tác phong công nghiệp và tinh thần sáng tạo",
-            detail: "Xây dựng ý thức kỷ luật lao động, tác phong làm việc chuyên nghiệp; chủ động tham gia nghiên cứu khoa học và khởi nghiệp đổi mới sáng tạo."
+            head: "Rèn luyện tác phong công nghiệp và kỷ luật lao động",
+            detail: "Xây dựng ý thức {{làm việc chuyên nghiệp, kỷ luật}}, năng động và thích ứng nhanh với {{chuyển đổi số}}."
           },
           {
-            head: "Gắn phát triển kinh tế với văn hóa và bảo vệ môi trường",
-            detail: "Rèn luyện đạo đức, giữ gìn bản sắc văn hóa dân tộc trong hội nhập quốc tế và thực hiện lối sống xanh, bảo vệ môi trường bền vững."
+            head: "Đẩy mạnh nghiên cứu khoa học và đổi mới sáng tạo",
+            detail: "Chủ động tiếp cận, ứng dụng {{khoa học – công nghệ hiện đại}} vào thực tiễn và tích cực {{khởi nghiệp sáng tạo}}."
+          },
+          {
+            head: "Giữ gìn bản sắc văn hóa và bảo vệ môi trường",
+            detail: "Tu dưỡng đạo đức, giữ gìn {{bản sắc văn hóa dân tộc}} khi hội nhập; gắn phát triển với {{bảo vệ môi trường bền vững}}."
           }
         ]
       }
@@ -1561,39 +1582,45 @@ const essayList = [
     sections: [
       {
         title: "1. Những chủ trương, giải pháp của Đảng để tăng cường hội nhập quốc tế hiện nay",
+        chain: "Đối ngoại độc lập tự chủ ➔ Hội nhập kinh tế là trọng tâm ➔ Phát huy nội lực & thể chế ➔ Hợp tác & đấu tranh ➔ Quốc phòng & bản sắc văn hóa",
         items: [
           {
             head: "Thực hiện nhất quán đường lối đối ngoại độc lập, tự chủ",
-            detail: "Kiên trì đường lối đối ngoại hòa bình, hữu nghị, hợp tác và phát triển; đa phương hóa, đa dạng hóa quan hệ đối ngoại; bảo đảm cao nhất lợi ích quốc gia - dân tộc trên cơ sở các nguyên tắc cơ bản của luật pháp quốc tế, bình đẳng, cùng có lợi."
+            detail: "Kiên trì đối ngoại {{hòa bình, hợp tác và phát triển}}; đa phương hóa, đa dạng hóa; bảo đảm {{lợi ích tối cao của quốc gia – dân tộc}} trên cơ sở luật pháp quốc tế."
           },
           {
             head: "Chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng",
-            detail: "Lấy hội nhập kinh tế là trọng tâm; hội nhập trong các lĩnh vực chính trị, quốc phòng, an ninh, văn hóa - xã hội, khoa học - công nghệ phải tạo thuận lợi cho hội nhập kinh tế."
+            detail: "Lấy {{hội nhập kinh tế là trọng tâm}}; hội nhập trong các lĩnh vực khác phải {{tạo thuận lợi cho hội nhập kinh tế}}."
           },
           {
-            head: "Nâng cao nội lực và sức cạnh tranh của nền kinh tế",
-            detail: "Xây dựng nền kinh tế độc lập, tự chủ gắn với hội nhập kinh tế quốc tế; đẩy mạnh thực hiện ba đột phá chiến lược về thể chế, nguồn nhân lực chất lượng cao và kết cấu hạ tầng đồng bộ."
+            head: "Phát huy nội lực và hoàn thiện thể chế phát triển",
+            detail: "Xây dựng {{nền kinh tế độc lập, tự chủ}} gắn với hội nhập quốc tế; đẩy mạnh {{ba đột phá chiến lược}} về thể chế, nhân lực và kết cấu hạ tầng."
           },
           {
             head: "Nắm vững hai mặt hợp tác và đấu tranh trong quan hệ quốc tế",
-            detail: "Kết hợp chặt chẽ đối ngoại Đảng, ngoại giao Nhà nước và đối ngoại nhân dân; giữ vững ổn định chính trị - xã hội, bảo vệ chủ quyền quốc gia và giữ gìn bản sắc văn hóa dân tộc."
+            detail: "Phối hợp chặt chẽ giữa {{đối ngoại Đảng, ngoại giao Nhà nước và đối ngoại nhân dân}}; xử lý linh hoạt các mối quan hệ quốc tế."
+          },
+          {
+            head: "Giữ vững quốc phòng, an ninh và bản sắc văn hóa dân tộc",
+            detail: "Bảo vệ vững chắc {{độc lập, chủ quyền}} và ổn định chính trị; tiếp thu tinh hoa nhân loại theo phương châm {{“hội nhập nhưng không hòa tan”}}."
           }
         ]
       },
       {
         title: "2. Liên hệ trách nhiệm của sinh viên trong hội nhập quốc tế",
+        chain: "Tri thức & ngoại ngữ ➔ Giữ gìn bản sắc văn hóa ➔ Bản lĩnh chính trị & pháp luật",
         items: [
           {
-            head: "Trang bị năng lực hội nhập quốc tế",
-            detail: "Chủ động nâng cao kiến thức chuyên môn, thông thạo ngoại ngữ, công nghệ số và rèn luyện kỹ năng làm việc trong môi trường quốc tế."
+            head: "Trang bị tri thức và kỹ năng hội nhập quốc tế",
+            detail: "Chủ động nâng cao trình độ {{chuyên môn, ngoại ngữ, công nghệ số}} và kỹ năng làm việc trong {{môi trường quốc tế}}."
           },
           {
-            head: "Giữ gìn và phát huy bản sắc văn hóa dân tộc",
-            detail: "Tiếp thu có chọn lọc tinh hoa văn hóa, tri thức nhân loại theo phương châm “hòa nhập nhưng không hòa tan”; tích cực quảng bá hình ảnh đất nước, con người Việt Nam."
+            head: "Giữ gìn và quảng bá bản sắc văn hóa dân tộc",
+            detail: "Tiếp thu có chọn lọc tinh hoa nhân loại, {{“hòa nhập nhưng không hòa tan”}}; tích cực quảng bá {{hình ảnh đất nước, con người Việt Nam}}."
           },
           {
             head: "Giữ vững bản lĩnh chính trị và ý thức pháp luật",
-            detail: "Nắm vững đường lối đối ngoại của Đảng, tuân thủ pháp luật Việt Nam và quốc tế; cảnh giác, đấu tranh phản bác các quan điểm sai trái, thù địch."
+            detail: "Tin tưởng đường lối đối ngoại của Đảng; tuân thủ {{pháp luật Việt Nam và quốc tế}}; cảnh giác, phản bác các {{quan điểm sai trái, thù địch}}."
           }
         ]
       }
@@ -1605,48 +1632,54 @@ const essayList = [
     fullQ: "Câu 80. Phân tích nội dung đường lối đổi mới toàn diện đất nước được Đảng Cộng sản Việt Nam đề ra tại Đại hội VI (1986). Những bài học kinh nghiệm mà Đảng ta đã đúc kết cho công cuộc phát triển đất nước trong giai đoạn hiện nay.",
     sections: [
       {
-        title: "1. Nội dung đường lối đổi mới toàn diện đất nước tại Đại hội VI (12/1986)",
+        title: "1. Nội dung đường lối đổi mới toàn diện (2.000 Points — Chuẩn đáp án chấm thi)",
+        chain: "Tư duy lý luận ➔ Chính sách kinh tế ➔ Đối ngoại & KT đối ngoại ➔ Quản lý của Nhà nước ➔ Lãnh đạo của Đảng",
         items: [
           {
-            head: "Phương châm và trọng tâm đổi mới",
-            detail: "Quán triệt tinh thần “nhìn thẳng vào sự thật, đánh giá đúng sự thật, nói rõ sự thật”; thực hiện đổi mới toàn diện, đồng bộ trên các lĩnh vực, trong đó trọng tâm là đổi mới kinh tế."
+            head: "Đổi mới tư duy lý luận",
+            detail: "Nhận thức rõ hơn về {{chủ nghĩa xã hội}} và {{thời kỳ quá độ lên chủ nghĩa xã hội}}, xác định những {{đặc trưng và quy luật khách quan}} của thời kỳ quá độ."
           },
           {
-            head: "Đổi mới cơ chế quản lý và cơ cấu kinh tế",
-            detail: "Xóa bỏ cơ chế tập trung quan liêu, hành chính, bao cấp, chuyển sang hạch toán, kinh doanh, kết hợp kế hoạch với thị trường; phát triển nền kinh tế nhiều thành phần theo định hướng xã hội chủ nghĩa."
+            head: "Đổi mới quan điểm, chính sách kinh tế",
+            detail: "Thừa nhận {{nền kinh tế nhiều thành phần}}; đổi mới cơ cấu kinh tế, tập trung thực hiện {{ba chương trình kinh tế lớn}}: lương thực – thực phẩm, hàng tiêu dùng và hàng xuất khẩu; từng bước xóa bỏ {{cơ chế quản lý tập trung quan liêu, bao cấp}}."
           },
           {
-            head: "Thực hiện Ba chương trình kinh tế lớn",
-            detail: "Bố trí lại cơ cấu sản xuất, điều chỉnh cơ cấu đầu tư, tập trung thực hiện ba chương trình mục tiêu về Lương thực - thực phẩm, Hàng tiêu dùng và Hàng xuất khẩu; coi nông nghiệp là mặt trận hàng đầu."
+            head: "Đổi mới chính sách đối ngoại và kinh tế đối ngoại",
+            detail: "Mở rộng {{quan hệ kinh tế đối ngoại}}, khuyến khích {{đầu tư nước ngoài}} và tạo điều kiện thuận lợi cho {{người nước ngoài, người Việt Nam ở nước ngoài}} hợp tác, kinh doanh tại Việt Nam."
           },
           {
-            head: "Đổi mới chính sách xã hội, quốc phòng - an ninh và đối ngoại",
-            detail: "Giải quyết việc làm, thực hiện công bằng xã hội, chăm lo giáo dục, văn hóa, y tế; tăng cường quốc phòng - an ninh; mở rộng và nâng cao hiệu quả kinh tế đối ngoại."
+            head: "Đổi mới vai trò quản lý, điều hành của Nhà nước",
+            detail: "{{Kiện toàn bộ máy nhà nước}}; phân biệt chức năng {{quản lý nhà nước về kinh tế}} với chức năng {{sản xuất, kinh doanh}}; kết hợp {{quản lý theo ngành}} với {{quản lý theo địa phương và vùng lãnh thổ}}."
           },
           {
-            head: "Đổi mới sự lãnh đạo của Đảng và quản lý của Nhà nước",
-            detail: "Đổi mới tư duy (trước hết là tư duy kinh tế), đổi mới công tác cán bộ và phong cách làm việc; phát huy quyền làm chủ của nhân dân theo phương châm “Dân biết, dân bàn, dân làm, dân kiểm tra”."
+            head: "Đổi mới nội dung và phương thức lãnh đạo của Đảng",
+            detail: "Nâng cao {{năng lực lãnh đạo, sức chiến đấu}} và {{năng lực tổ chức thực tiễn}} của Đảng; tăng cường {{đoàn kết, thống nhất}} và đấu tranh chống tiêu cực."
           }
         ]
       },
       {
-        title: "2. Bốn bài học kinh nghiệm quý báu được Đảng đúc kết",
+        title: "2. Bài học kinh nghiệm đối với công cuộc phát triển đất nước hiện nay (1.500 Points — Chuẩn đáp án chấm thi)",
+        chain: "Kiên định mục tiêu ➔ Xuất phát từ thực tiễn ➔ Lấy dân làm gốc ➔ Dân tộc & thời đại ➔ Xây dựng Đảng",
         items: [
           {
-            head: "Một là, quán triệt tư tưởng “lấy dân làm gốc”",
-            detail: "Trong toàn bộ hoạt động của mình, Đảng phải xây dựng và phát huy quyền làm chủ của nhân dân lao động."
+            head: "Kiên định mục tiêu độc lập dân tộc và chủ nghĩa xã hội",
+            detail: "Đồng thời vận dụng sáng tạo {{chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh}}."
           },
           {
-            head: "Hai là, tôn trọng và hành động theo quy luật khách quan",
-            detail: "Đảng phải luôn luôn xuất phát từ thực tế, khắc phục bệnh chủ quan, duy ý chí."
+            head: "Xuất phát từ thực tiễn, tôn trọng và hành động theo quy luật khách quan",
+            detail: "Thường xuyên {{đổi mới tư duy}} và {{phương thức lãnh đạo}}."
           },
           {
-            head: "Ba là, kết hợp sức mạnh dân tộc với sức mạnh thời đại",
-            detail: "Biết tranh thủ và phát huy sức mạnh tổng hợp của dân tộc và thời đại trong điều kiện lịch sử mới."
+            head: "Lấy dân làm gốc",
+            detail: "Phát huy {{quyền làm chủ}} và sức mạnh {{đại đoàn kết toàn dân tộc}}."
           },
           {
-            head: "Bốn là, chăm lo xây dựng Đảng ngang tầm nhiệm vụ",
-            detail: "Xây dựng Đảng ngang tầm với một đảng cầm quyền lãnh đạo nhân dân tiến hành cuộc cách mạng xã hội chủ nghĩa."
+            head: "Kết hợp sức mạnh dân tộc với sức mạnh thời đại",
+            detail: "Chủ động, tích cực {{hội nhập quốc tế}}."
+          },
+          {
+            head: "Xây dựng Đảng và hệ thống chính trị trong sạch, vững mạnh",
+            detail: "Giữ vững {{ổn định chính trị}} và {{phát huy dân chủ}}."
           }
         ]
       }
@@ -1659,51 +1692,53 @@ const essayList = [
     sections: [
       {
         title: "1. Những thành tựu cơ bản trong công cuộc đổi mới đất nước (1986–2021)",
+        chain: "Đánh giá tổng quát ➔ Kinh tế ➔ Văn hóa – xã hội ➔ Quốc phòng, an ninh & đối ngoại ➔ Xây dựng Đảng",
         items: [
           {
-            head: "Đánh giá tổng quát",
-            detail: "Qua 35 năm đổi mới, đất nước đạt được những thành tựu to lớn, có ý nghĩa lịch sử; Đại hội XIII khẳng định: “Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”."
+            head: "Thành tựu tổng quát",
+            detail: "Qua 35 năm đổi mới, đất nước đạt những thành tựu to lớn, có ý nghĩa lịch sử; {{“Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”}}."
           },
           {
             head: "Về kinh tế",
-            detail: "Đưa đất nước ra khỏi khủng hoảng kinh tế - xã hội và tình trạng kém phát triển, trở thành nước đang phát triển có thu nhập trung bình; quy mô nền kinh tế tăng mạnh và thể chế kinh tế thị trường định hướng XHCN từng bước được hoàn thiện."
+            detail: "Ra khỏi khủng hoảng kinh tế – xã hội, trở thành {{nước đang phát triển có thu nhập trung bình}}; quy mô kinh tế tăng mạnh; {{thể chế kinh tế thị trường định hướng XHCN}} từng bước hoàn thiện."
           },
           {
-            head: "Về văn hóa - xã hội và con người",
-            detail: "Đời sống vật chất và tinh thần của nhân dân được cải thiện rõ rệt; công tác xóa đói, giảm nghèo đạt thành tựu ấn tượng; giáo dục, khoa học - công nghệ, y tế và an sinh xã hội phát triển tích cực."
+            head: "Về văn hóa – xã hội và con người",
+            detail: "Đời sống vật chất, tinh thần của nhân dân được cải thiện rõ rệt; {{xóa đói, giảm nghèo}} đạt kết quả ấn tượng; {{giáo dục, y tế, khoa học – công nghệ}} và an sinh xã hội phát triển tích cực."
           },
           {
             head: "Về chính trị, quốc phòng, an ninh và đối ngoại",
-            detail: "Giữ vững ổn định chính trị - xã hội, bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ; phá thế bao vây, cấm vận, hội nhập quốc tế sâu rộng, nâng cao vị thế quốc tế của Việt Nam."
+            detail: "Giữ vững {{ổn định chính trị – xã hội}}, bảo vệ vững chắc {{độc lập, chủ quyền, toàn vẹn lãnh thổ}}; phá thế bao vây, cấm vận, {{hội nhập quốc tế sâu rộng}}."
           },
           {
             head: "Về xây dựng Đảng và hệ thống chính trị",
-            detail: "Nhận thức lý luận về chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội ở Việt Nam ngày càng sáng tỏ; công tác xây dựng, chỉnh đốn Đảng và phòng, chống tham nhũng, tiêu cực đạt kết quả quan trọng."
+            detail: "Nhận thức lý luận về {{chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội}} ngày càng sáng tỏ; công tác {{xây dựng, chỉnh đốn Đảng}} và phòng, chống tham nhũng, tiêu cực đạt kết quả quan trọng."
           }
         ]
       },
       {
-        title: "2. Phương hướng, nhiệm vụ để phát huy thành tựu trong thực hiện Nghị quyết Đại hội XIII (2021–2026)",
+        title: "2. Phương hướng, nhiệm vụ phát huy thành tựu trong thực hiện Nghị quyết Đại hội XIII (2021–2026)",
+        chain: "Xây dựng, chỉnh đốn Đảng ➔ Đổi mới mô hình tăng trưởng ➔ Văn hóa, con người & an sinh ➔ Quốc phòng & đối ngoại ➔ Ba đột phá chiến lược",
         items: [
           {
-            head: "Đẩy mạnh xây dựng, chỉnh đốn Đảng và hệ thống chính trị",
-            detail: "Xây dựng Đảng, Nhà nước và hệ thống chính trị trong sạch, vững mạnh toàn diện; kiên quyết, kiên trì đấu tranh phòng, chống tham nhũng, lãng phí, tiêu cực."
+            head: "Xây dựng, chỉnh đốn Đảng và hệ thống chính trị",
+            detail: "Xây dựng Đảng, Nhà nước và hệ thống chính trị {{trong sạch, vững mạnh toàn diện}}; kiên quyết, kiên trì {{phòng, chống tham nhũng, lãng phí, tiêu cực}}."
           },
           {
             head: "Đổi mới mô hình tăng trưởng, cơ cấu lại nền kinh tế",
-            detail: "Đẩy mạnh công nghiệp hóa, hiện đại hóa dựa trên nền tảng khoa học - công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia; phát triển kinh tế số, kinh tế xanh, kinh tế tuần hoàn."
+            detail: "Đẩy mạnh công nghiệp hóa, hiện đại hóa dựa trên {{khoa học – công nghệ, đổi mới sáng tạo và chuyển đổi số}}; phát triển {{kinh tế số, kinh tế xanh, kinh tế tuần hoàn}}."
           },
           {
             head: "Phát triển văn hóa, con người và bảo đảm an sinh xã hội",
-            detail: "Khơi dậy mạnh mẽ tinh thần yêu nước, ý chí tự cường dân tộc và khát vọng phát triển đất nước phồn vinh, hạnh phúc; nâng cao chất lượng giáo dục, y tế và đời sống nhân dân."
+            detail: "Khơi dậy tinh thần yêu nước, ý chí tự cường và {{khát vọng phát triển đất nước phồn vinh, hạnh phúc}}; nâng cao chất lượng giáo dục, y tế và {{đời sống nhân dân}}."
           },
           {
             head: "Tăng cường quốc phòng, an ninh và nâng cao hiệu quả đối ngoại",
-            detail: "Giữ vững độc lập, tự chủ; bảo vệ vững chắc Tổ quốc từ sớm, từ xa; chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng."
+            detail: "Giữ vững độc lập, tự chủ; bảo vệ vững chắc Tổ quốc {{từ sớm, từ xa}}; chủ động, tích cực {{hội nhập quốc tế toàn diện, sâu rộng}}."
           },
           {
             head: "Thực hiện đồng bộ ba đột phá chiến lược",
-            detail: "Hoàn thiện đồng bộ thể chế phát triển (trước hết là thể chế kinh tế thị trường định hướng XHCN); phát triển nguồn nhân lực chất lượng cao; xây dựng hệ thống kết cấu hạ tầng đồng bộ, hiện đại."
+            detail: "Hoàn thiện đồng bộ {{thể chế phát triển}}; phát triển {{nguồn nhân lực chất lượng cao}}; xây dựng hệ thống {{kết cấu hạ tầng đồng bộ, hiện đại}}."
           }
         ]
       }
@@ -2269,11 +2304,20 @@ function stepShortFc(d) {
 // ============================================================================
 function setEssayMode(mode) {
   state.essayMode = mode;
-  ['full', 'keywords', 'mask'].forEach(k => {
+  ['full', 'cloze', 'keywords', 'mask'].forEach(k => {
     const el = document.getElementById('essay-mode-' + k);
     if (el) el.classList.toggle('active', mode === k);
   });
   renderEssayTab();
+}
+
+function formatEssayDetailHtml(detailText, mode) {
+  return (detailText || '').replace(/\{\{(.+?)\}\}/g, (_, word) => {
+    if (mode === 'cloze') {
+      return `<span class="cloze-token" onclick="event.stopPropagation(); this.classList.toggle('revealed')">${word}</span>`;
+    }
+    return `<span class="kw-inline">${word}</span>`;
+  });
 }
 
 function renderEssayTab() {
@@ -2310,13 +2354,16 @@ function renderEssayTab() {
 
       ${e.sections.map(sec => `
         <div class="essay-section-block">
-          <div class="essay-sec-title">${sec.title}</div>
+          <div class="essay-sec-title">
+            <div>${sec.title}</div>
+            ${sec.chain ? `<div style="font-size:0.79rem; font-weight:600; color:var(--text-secondary); margin-top:3px;">🔑 Công thức nhớ: ${sec.chain}</div>` : ''}
+          </div>
           <div class="essay-dash-list">
             ${sec.items.map(it => `
               <div class="essay-dash-item ${isMask ? 'clickable masked' : ''}" ${isMask ? 'onclick="this.classList.toggle(\'masked\')"' : ''}>
                 <span class="essay-dash-mark">-</span>
                 <div class="essay-dash-body">
-                  <span class="essay-key-head">${it.head}</span><span class="essay-key-detail">: ${it.detail}</span>
+                  <span class="essay-key-head">${it.head}</span><span class="essay-key-detail">: ${formatEssayDetailHtml(it.detail, state.essayMode)}</span>
                 </div>
               </div>
             `).join('')}

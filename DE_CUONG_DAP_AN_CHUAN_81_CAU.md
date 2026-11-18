@@ -124,100 +124,113 @@
 
 ---
 
-## PHẦN 3: CÂU HỎI TỰ LUẬN – NGẮN GỌN, ĐÚNG TRỌNG TÂM, CHUẨN GIÁO TRÌNH (CÂU 76 – CÂU 81)
+## PHẦN 3: CÂU HỎI TỰ LUẬN – NGẮN GỌN, ĐÚNG TRỌNG TÂM, CHUẨN GIÁO TRÌNH & ĐÁP ÁN CHẤM THI (CÂU 76 – CÂU 81)
 
 ### Câu 76. Trình bày ý nghĩa lịch sử Cách mạng Tháng Tám năm 1945. Liên hệ trách nhiệm sinh viên trong việc góp phần xây dựng và bảo vệ Tổ quốc hiện nay.
 
 **1. Ý nghĩa lịch sử của Cách mạng Tháng Tám năm 1945:**
-- **Đập tan ách thống trị thực dân, phong kiến:** Đập tan xiềng xích nô lệ của chủ nghĩa đế quốc trong gần một thế kỷ, chấm dứt sự tồn tại của chế độ quân chủ chuyên chế ngót nghìn năm, lập nên nước Việt Nam Dân chủ Cộng hòa — nhà nước của nhân dân đầu tiên ở Đông Nam Á.
-- **Đưa nhân dân lên địa vị làm chủ:** Nhân dân Việt Nam từ thân phận nô lệ bước lên địa vị người làm chủ đất nước; nước ta từ một nước thuộc địa trở thành một quốc gia độc lập có chủ quyền.
-- **Đưa Đảng trở thành đảng cầm quyền và mở ra kỷ nguyên mới:** Đảng Cộng sản Đông Dương từ hoạt động bí mật trở thành một đảng cầm quyền; mở ra kỷ nguyên mới của dân tộc — kỷ nguyên độc lập, tự do và hướng tới chủ nghĩa xã hội.
-- **Ý nghĩa quốc tế và lý luận:** Đột phá một khâu quan trọng trong hệ thống thuộc địa của chủ nghĩa đế quốc, mở đầu thời kỳ suy sụp, tan rã của chủ nghĩa thực dân cũ; cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên thế giới và làm phong phú thêm kho tàng lý luận của chủ nghĩa Mác - Lênin.
+> *🔑 Công thức nhớ: Đập tan thực dân, phong kiến → Nhân dân làm chủ → Đảng cầm quyền, kỷ nguyên mới → Cổ vũ quốc tế & phát triển lý luận*
+- **Đập tan ách thống trị của thực dân, phong kiến:** Đập tan xiềng xích nô lệ của **chủ nghĩa đế quốc** hơn 80 năm và **chế độ quân chủ chuyên chế** ngót nghìn năm; lập nên nước **Việt Nam Dân chủ Cộng hòa** — nhà nước của nhân dân đầu tiên ở Đông Nam Á.
+- **Đưa nhân dân lên địa vị làm chủ:** Nhân dân Việt Nam từ thân phận nô lệ bước lên **địa vị người làm chủ đất nước**; nước ta từ một nước thuộc địa trở thành một **quốc gia độc lập có chủ quyền**.
+- **Đưa Đảng trở thành đảng cầm quyền và mở ra kỷ nguyên mới:** Đảng Cộng sản Đông Dương từ hoạt động bí mật trở thành **đảng cầm quyền**; mở ra kỷ nguyên **độc lập, tự do và hướng tới chủ nghĩa xã hội**.
+- **Ý nghĩa quốc tế và lý luận:** Mở đầu thời kỳ suy sụp, tan rã của **chủ nghĩa thực dân cũ**; cổ vũ mạnh mẽ **phong trào giải phóng dân tộc** trên thế giới và bổ sung, phát triển lý luận của **chủ nghĩa Mác – Lênin**.
 
 **2. Liên hệ trách nhiệm của sinh viên trong xây dựng và bảo vệ Tổ quốc hiện nay:**
-- **Về chính trị - tư tưởng:** Kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội; tin tưởng vào sự lãnh đạo của Đảng; nâng cao cảnh giác, đấu tranh phản bác các quan điểm sai trái, âm mưu “diễn biến hòa bình” trên không gian mạng.
-- **Về học tập, xây dựng Tổ quốc:** Không ngừng học tập nâng cao trình độ chuyên môn, ngoại ngữ, kỹ năng số và làm chủ khoa học - công nghệ; rèn luyện đạo đức cách mạng, lối sống lành mạnh và tinh thần khởi nghiệp, đổi mới sáng tạo.
-- **Về hành động bảo vệ Tổ quốc:** Chấp hành nghiêm chủ trương của Đảng, chính sách, pháp luật của Nhà nước và Luật Nghĩa vụ quân sự; hoàn thành tốt chương trình Giáo dục quốc phòng - an ninh; tích cực tham gia bảo vệ chủ quyền biên giới, biển đảo của Tổ quốc.
+> *🔑 Công thức nhớ: Bản lĩnh chính trị → Học tập, khởi nghiệp → Chấp hành pháp luật & bảo vệ chủ quyền*
+- **Về chính trị – tư tưởng:** Kiên định mục tiêu **độc lập dân tộc gắn liền với chủ nghĩa xã hội**; tuyệt đối tin tưởng sự lãnh đạo của Đảng; đấu tranh phản bác các quan điểm sai trái, âm mưu **“diễn biến hòa bình”**.
+- **Về học tập, xây dựng Tổ quốc:** Không ngừng học tập nâng cao trình độ chuyên môn, ngoại ngữ và làm chủ **khoa học – công nghệ**; rèn luyện **đạo đức cách mạng** và tinh thần **khởi nghiệp, đổi mới sáng tạo**.
+- **Về hành động bảo vệ Tổ quốc:** Chấp hành nghiêm chủ trương của Đảng, **chính sách, pháp luật của Nhà nước** và **Luật Nghĩa vụ quân sự**; tích cực tham gia bảo vệ **chủ quyền biên giới, biển đảo**.
 
 ---
 
 ### Câu 77. Trình bày một số bài học kinh nghiệm trong cuộc kháng chiến chống Mỹ, cứu nước của nhân dân Việt Nam (1954-1975). Theo anh (chị) Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay.
 
 **1. Một số bài học kinh nghiệm trong cuộc kháng chiến chống Mỹ, cứu nước (1954–1975):**
-- **Một là, giương cao ngọn cờ độc lập dân tộc và chủ nghĩa xã hội:** Kết hợp chặt chẽ hai nhiệm vụ chiến lược ở hai miền Nam - Bắc nhằm huy động sức mạnh toàn dân đánh Mỹ, cả nước đánh Mỹ.
-- **Hai là, tìm ra phương pháp đấu tranh đúng đắn, sáng tạo:** Thực hiện khởi nghĩa toàn dân và chiến tranh nhân dân, sử dụng phương pháp cách mạng tổng hợp (kết hợp đấu tranh quân sự, chính trị, ngoại giao; đánh địch bằng ba mũi giáp công trên ba vùng chiến lược).
-- **Ba là, phải có công tác tổ chức chiến đấu giỏi:** Phát huy năng lực chỉ đạo, tổ chức chiến đấu của các cấp bộ Đảng và các cấp chi ủy quân đội, thực hiện giành thắng lợi từng bước đến thắng lợi hoàn toàn.
-- **Bốn là, hết sức coi trọng công tác xây dựng Đảng, lực lượng cách mạng và đoàn kết quốc tế:** Chú trọng xây dựng Đảng, xây dựng lực lượng cách mạng ở miền Nam và lực lượng chiến đấu trong cả nước; tranh thủ tối đa sự đồng tình, ủng hộ của quốc tế.
+> *🔑 Công thức nhớ: Ngọn cờ ĐLDT & CNXH → Phương pháp đấu tranh tổng hợp (3 mũi, 3 vùng) → Tổ chức chiến đấu giỏi → Xây dựng Đảng, lực lượng & đoàn kết quốc tế*
+- **Một là, giương cao ngọn cờ độc lập dân tộc và chủ nghĩa xã hội:** Kết hợp chặt chẽ **hai nhiệm vụ chiến lược ở hai miền Nam – Bắc** nhằm huy động sức mạnh **toàn dân đánh Mỹ, cả nước đánh Mỹ**.
+- **Hai là, tìm ra phương pháp đấu tranh đúng đắn, sáng tạo:** Thực hiện **khởi nghĩa toàn dân và chiến tranh nhân dân**; sử dụng **phương pháp cách mạng tổng hợp** (kết hợp đấu tranh **quân sự, chính trị, ngoại giao**; đánh địch bằng **ba mũi giáp công** trên **ba vùng chiến lược**).
+- **Ba là, phải có công tác tổ chức chiến đấu giỏi:** Phát huy năng lực chỉ đạo của **các cấp bộ Đảng và các cấp chi ủy quân đội**; thực hiện **giành thắng lợi từng bước đến thắng lợi hoàn toàn**.
+- **Bốn là, hết sức coi trọng công tác xây dựng Đảng, xây dựng lực lượng và đoàn kết quốc tế:** Chú trọng **xây dựng Đảng**, xây dựng **lực lượng cách mạng ở miền Nam** và cả nước; tranh thủ tối đa **sự đồng tình, ủng hộ của quốc tế**.
 
 **2. Đảng phải làm gì để tiếp tục kế thừa, phát huy những bài học đó trong bối cảnh hiện nay:**
-- **Kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội:** Vận dụng sáng tạo chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh vào công cuộc đổi mới; kết hợp chặt chẽ hai nhiệm vụ chiến lược là xây dựng và bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa.
-- **Phát huy sức mạnh đại đoàn kết toàn dân tộc:** Thực hiện nhất quán quan điểm “lấy dân làm gốc”, xây dựng “thế trận lòng dân” vững chắc gắn với thế trận quốc phòng toàn dân và thế trận an ninh nhân dân.
-- **Nâng cao năng lực lãnh đạo và chỉ đạo thực tiễn:** Đổi mới phương thức lãnh đạo của Đảng, nâng cao năng lực dự báo chiến lược, nhạy bén nắm bắt thời cơ phát triển đất nước và chủ động bảo vệ Tổ quốc “từ sớm, từ xa”.
-- **Tăng cường xây dựng, chỉnh đốn Đảng và hội nhập quốc tế:** Xây dựng Đảng trong sạch, vững mạnh toàn diện, kiên quyết phòng, chống tham nhũng, tiêu cực; đồng thời kết hợp sức mạnh dân tộc với sức mạnh thời đại, chủ động, tích cực hội nhập quốc tế sâu rộng.
+> *🔑 Công thức nhớ: Kiên định ĐLDT & CNXH → Lấy dân làm gốc, thế trận lòng dân → Bảo vệ Tổ quốc từ sớm, từ xa → Xây dựng Đảng & hội nhập quốc tế*
+- **Kiên định mục tiêu độc lập dân tộc và chủ nghĩa xã hội:** Vận dụng sáng tạo **chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh**; kết hợp chặt chẽ hai nhiệm vụ chiến lược là **xây dựng và bảo vệ Tổ quốc**.
+- **Phát huy sức mạnh đại đoàn kết toàn dân tộc:** Thực hiện quan điểm **“lấy dân làm gốc”**; xây dựng **“thế trận lòng dân”** gắn với **thế trận quốc phòng toàn dân** và **thế trận an ninh nhân dân**.
+- **Nâng cao năng lực lãnh đạo và chỉ đạo thực tiễn:** Đổi mới **phương thức lãnh đạo của Đảng**, nâng cao năng lực **dự báo chiến lược**; chủ động bảo vệ Tổ quốc **“từ sớm, từ xa”**.
+- **Tăng cường xây dựng, chỉnh đốn Đảng và hội nhập quốc tế:** Xây dựng Đảng **trong sạch, vững mạnh**, kiên quyết **phòng, chống tham nhũng, tiêu cực**; kết hợp **sức mạnh dân tộc với sức mạnh thời đại**, chủ động **hội nhập quốc tế**.
 
 ---
 
 ### Câu 78. Trình bày quan điểm của Đảng về công nghiệp hóa trong thời kì đổi mới được nêu ra tại Đại hội VIII (7/1996) của Đảng. Sinh viên có thể làm gì để đóng góp vào quá trình công nghiệp hóa, hiện đại hóa đất nước theo định hướng của Đảng?
 
-**1. Quan điểm của Đảng về công nghiệp hóa trong thời kỳ đổi mới tại Đại hội VIII (7/1996):**
-- **Một là, giữ vững độc lập, tự chủ gắn với mở rộng hợp tác quốc tế:** Đa phương hóa, đa dạng hóa quan hệ đối ngoại; dựa vào nguồn lực trong nước là chính đi đôi với tranh thủ tối đa nguồn lực bên ngoài.
-- **Hai là, công nghiệp hóa, hiện đại hóa là sự nghiệp của toàn dân:** Huy động sức mạnh của mọi thành phần kinh tế, trong đó kinh tế nhà nước giữ vai trò chủ đạo.
-- **Ba là, lấy phát huy nguồn lực con người là yếu tố cơ bản:** Bảo đảm cho sự phát triển nhanh và bền vững; tăng trưởng kinh tế gắn với cải thiện đời sống nhân dân, phát triển văn hóa, giáo dục, thực hiện tiến bộ, công bằng xã hội và bảo vệ môi trường.
-- **Bốn là, khoa học và công nghệ là động lực:** Kết hợp công nghệ truyền thống với công nghệ hiện đại, tranh thủ đi nhanh vào hiện đại ở những khâu quyết định.
-- **Năm là, lấy hiệu quả kinh tế - xã hội làm tiêu chuẩn cơ bản:** Làm căn cứ để xác định phương án phát triển, lựa chọn dự án đầu tư và công nghệ.
-- **Sáu là, kết hợp kinh tế với quốc phòng và an ninh:** Bảo đảm gắn kết chặt chẽ giữa phát triển kinh tế với củng cố quốc phòng - an ninh.
+**1. Sáu quan điểm của Đảng về công nghiệp hóa, hiện đại hóa tại Đại hội VIII (7/1996):**
+> *🔑 Công thức nhớ: (1) Độc lập tự chủ + Hợp tác quốc tế → (2) Toàn dân + Kinh tế nhà nước chủ đạo → (3) Nguồn lực con người → (4) Khoa học công nghệ là động lực → (5) Hiệu quả kinh tế – xã hội → (6) Kinh tế + Quốc phòng an ninh*
+- **Một là, giữ vững độc lập, tự chủ đi đôi với mở rộng hợp tác quốc tế:** **Đa phương hóa, đa dạng hóa** quan hệ đối ngoại; dựa vào **nguồn lực trong nước là chính** đi đôi với tranh thủ tối đa **nguồn lực bên ngoài**.
+- **Hai là, công nghiệp hóa, hiện đại hóa là sự nghiệp của toàn dân:** Của **mọi thành phần kinh tế**, trong đó **kinh tế nhà nước giữ vai trò chủ đạo**.
+- **Ba là, lấy việc phát huy nguồn lực con người là yếu tố cơ bản:** Bảo đảm cho sự **phát triển nhanh và bền vững**; tăng trưởng kinh tế gắn với **tiến bộ, công bằng xã hội** và **bảo vệ môi trường**.
+- **Bốn là, khoa học và công nghệ là động lực:** Kết hợp **công nghệ truyền thống với công nghệ hiện đại**, tranh thủ **đi nhanh vào hiện đại** ở những khâu quyết định.
+- **Năm là, lấy hiệu quả kinh tế – xã hội làm tiêu chuẩn cơ bản:** Để xác định **phương án phát triển**, lựa chọn **dự án đầu tư và công nghệ**.
+- **Sáu là, kết hợp kinh tế với quốc phòng và an ninh:** Gắn kết chặt chẽ giữa phát triển kinh tế với củng cố **quốc phòng và an ninh**.
 
 **2. Sinh viên có thể làm gì để đóng góp vào quá trình công nghiệp hóa, hiện đại hóa đất nước:**
-- **Phấn đấu trở thành nguồn nhân lực chất lượng cao:** Tích cực học tập nâng cao trình độ chuyên môn, ngoại ngữ, kỹ năng số và làm chủ khoa học - công nghệ hiện đại.
-- **Rèn luyện tác phong công nghiệp và tinh thần sáng tạo:** Xây dựng ý thức kỷ luật lao động, tác phong làm việc chuyên nghiệp; chủ động tham gia nghiên cứu khoa học và khởi nghiệp đổi mới sáng tạo.
-- **Gắn phát triển kinh tế với văn hóa và bảo vệ môi trường:** Rèn luyện đạo đức, giữ gìn bản sắc văn hóa dân tộc trong hội nhập quốc tế và thực hiện lối sống xanh, bảo vệ môi trường bền vững.
+> *🔑 Công thức nhớ: Nhân lực chất lượng cao → Tác phong công nghiệp & đổi mới sáng tạo → Giữ bản sắc văn hóa & bảo vệ môi trường*
+- **Phấn đấu trở thành nguồn nhân lực chất lượng cao:** Tích cực học tập nâng cao **trình độ chuyên môn**, ngoại ngữ, kỹ năng số và làm chủ **khoa học – công nghệ hiện đại**.
+- **Rèn luyện tác phong công nghiệp và tinh thần sáng tạo:** Xây dựng **ý thức kỷ luật lao động**, tác phong chuyên nghiệp; chủ động **nghiên cứu khoa học** và **khởi nghiệp đổi mới sáng tạo**.
+- **Gắn phát triển kinh tế với văn hóa và bảo vệ môi trường:** Giữ gìn **bản sắc văn hóa dân tộc** trong hội nhập quốc tế và thực hiện **lối sống xanh, bảo vệ môi trường bền vững**.
 
 ---
 
 ### Câu 79. Trong bối cảnh quốc tế hiện nay Đảng ta cần phải làm gì để tăng cường hội nhập quốc tế, góp phần xây dựng và phát triển đất nước. Liên hệ trách nhiệm sinh viên.
 
 **1. Những chủ trương, giải pháp của Đảng để tăng cường hội nhập quốc tế hiện nay:**
-- **Thực hiện nhất quán đường lối đối ngoại độc lập, tự chủ:** Kiên trì đường lối đối ngoại hòa bình, hữu nghị, hợp tác và phát triển; đa phương hóa, đa dạng hóa quan hệ đối ngoại; bảo đảm cao nhất lợi ích quốc gia - dân tộc trên cơ sở các nguyên tắc cơ bản của luật pháp quốc tế, bình đẳng, cùng có lợi.
-- **Chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng:** Lấy hội nhập kinh tế là trọng tâm; hội nhập trong các lĩnh vực chính trị, quốc phòng, an ninh, văn hóa - xã hội, khoa học - công nghệ phải tạo thuận lợi cho hội nhập kinh tế.
-- **Nâng cao nội lực và sức cạnh tranh của nền kinh tế:** Xây dựng nền kinh tế độc lập, tự chủ gắn với hội nhập kinh tế quốc tế; đẩy mạnh thực hiện ba đột phá chiến lược về thể chế, nguồn nhân lực chất lượng cao và kết cấu hạ tầng đồng bộ.
-- **Nắm vững hai mặt hợp tác và đấu tranh trong quan hệ quốc tế:** Kết hợp chặt chẽ đối ngoại Đảng, ngoại giao Nhà nước và đối ngoại nhân dân; giữ vững ổn định chính trị - xã hội, bảo vệ chủ quyền quốc gia và giữ gìn bản sắc văn hóa dân tộc.
+> *🔑 Công thức nhớ: Đối ngoại độc lập, tự chủ → Hội nhập kinh tế là trọng tâm → Nâng cao nội lực & 3 đột phá chiến lược → Hợp tác và đấu tranh, 3 trụ cột đối ngoại*
+- **Thực hiện nhất quán đường lối đối ngoại độc lập, tự chủ:** Kiên trì đường lối đối ngoại **hòa bình, hữu nghị, hợp tác và phát triển**; **đa phương hóa, đa dạng hóa** quan hệ đối ngoại; bảo đảm cao nhất **lợi ích quốc gia – dân tộc** trên cơ sở **luật pháp quốc tế**.
+- **Chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng:** Lấy **hội nhập kinh tế là trọng tâm**; hội nhập các lĩnh vực khác phải **tạo thuận lợi cho hội nhập kinh tế**.
+- **Nâng cao nội lực và sức cạnh tranh của nền kinh tế:** Xây dựng **nền kinh tế độc lập, tự chủ** gắn với hội nhập kinh tế quốc tế; đẩy mạnh **ba đột phá chiến lược** (thể chế, nhân lực chất lượng cao, kết cấu hạ tầng).
+- **Nắm vững hai mặt hợp tác và đấu tranh trong quan hệ quốc tế:** Kết hợp chặt chẽ **đối ngoại Đảng, ngoại giao Nhà nước và đối ngoại nhân dân**; bảo vệ vững chắc **chủ quyền quốc gia** và **bản sắc văn hóa dân tộc**.
 
 **2. Liên hệ trách nhiệm của sinh viên trong hội nhập quốc tế:**
-- **Trang bị năng lực hội nhập quốc tế:** Chủ động nâng cao kiến thức chuyên môn, thông thạo ngoại ngữ, công nghệ số và rèn luyện kỹ năng làm việc trong môi trường quốc tế.
-- **Giữ gìn và phát huy bản sắc văn hóa dân tộc:** Tiếp thu có chọn lọc tinh hoa văn hóa, tri thức nhân loại theo phương châm “hòa nhập nhưng không hòa tan”; tích cực quảng bá hình ảnh đất nước, con người Việt Nam.
-- **Giữ vững bản lĩnh chính trị và ý thức pháp luật:** Nắm vững đường lối đối ngoại của Đảng, tuân thủ pháp luật Việt Nam và quốc tế; cảnh giác, đấu tranh phản bác các quan điểm sai trái, thù địch.
+> *🔑 Công thức nhớ: Năng lực hội nhập (chuyên môn, ngoại ngữ, số) → Hòa nhập không hòa tan → Bản lĩnh chính trị & tuân thủ pháp luật*
+- **Trang bị năng lực hội nhập quốc tế:** Chủ động nâng cao **kiến thức chuyên môn**, thông thạo **ngoại ngữ, công nghệ số** và kỹ năng làm việc quốc tế.
+- **Giữ gìn và phát huy bản sắc văn hóa dân tộc:** Tiếp thu tinh hoa nhân loại theo phương châm **“hòa nhập nhưng không hòa tan”**; tích cực quảng bá **hình ảnh đất nước, con người Việt Nam**.
+- **Giữ vững bản lĩnh chính trị và ý thức pháp luật:** Nắm vững **đường lối đối ngoại của Đảng**, tuân thủ **pháp luật Việt Nam và quốc tế**; cảnh giác trước các âm mưu chống phá.
 
 ---
 
-### Câu 80. Phân tích nội dung đường lối đổi mới toàn diện đất nước được Đảng Cộng sản Việt Nam đề ra tại Đại hội VI (1986). Những bài học kinh nghiệm mà Đảng ta đã đúc kết cho công cuộc phát triển đất nước trong giai đoạn hiện nay.
+### Câu 80. Phân tích những nội dung cơ bản của đường lối đổi mới toàn diện đất nước được Đảng Cộng sản Việt Nam đề ra tại Đại hội VI (1986). Nêu những bài học kinh nghiệm của Đảng đối với công cuộc phát triển đất nước hiện nay.
 
-**1. Nội dung đường lối đổi mới toàn diện đất nước tại Đại hội VI (12/1986):**
-- **Phương châm và trọng tâm đổi mới:** Quán triệt tinh thần “nhìn thẳng vào sự thật, đánh giá đúng sự thật, nói rõ sự thật”; thực hiện đổi mới toàn diện, đồng bộ trên các lĩnh vực, trong đó trọng tâm là đổi mới kinh tế.
-- **Đổi mới cơ chế quản lý và cơ cấu kinh tế:** Xóa bỏ cơ chế tập trung quan liêu, hành chính, bao cấp, chuyển sang hạch toán, kinh doanh, kết hợp kế hoạch với thị trường; phát triển nền kinh tế nhiều thành phần theo định hướng xã hội chủ nghĩa.
-- **Thực hiện Ba chương trình kinh tế lớn:** Bố trí lại cơ cấu sản xuất, điều chỉnh cơ cấu đầu tư, tập trung thực hiện ba chương trình mục tiêu về Lương thực - thực phẩm, Hàng tiêu dùng và Hàng xuất khẩu; coi nông nghiệp là mặt trận hàng đầu.
-- **Đổi mới chính sách xã hội, quốc phòng - an ninh và đối ngoại:** Giải quyết việc làm, thực hiện công bằng xã hội, chăm lo giáo dục, văn hóa, y tế; tăng cường quốc phòng - an ninh; mở rộng và nâng cao hiệu quả kinh tế đối ngoại.
-- **Đổi mới sự lãnh đạo của Đảng và quản lý của Nhà nước:** Đổi mới tư duy (trước hết là tư duy kinh tế), đổi mới công tác cán bộ và phong cách làm việc; phát huy quyền làm chủ của nhân dân theo phương châm “Dân biết, dân bàn, dân làm, dân kiểm tra”.
+**1. Nội dung đường lối đổi mới toàn diện (2.000 Points):**
+> *🔑 Công thức nhớ 5 Đổi mới: (1) Tư duy lý luận → (2) Chính sách kinh tế (nhiều thành phần, 3 chương trình, xóa bao cấp) → (3) Đối ngoại & kinh tế đối ngoại → (4) Quản lý của Nhà nước → (5) Lãnh đạo của Đảng*
+- **Đổi mới tư duy lý luận:** Nhận thức rõ hơn về **chủ nghĩa xã hội** và **thời kỳ quá độ lên chủ nghĩa xã hội**, xác định những đặc trưng và **quy luật khách quan** của thời kỳ quá độ. *(0.500 Points)*
+- **Đổi mới quan điểm, chính sách kinh tế:** Thừa nhận **nền kinh tế nhiều thành phần**; đổi mới cơ cấu kinh tế, tập trung thực hiện **ba chương trình kinh tế lớn: lương thực – thực phẩm, hàng tiêu dùng và hàng xuất khẩu**; từng bước xóa bỏ **cơ chế quản lý tập trung quan liêu, bao cấp**. *(0.500 Points)*
+- **Đổi mới chính sách đối ngoại và kinh tế đối ngoại:** Mở rộng **quan hệ kinh tế đối ngoại**, khuyến khích **đầu tư nước ngoài** và tạo điều kiện thuận lợi cho **người nước ngoài, người Việt Nam ở nước ngoài** hợp tác, kinh doanh tại Việt Nam. *(0.250 Points)*
+- **Đổi mới vai trò quản lý, điều hành của Nhà nước:** **Kiện toàn bộ máy nhà nước**; phân biệt chức năng **quản lý nhà nước về kinh tế** với chức năng **sản xuất, kinh doanh**; kết hợp **quản lý theo ngành** với **quản lý theo địa phương và vùng lãnh thổ**. *(0.250 Points)*
+- **Đổi mới nội dung và phương thức lãnh đạo của Đảng:** Nâng cao **năng lực lãnh đạo, sức chiến đấu** và **năng lực tổ chức thực tiễn** của Đảng; tăng cường **đoàn kết, thống nhất** và **đấu tranh chống tiêu cực**. *(0.500 Points)*
 
-**2. Bốn bài học kinh nghiệm quý báu được Đảng đúc kết:**
-- **Một là, quán triệt tư tưởng “lấy dân làm gốc”:** Trong toàn bộ hoạt động của mình, Đảng phải xây dựng và phát huy quyền làm chủ của nhân dân lao động.
-- **Hai là, tôn trọng và hành động theo quy luật khách quan:** Đảng phải luôn luôn xuất phát từ thực tế, khắc phục bệnh chủ quan, duy ý chí.
-- **Ba là, kết hợp sức mạnh dân tộc với sức mạnh thời đại:** Biết tranh thủ và phát huy sức mạnh tổng hợp của dân tộc và thời đại trong điều kiện lịch sử mới.
-- **Bốn là, chăm lo xây dựng Đảng ngang tầm nhiệm vụ:** Xây dựng Đảng ngang tầm với một đảng cầm quyền lãnh đạo nhân dân tiến hành cuộc cách mạng xã hội chủ nghĩa.
+**2. Bài học kinh nghiệm đối với công cuộc phát triển đất nước hiện nay (1.500 Points):**
+> *🔑 Công thức nhớ 5 Bài học: (1) Kiên định ĐLDT & CNXH → (2) Thực tiễn & quy luật khách quan → (3) Lấy dân làm gốc → (4) Sức mạnh dân tộc + thời đại → (5) Xây dựng Đảng & hệ thống chính trị*
+- **Kiên định mục tiêu độc lập dân tộc và chủ nghĩa xã hội:** Đồng thời vận dụng sáng tạo **chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh**. *(0.500 Points)*
+- **Xuất phát từ thực tiễn, tôn trọng và hành động theo quy luật khách quan:** Thường xuyên **đổi mới tư duy và phương thức lãnh đạo**. *(0.250 Points)*
+- **Lấy dân làm gốc:** Phát huy **quyền làm chủ** và **sức mạnh đại đoàn kết toàn dân tộc**. *(0.250 Points)*
+- **Kết hợp sức mạnh dân tộc với sức mạnh thời đại:** **Chủ động, tích cực hội nhập quốc tế**. *(0.250 Points)*
+- **Xây dựng Đảng và hệ thống chính trị trong sạch, vững mạnh:** Giữ vững **ổn định chính trị** và **phát huy dân chủ**. *(0.250 Points)*
 
 ---
 
 ### Câu 81. Trình bày những thành tựu cơ bản trong công cuộc đổi mới đất nước (1986-2021). Theo anh (chị) để phát huy những thành tựu đó trong thực hiện nghị quyết Đại hội XIII giai đoạn 2021 - 2026 Đảng ta cần phải làm gì?
 
 **1. Những thành tựu cơ bản trong công cuộc đổi mới đất nước (1986–2021):**
-- **Đánh giá tổng quát:** Qua 35 năm đổi mới, đất nước đạt được những thành tựu to lớn, có ý nghĩa lịch sử; Đại hội XIII khẳng định: “Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”.
-- **Về kinh tế:** Đưa đất nước ra khỏi khủng hoảng kinh tế - xã hội và tình trạng kém phát triển, trở thành nước đang phát triển có thu nhập trung bình; quy mô nền kinh tế tăng mạnh và thể chế kinh tế thị trường định hướng XHCN từng bước được hoàn thiện.
-- **Về văn hóa - xã hội và con người:** Đời sống vật chất và tinh thần của nhân dân được cải thiện rõ rệt; công tác xóa đói, giảm nghèo đạt thành tựu ấn tượng; giáo dục, khoa học - công nghệ, y tế và an sinh xã hội phát triển tích cực.
-- **Về chính trị, quốc phòng, an ninh và đối ngoại:** Giữ vững ổn định chính trị - xã hội, bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ; phá thế bao vây, cấm vận, hội nhập quốc tế sâu rộng, nâng cao vị thế quốc tế của Việt Nam.
-- **Về xây dựng Đảng và hệ thống chính trị:** Nhận thức lý luận về chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội ở Việt Nam ngày càng sáng tỏ; công tác xây dựng, chỉnh đốn Đảng và phòng, chống tham nhũng, tiêu cực đạt kết quả quan trọng.
+> *🔑 Công thức nhớ: Đánh giá tổng quát (cơ đồ, tiềm lực, vị thế, uy tín) → Kinh tế (thoát khủng hoảng, KTTT định hướng XHCN) → Văn hóa – xã hội (giảm nghèo, đời sống) → Chính trị, QP-AN, đối ngoại → Xây dựng Đảng*
+- **Đánh giá tổng quát:** Đạt được những thành tựu to lớn, có ý nghĩa lịch sử: **“Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”**.
+- **Về kinh tế:** Ra khỏi khủng hoảng kinh tế – xã hội, trở thành **nước đang phát triển có thu nhập trung bình**; từng bước hoàn thiện **thể chế kinh tế thị trường định hướng xã hội chủ nghĩa**.
+- **Về văn hóa – xã hội và con người:** Đời sống vật chất, tinh thần của nhân dân được cải thiện rõ rệt; **xóa đói, giảm nghèo** đạt thành tựu ấn tượng; **giáo dục, y tế và an sinh xã hội** phát triển tích cực.
+- **Về chính trị, quốc phòng, an ninh và đối ngoại:** Giữ vững **ổn định chính trị – xã hội**, bảo vệ vững chắc **độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ**; phá thế bao vây, cấm vận và **hội nhập quốc tế sâu rộng**.
+- **Về xây dựng Đảng và hệ thống chính trị:** Nhận thức lý luận về **chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội** ngày càng sáng tỏ; công tác **xây dựng, chỉnh đốn Đảng** đạt kết quả quan trọng.
 
-**2. Phương hướng, nhiệm vụ để phát huy thành tựu trong thực hiện Nghị quyết Đại hội XIII (2021–2026):**
-- **Đẩy mạnh xây dựng, chỉnh đốn Đảng và hệ thống chính trị:** Xây dựng Đảng, Nhà nước và hệ thống chính trị trong sạch, vững mạnh toàn diện; kiên quyết, kiên trì đấu tranh phòng, chống tham nhũng, lãng phí, tiêu cực.
-- **Đổi mới mô hình tăng trưởng, cơ cấu lại nền kinh tế:** Đẩy mạnh công nghiệp hóa, hiện đại hóa dựa trên nền tảng khoa học - công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia; phát triển kinh tế số, kinh tế xanh, kinh tế tuần hoàn.
-- **Phát triển văn hóa, con người và bảo đảm an sinh xã hội:** Khơi dậy mạnh mẽ tinh thần yêu nước, ý chí tự cường dân tộc và khát vọng phát triển đất nước phồn vinh, hạnh phúc; nâng cao chất lượng giáo dục, y tế và đời sống nhân dân.
-- **Tăng cường quốc phòng, an ninh và nâng cao hiệu quả đối ngoại:** Giữ vững độc lập, tự chủ; bảo vệ vững chắc Tổ quốc từ sớm, từ xa; chủ động, tích cực hội nhập quốc tế toàn diện, sâu rộng.
-- **Thực hiện đồng bộ ba đột phá chiến lược:** Hoàn thiện đồng bộ thể chế phát triển (trước hết là thể chế kinh tế thị trường định hướng XHCN); phát triển nguồn nhân lực chất lượng cao; xây dựng hệ thống kết cấu hạ tầng đồng bộ, hiện đại.
+**2. Phương hướng, nhiệm vụ phát huy thành tựu theo Nghị quyết Đại hội XIII (2021–2026):**
+> *🔑 Công thức nhớ: Xây dựng, chỉnh đốn Đảng → Đổi mới mô hình tăng trưởng, chuyển đổi số → Văn hóa & khát vọng phồn vinh → Quốc phòng, an ninh, đối ngoại → 3 đột phá chiến lược*
+- **Đẩy mạnh xây dựng, chỉnh đốn Đảng và hệ thống chính trị:** Xây dựng Đảng và hệ thống chính trị **trong sạch, vững mạnh toàn diện**; kiên quyết, kiên trì **đấu tranh phòng, chống tham nhũng, tiêu cực**.
+- **Đổi mới mô hình tăng trưởng, cơ cấu lại nền kinh tế:** Đẩy mạnh công nghiệp hóa, hiện đại hóa dựa trên **khoa học – công nghệ, đổi mới sáng tạo và chuyển đổi số**; phát triển **kinh tế số, kinh tế xanh, kinh tế tuần hoàn**.
+- **Phát triển văn hóa, con người và bảo đảm an sinh xã hội:** Khơi dậy **khát vọng phát triển đất nước phồn vinh, hạnh phúc**; nâng cao chất lượng giáo dục, y tế và đời sống nhân dân.
+- **Tăng cường quốc phòng, an ninh và nâng cao hiệu quả đối ngoại:** Bảo vệ vững chắc Tổ quốc **“từ sớm, từ xa”**; chủ động, tích cực **hội nhập quốc tế toàn diện, sâu rộng**.
+- **Thực hiện đồng bộ ba đột phá chiến lược:** Hoàn thiện đồng bộ **thể chế phát triển (trước hết là thể chế kinh tế thị trường định hướng XHCN)**; phát triển **nguồn nhân lực chất lượng cao**; xây dựng **hệ thống kết cấu hạ tầng đồng bộ, hiện đại**.
